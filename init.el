@@ -27,7 +27,7 @@
      ("melpa" . "https://melpa.org/packages/"))))
  '(package-selected-packages
    (quote
-    (flycheck company-jedi docker py-isort counsel-projectile counsel dockerfile-mode pipenv realgud yaml-mode magit projectile markdown-mode)))
+    (ws-butler smartparens flycheck company-jedi docker py-isort counsel-projectile counsel dockerfile-mode pipenv realgud yaml-mode magit projectile markdown-mode)))
  '(pipenv-projectile-after-switch-function (quote pipenv-projectile-after-switch-custom))
  '(projectile-completion-system (quote ivy))
  '(projectile-mode t nil (projectile))
@@ -58,6 +58,10 @@
 (add-hook 'python-mode-hook #'pipenv-mode)
 ;; static code analysis
 (add-hook 'python-mode-hook 'jedi:setup)
+;; smart parentheses
+(smartparens-global-mode)
+;; trim trailing whitespaces
+(ws-butler-global-mode)
 ;; swiper
 (global-set-key (kbd "C-s") 'swiper)
 ;; projectile customisation
