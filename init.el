@@ -32,6 +32,7 @@
  '(projectile-completion-system (quote ivy))
  '(projectile-mode t nil (projectile))
  '(projectile-project-search-path (list (quote ~/projects)))
+ '(python-check-command "pylint")
  '(realgud:pdb-command-name "python -m pdb")
  '(save-place-mode t)
  '(sentence-end-double-space nil)
