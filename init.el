@@ -36,7 +36,7 @@
  '(save-place-mode t)
  '(sentence-end-double-space nil)
  '(show-paren-mode t)
- '(tramp-default-method "ssh" nil (tramp)))
+ '(tramp-default-method "ssh"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -68,14 +68,10 @@
 (defun pipenv-projectile-after-switch-custom ()
   "Activate pipenv, pyvenv and set PYTHONPATH"
   ;; Always clean up, in case we were in a Python project previously.
-  (pyvenv-deactivate)
   (pipenv-deactivate)
   ;; Only activate if we can verify this is a Pipenv project.
   (when (pipenv-project?)
     (pipenv-activate)
     (setenv "PYTHONPATH" (pipenv-project-p))
-    (pyvenv-activate
-      (file-name-as-directory python-shell-virtualenv-root)
-    )
   )
 )
