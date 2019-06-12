@@ -14,6 +14,7 @@
  '(custom-enabled-themes (quote (wheatgrass)))
  '(ediff-highlight-all-diffs nil)
  '(ediff-split-window-function (quote split-window-horizontally))
+ '(ein:completion-backend (quote ein:use-company-backend))
  '(elpy-mode-hook (quote (flycheck-mode)))
  '(elpy-modules
    (quote
@@ -28,7 +29,7 @@
      ("melpa" . "https://melpa.org/packages/"))))
  '(package-selected-packages
    (quote
-    (osx-clipboard ws-butler smartparens flycheck company-jedi docker py-isort counsel-projectile counsel dockerfile-mode pipenv realgud yaml-mode magit projectile markdown-mode)))
+    (ein osx-clipboard ws-butler smartparens flycheck company-jedi docker py-isort counsel-projectile counsel dockerfile-mode pipenv realgud yaml-mode magit projectile markdown-mode)))
  '(pipenv-projectile-after-switch-function (quote pipenv-projectile-after-switch-custom))
  '(projectile-completion-system (quote ivy))
  '(projectile-mode t nil (projectile))
