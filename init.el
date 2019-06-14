@@ -12,6 +12,7 @@
 		  company-oddmuse company-dabbrev company-jedi)))
  '(counsel-mode t)
  '(custom-enabled-themes (quote (wheatgrass)))
+ '(disable-mouse-global-mode t nil (disable-mouse))
  '(ediff-highlight-all-diffs nil)
  '(ediff-split-window-function (quote split-window-horizontally))
  '(ein:completion-backend (quote ein:use-company-backend))
@@ -29,7 +30,7 @@
      ("melpa" . "https://melpa.org/packages/"))))
  '(package-selected-packages
    (quote
-    (ein osx-clipboard ws-butler smartparens flycheck company-jedi docker py-isort counsel-projectile counsel dockerfile-mode pipenv realgud yaml-mode magit projectile markdown-mode)))
+    (disable-mouse ein osx-clipboard ws-butler smartparens flycheck company-jedi docker py-isort counsel-projectile counsel dockerfile-mode pipenv realgud yaml-mode magit projectile markdown-mode)))
  '(pipenv-projectile-after-switch-function (quote pipenv-projectile-after-switch-custom))
  '(projectile-completion-system (quote ivy))
  '(projectile-mode t nil (projectile))
@@ -37,8 +38,10 @@
  '(python-check-command "pylint")
  '(realgud:pdb-command-name "python -m pdb")
  '(save-place-mode t)
+ '(scroll-bar-mode nil)
  '(sentence-end-double-space nil)
  '(show-paren-mode t)
+ '(tool-bar-mode nil)
  '(tramp-default-method "ssh"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
