@@ -26,6 +26,7 @@
  '(ediff-split-window-function (quote split-window-vertically))
  '(ediff-window-setup-function (quote ediff-setup-windows-plain))
  '(ein:completion-backend (quote ein:use-company-backend))
+ '(ein:notebook-modes (quote (ein:notebook-python-mode)))
  '(elpy-mode-hook (quote (flycheck-mode)))
  '(elpy-modules
    (quote
