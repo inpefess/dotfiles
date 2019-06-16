@@ -5,11 +5,13 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(before-save-hook (quote (py-isort-before-save)))
+ '(company-auto-complete t)
  '(company-backends
    (quote
     (company-bbdb company-eclim company-semantic company-clang company-xcode company-cmake company-capf company-files
 		  (company-dabbrev-code company-gtags company-etags company-keywords)
 		  company-oddmuse company-dabbrev company-jedi)))
+ '(company-minimum-prefix-length 1)
  '(counsel-mode t)
  '(custom-enabled-themes (quote (wheatgrass)))
  '(default-frame-alist
