@@ -23,7 +23,8 @@
       (left . 400))))
  '(disable-mouse-global-mode t nil (disable-mouse))
  '(ediff-highlight-all-diffs nil)
- '(ediff-split-window-function (quote split-window-horizontally))
+ '(ediff-split-window-function (quote split-window-vertically))
+ '(ediff-window-setup-function (quote ediff-setup-windows-plain))
  '(ein:completion-backend (quote ein:use-company-backend))
  '(elpy-mode-hook (quote (flycheck-mode)))
  '(elpy-modules
