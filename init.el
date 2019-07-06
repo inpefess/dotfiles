@@ -45,7 +45,7 @@
  '(pipenv-projectile-after-switch-function (quote pipenv-projectile-after-switch-custom))
  '(projectile-completion-system (quote ivy))
  '(projectile-mode t nil (projectile))
- '(projectile-project-search-path (list (quote ~/projects)))
+ '(projectile-project-search-path (quote ("~/projects")))
  '(python-check-command "pylint")
  '(python-shell-completion-native-enable nil)
  '(realgud:pdb-command-name "python -m pdb")
