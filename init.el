@@ -30,6 +30,7 @@
  '(elpy-modules
    (quote
     (elpy-module-company elpy-module-eldoc elpy-module-pyvenv elpy-module-highlight-indentation elpy-module-sane-defaults)))
+ '(eshell-rc-script "~/.bash_profile")
  '(fill-column 69)
  '(ivy-mode t)
  '(menu-bar-mode nil)
