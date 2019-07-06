@@ -60,7 +60,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background "black" :foreground "wheat" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 180 :width normal :foundry "nil" :family "Menlo")))))
-
+;; for the first start of the emacs daemon
+(package-refresh-contents)
+(package-install-selected-packages)
 ;; projects
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 ;; git
