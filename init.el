@@ -11,7 +11,6 @@
     (company-bbdb company-eclim company-semantic company-clang company-xcode company-cmake company-capf company-files
 		  (company-dabbrev-code company-gtags company-etags company-keywords)
 		  company-oddmuse company-dabbrev company-jedi)))
- '(company-minimum-prefix-length 1)
  '(counsel-mode t)
  '(custom-enabled-themes (quote (wheatgrass)))
  '(default-frame-alist
@@ -47,6 +46,7 @@
  '(projectile-mode t nil (projectile))
  '(projectile-project-search-path (list (quote ~/projects)))
  '(python-check-command "pylint")
+ '(python-shell-completion-native-enable nil)
  '(realgud:pdb-command-name "python -m pdb")
  '(save-place-mode t)
  '(sentence-end-double-space nil)
