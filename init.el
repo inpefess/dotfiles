@@ -42,7 +42,7 @@
      ("melpa" . "https://melpa.org/packages/"))))
  '(package-selected-packages
    (quote
-    (exec-path-from-shell disable-mouse ein osx-clipboard ws-butler smartparens flycheck company-jedi docker py-isort counsel-projectile counsel dockerfile-mode pipenv realgud yaml-mode magit projectile markdown-mode)))
+    (restart-emacs exec-path-from-shell disable-mouse ein osx-clipboard ws-butler smartparens flycheck company-jedi docker py-isort counsel-projectile counsel dockerfile-mode pipenv realgud yaml-mode magit projectile markdown-mode)))
  '(pipenv-projectile-after-switch-function (quote pipenv-projectile-after-switch-custom))
  '(projectile-completion-system (quote ivy))
  '(projectile-mode t nil (projectile))
