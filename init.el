@@ -33,6 +33,7 @@
  '(eshell-rc-script "~/.bash_profile")
  '(fill-column 69)
  '(ivy-mode t)
+ '(keyboard-coding-system (quote utf-8-emacs))
  '(menu-bar-mode nil)
  '(osx-clipboard-mode t)
  '(package-archives
