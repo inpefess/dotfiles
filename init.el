@@ -35,6 +35,7 @@
  '(ivy-mode t)
  '(keyboard-coding-system (quote utf-8-emacs))
  '(menu-bar-mode nil)
+ '(nyan-mode t)
  '(package-archives
    (quote
     (("gnu" . "https://elpa.gnu.org/packages/")
