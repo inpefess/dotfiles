@@ -35,7 +35,6 @@
  '(ivy-mode t)
  '(keyboard-coding-system (quote utf-8-emacs))
  '(menu-bar-mode nil)
- '(osx-clipboard-mode t)
  '(package-archives
    (quote
     (("gnu" . "https://elpa.gnu.org/packages/")
@@ -54,7 +53,9 @@
  '(sentence-end-double-space nil)
  '(show-paren-mode t)
  '(tool-bar-mode nil)
- '(tramp-default-method "ssh"))
+ '(tramp-default-method "ssh")
+ '(xclip-mode t)
+ '(xclip-select-enable-clipboard nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
