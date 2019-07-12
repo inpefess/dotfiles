@@ -15,7 +15,7 @@
  '(custom-enabled-themes (quote (wheatgrass)))
  '(default-frame-alist
     (quote
-     ((width . 79)
+     ((width . 80)
       (height . 48)
       (vertical-scroll-bars)
       (top . 0)
@@ -42,7 +42,7 @@
      ("melpa" . "https://melpa.org/packages/"))))
  '(package-selected-packages
    (quote
-    (restart-emacs exec-path-from-shell disable-mouse ein osx-clipboard ws-butler smartparens flycheck company-jedi docker py-isort counsel-projectile counsel dockerfile-mode pipenv realgud yaml-mode magit projectile markdown-mode)))
+    (zone-nyan nyan-mode xclip restart-emacs exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker py-isort counsel-projectile counsel dockerfile-mode pipenv realgud yaml-mode magit projectile markdown-mode)))
  '(pipenv-projectile-after-switch-function (quote pipenv-projectile-after-switch-custom))
  '(projectile-completion-system (quote ivy))
  '(projectile-mode t nil (projectile))
@@ -97,3 +97,7 @@
 )
 ;; fix PATH for MacOS
 (exec-path-from-shell-initialize)
+;; setup the screensaver
+(require 'zone)
+(setq zone-programs [zone-nyan])
+(zone-when-idle 60)
