@@ -36,6 +36,13 @@
  '(keyboard-coding-system (quote utf-8-emacs))
  '(menu-bar-mode nil)
  '(nyan-mode t)
+ '(org-capture-templates
+   (quote
+    (("t" "Task" entry
+      (file+headline "" "Inbox")
+      "** TODO %?
+ :CAPTURED: %T
+"))))
  '(package-archives
    (quote
     (("gnu" . "https://elpa.gnu.org/packages/")
@@ -103,3 +110,6 @@
 (require 'zone)
 (setq zone-programs [zone-nyan])
 (zone-when-idle 60)
+;; org-mode capture customization
+(setq org-default-notes-file (concat org-directory "/notes.org"))
+(define-key global-map "\C-cc" 'org-capture)
