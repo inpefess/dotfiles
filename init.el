@@ -115,3 +115,6 @@
 ;; org-mode customization
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cc" 'org-capture)
+;; moving regions
+(require 'move-text)
+(move-text-default-bindings)
