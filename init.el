@@ -36,12 +36,13 @@
  '(keyboard-coding-system (quote utf-8-emacs))
  '(menu-bar-mode nil)
  '(nyan-mode t)
+ '(org-agenda-files (list org-default-notes-file))
  '(org-capture-templates
    (quote
     (("t" "Task" entry
-      (file+headline "" "Inbox")
+      (file+headline org-default-notes-file "Inbox")
       "** TODO %?
- :CAPTURED: %T
+   :CAPTURED: %U
 "))))
  '(package-archives
    (quote
@@ -110,6 +111,6 @@
 (require 'zone)
 (setq zone-programs [zone-nyan])
 (zone-when-idle 60)
-;; org-mode capture customization
-(setq org-default-notes-file (concat org-directory "/notes.org"))
-(define-key global-map "\C-cc" 'org-capture)
+;; org-mode customization
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cc" 'org-capture)
