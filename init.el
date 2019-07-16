@@ -75,6 +75,9 @@
 ;; for the first start of the emacs daemon
 (unless package-archive-contents
   (package-refresh-contents))
+;; fixes a 'bad request' bug of ELPA: https://www.reddit.com/r/emacs/comments/cdei4p/failed_to_download_gnu_archive_bad_request/
+(if (and (version< emacs-version "26.3") (>= libgnutls-version 30600))
+    (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3"))
 (package-install-selected-packages)
 ;; projects
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
