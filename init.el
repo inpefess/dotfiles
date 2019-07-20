@@ -36,6 +36,7 @@
  '(ivy-mode t)
  '(keyboard-coding-system (quote utf-8-emacs))
  '(menu-bar-mode nil)
+ '(ns-function-modifier (quote hyper))
  '(nyan-mode t)
  '(org-agenda-files (list org-default-notes-file))
  '(org-capture-templates
@@ -81,11 +82,11 @@
     (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3"))
 (package-install-selected-packages)
 ;; projects
-(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "H-p") 'projectile-command-map)
 ;; git
-(global-set-key (kbd "C-x g") 'magit-status)
+(global-set-key (kbd "H-g") 'magit-status)
 ;; docker
-(global-set-key (kbd "C-c d") 'docker)
+(global-set-key (kbd "H-d") 'docker)
 ;; python
 (elpy-enable)
 ;; debugger
@@ -99,7 +100,7 @@
 ;; trim trailing whitespaces
 (ws-butler-global-mode)
 ;; swiper
-(global-set-key (kbd "C-s") 'swiper)
+(global-set-key (kbd "H-s") 'swiper)
 ;; projectile customisation
 (defun pipenv-projectile-after-switch-custom ()
   "Activate pipenv, pyvenv and set PYTHONPATH"
@@ -118,8 +119,8 @@
 (setq zone-programs [zone-nyan])
 (zone-when-idle 60)
 ;; org-mode customization
-(global-set-key "\C-ca" 'org-agenda)
-(global-set-key "\C-cc" 'org-capture)
+(global-set-key (kbd "H-a") 'org-agenda)
+(global-set-key (kbd "H-c") 'org-capture)
 ;; moving regions
 (require 'move-text)
 (move-text-default-bindings)
