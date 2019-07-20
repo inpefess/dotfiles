@@ -32,6 +32,7 @@
     (elpy-module-company elpy-module-eldoc elpy-module-pyvenv elpy-module-highlight-indentation elpy-module-sane-defaults)))
  '(eshell-rc-script "~/.bash_profile")
  '(fill-column 69)
+ '(gnus-select-method (quote (nnimap "imap.yandex.ru")))
  '(ivy-mode t)
  '(keyboard-coding-system (quote utf-8-emacs))
  '(menu-bar-mode nil)
