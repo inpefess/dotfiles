@@ -117,7 +117,7 @@
 ;; setup the screensaver
 (require 'zone)
 (setq zone-programs [zone-nyan])
-(zone-when-idle 60)
+(zone-when-idle 300)
 ;; org-mode customization
 (global-set-key (kbd "H-a") 'org-agenda)
 (global-set-key (kbd "H-c") 'org-capture)
