@@ -43,7 +43,7 @@
    (quote
     (("t" "Task" entry
       (file+headline org-default-notes-file "Inbox")
-      "** TODO %?
+      "** TODO %? [/]
    :CAPTURED: %U
 "))))
  '(package-archives
