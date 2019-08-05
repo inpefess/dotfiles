@@ -46,6 +46,10 @@
       "** TODO %? [/]
    :CAPTURED: %U
 "))))
+ '(org-format-latex-options
+   (quote
+    (:foreground default :background default :scale 3.0 :html-foreground "Black" :html-background "Transparent" :html-scale 1.0 :matchers
+		 ("begin" "$1" "$" "$$" "\\(" "\\["))))
  '(package-archives
    (quote
     (("gnu" . "https://elpa.gnu.org/packages/")
@@ -53,7 +57,7 @@
      ("org" . "https://orgmode.org/elpa/"))))
  '(package-selected-packages
    (quote
-    (move-text elpy zone-nyan nyan-mode xclip restart-emacs exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker py-isort counsel-projectile counsel dockerfile-mode pipenv realgud yaml-mode magit projectile markdown-mode)))
+    (auctex cdlatex move-text elpy zone-nyan nyan-mode xclip restart-emacs exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker py-isort counsel-projectile counsel dockerfile-mode pipenv realgud yaml-mode magit projectile markdown-mode)))
  '(pipenv-projectile-after-switch-function (quote pipenv-projectile-after-switch-custom))
  '(projectile-completion-system (quote ivy))
  '(projectile-mode t nil (projectile))
