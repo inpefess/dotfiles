@@ -57,8 +57,12 @@
      ("org" . "https://orgmode.org/elpa/"))))
  '(package-selected-packages
    (quote
-    (auctex cdlatex move-text elpy zone-nyan nyan-mode xclip restart-emacs exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker py-isort counsel-projectile counsel dockerfile-mode pipenv realgud yaml-mode magit projectile markdown-mode)))
- '(pipenv-projectile-after-switch-function (quote pipenv-projectile-after-switch-custom))
+    (auctex cdlatex move-text elpy zone-nyan nyan-mode xclip restart-emacs exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker py-isort counsel-projectile counsel dockerfile-mode realgud yaml-mode magit projectile markdown-mode)))
+ '(projectile-after-switch-project-hook
+   (quote
+    ((lambda nil
+       (pyvenv-activate
+	(projectile-project-root))))))
  '(projectile-completion-system (quote ivy))
  '(projectile-mode t nil (projectile))
  '(projectile-project-search-path (quote ("~/projects")))
@@ -95,8 +99,6 @@
 (elpy-enable)
 ;; debugger
 (require 'realgud)
-;; pipenv
-(add-hook 'python-mode-hook #'pipenv-mode)
 ;; static code analysis
 (add-hook 'python-mode-hook 'jedi:setup)
 ;; smart parentheses
@@ -105,17 +107,6 @@
 (ws-butler-global-mode)
 ;; swiper
 (global-set-key (kbd "H-s") 'swiper)
-;; projectile customisation
-(defun pipenv-projectile-after-switch-custom ()
-  "Activate pipenv, pyvenv and set PYTHONPATH"
-  ;; Always clean up, in case we were in a Python project previously.
-  (pipenv-deactivate)
-  ;; Only activate if we can verify this is a Pipenv project.
-  (when (pipenv-project?)
-    (pipenv-activate)
-    (setenv "PYTHONPATH" (pipenv-project-p))
-  )
-)
 ;; fix PATH for MacOS
 (exec-path-from-shell-initialize)
 ;; setup the screensaver
