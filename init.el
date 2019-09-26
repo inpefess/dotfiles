@@ -61,8 +61,11 @@
  '(projectile-after-switch-project-hook
    (quote
     ((lambda nil
-       (pyvenv-activate
-	(projectile-project-root))))))
+       (progn
+	 (pyvenv-activate
+	  (projectile-project-root))
+	 (setenv "PYTHONPATH"
+		 (projectile-project-root)))))))
  '(projectile-completion-system (quote ivy))
  '(projectile-mode t nil (projectile))
  '(projectile-project-search-path (quote ("~/projects")))
