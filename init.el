@@ -31,6 +31,7 @@
    (quote
     (elpy-module-company elpy-module-eldoc elpy-module-pyvenv elpy-module-highlight-indentation elpy-module-sane-defaults)))
  '(eshell-rc-script "~/.bash_profile")
+ '(exec-path-from-shell-variables (quote ("PATH" "MANPATH" "LC_ALL" "LANG")))
  '(fill-column 69)
  '(gnus-select-method (quote (nnimap "imap.yandex.ru")))
  '(grep-find-ignored-directories
