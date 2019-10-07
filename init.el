@@ -37,7 +37,7 @@
  '(gnus-select-method (quote (nnimap "imap.yandex.ru")))
  '(grep-find-ignored-directories
    (quote
-    ("SCCS" "RCS" "CVS" "MCVS" ".src" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" "lib" "etc" "share" "bin" "include")))
+    ("SCCS" "RCS" "CVS" "MCVS" ".src" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" "lib" "etc" "share" "bin" "include" "lib64" "src")))
  '(ivy-mode t)
  '(keyboard-coding-system (quote utf-8-emacs))
  '(menu-bar-mode nil)
