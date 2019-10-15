@@ -30,7 +30,7 @@
  '(elpy-modules
    (quote
     (elpy-module-company elpy-module-eldoc elpy-module-pyvenv elpy-module-highlight-indentation elpy-module-sane-defaults)))
- '(eshell-rc-script "~/.bash_profile")
+ '(eshell-rc-script "~/.zshenv")
  '(exec-path-from-shell-variables (quote ("PATH" "MANPATH" "LC_ALL" "LANG")))
  '(explicit-shell-file-name "/bin/zsh")
  '(fill-column 69)
@@ -76,6 +76,7 @@
  '(projectile-project-search-path (quote ("~/projects")))
  '(python-check-command "pylint")
  '(python-shell-completion-native-enable nil)
+ '(pyvenv-exec-shell "/bin/zsh")
  '(realgud:pdb-command-name "python -m pdb")
  '(save-place-mode t)
  '(sentence-end-double-space nil)
