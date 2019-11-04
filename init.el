@@ -96,12 +96,22 @@
 (unless package-archive-contents
   (package-refresh-contents))
 (package-install-selected-packages)
-;; projects
-(define-key projectile-mode-map (kbd "H-p") 'projectile-command-map)
-;; git
-(global-set-key (kbd "H-g") 'magit-status)
-;; docker
-(global-set-key (kbd "H-d") 'docker)
+;; using Hyper key only on Mac keyboard
+(if (eq system-type 'darwin)
+    (progn
+      (define-key projectile-mode-map (kbd "H-p") 'projectile-command-map)
+      (global-set-key (kbd "H-g") 'magit-status)
+      (global-set-key (kbd "H-d") 'docker)
+      (global-set-key (kbd "H-s") 'swiper)
+      (global-set-key (kbd "H-a") 'org-agenda)
+      (global-set-key (kbd "H-c") 'org-capture))
+  (progn
+      (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+      (global-set-key (kbd "C-x g") 'magit-status)
+      (global-set-key (kbd "C-c d") 'docker)
+      (global-set-key (kbd "C-s") 'swiper)
+      (global-set-key (kbd "C-c a") 'org-agenda)
+      (global-set-key (kbd "C-c c") 'org-capture)))
 ;; python
 (elpy-enable)
 ;; debugger
@@ -112,17 +122,12 @@
 (smartparens-global-mode)
 ;; trim trailing whitespaces
 (ws-butler-global-mode)
-;; swiper
-(global-set-key (kbd "H-s") 'swiper)
 ;; fix PATH for MacOS
 (exec-path-from-shell-initialize)
 ;; setup the screensaver
 (require 'zone)
 (setq zone-programs [zone-nyan])
 (zone-when-idle 300)
-;; org-mode customization
-(global-set-key (kbd "H-a") 'org-agenda)
-(global-set-key (kbd "H-c") 'org-capture)
 ;; moving regions
 (require 'move-text)
 (move-text-default-bindings)
