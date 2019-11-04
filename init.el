@@ -30,6 +30,7 @@
  '(elpy-modules
    (quote
     (elpy-module-company elpy-module-eldoc elpy-module-pyvenv elpy-module-highlight-indentation elpy-module-sane-defaults)))
+ '(enable-recursive-minibuffers t)
  '(eshell-rc-script "~/.zshenv")
  '(exec-path-from-shell-variables (quote ("PATH" "MANPATH" "LC_ALL" "LANG")))
  '(explicit-shell-file-name "/bin/zsh")
@@ -42,6 +43,7 @@
  '(ivy-mode t)
  '(keyboard-coding-system (quote utf-8-emacs))
  '(menu-bar-mode nil)
+ '(minibuffer-depth-indicate-mode t)
  '(ns-function-modifier (quote hyper))
  '(nyan-mode t)
  '(org-agenda-files (list org-default-notes-file))
