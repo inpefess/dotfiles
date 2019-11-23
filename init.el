@@ -12,7 +12,7 @@
 		  (company-dabbrev-code company-gtags company-etags company-keywords)
 		  company-oddmuse company-dabbrev company-jedi)))
  '(counsel-mode t)
- '(custom-enabled-themes (quote (wheatgrass)))
+ '(custom-enabled-themes (quote (manoj-dark)))
  '(default-frame-alist
     (quote
      ((width . 80)
@@ -88,12 +88,6 @@
  '(tramp-default-method "ssh")
  '(xclip-mode t)
  '(xclip-select-enable-clipboard nil))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "black" :foreground "wheat" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 180 :width normal :foundry "nil" :family "Menlo")))))
 ;; for the first start of the emacs daemon
 (unless package-archive-contents
   (package-refresh-contents))
@@ -133,3 +127,9 @@
 ;; moving regions
 (require 'move-text)
 (move-text-default-bindings)
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
