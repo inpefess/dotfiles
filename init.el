@@ -30,6 +30,7 @@
  '(elpy-modules
    (quote
     (elpy-module-company elpy-module-eldoc elpy-module-pyvenv elpy-module-highlight-indentation elpy-module-sane-defaults)))
+ '(elpy-rpc-virtualenv-path (quote current))
  '(enable-recursive-minibuffers t)
  '(eshell-rc-script "~/.zshenv")
  '(exec-path-from-shell-variables (quote ("PATH" "MANPATH" "LC_ALL" "LANG")))
