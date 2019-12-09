@@ -17,13 +17,7 @@
 		  company-oddmuse company-dabbrev company-jedi)))
  '(counsel-mode t)
  '(custom-enabled-themes (quote (manoj-dark)))
- '(default-frame-alist
-    (quote
-     ((width . 80)
-      (height . 48)
-      (vertical-scroll-bars)
-      (top . 0)
-      (left . 400))))
+ '(default-frame-alist (quote ((fullscreen . maximized))))
  '(disable-mouse-global-mode t nil (disable-mouse))
  '(ediff-highlight-all-diffs nil)
  '(ediff-split-window-function (quote split-window-vertically))
@@ -87,6 +81,7 @@
  '(pyvenv-exec-shell "/bin/zsh")
  '(realgud:pdb-command-name "python -m pdb")
  '(save-place-mode t)
+ '(scroll-bar-mode nil)
  '(sentence-end-double-space nil)
  '(show-paren-mode t)
  '(tool-bar-mode nil)
