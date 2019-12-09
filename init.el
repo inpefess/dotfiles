@@ -6,6 +6,8 @@
  ;; If there is more than one, they won't work right.
  '(TeX-engine (quote xetex))
  '(before-save-hook (quote (py-isort-before-save)))
+ '(calendar-latitude 55.75222)
+ '(calendar-longitude 37.61556)
  '(column-number-mode t)
  '(company-auto-complete t)
  '(company-backends
