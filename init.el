@@ -41,6 +41,7 @@
     ("SCCS" "RCS" "CVS" "MCVS" ".src" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" "lib" "etc" "share" "bin" "include" "lib64" "src" ".mypy_cache")))
  '(ivy-mode t)
  '(keyboard-coding-system (quote utf-8-emacs))
+ '(magit-log-mode-hook (quote (hl-line-mode)))
  '(menu-bar-mode nil)
  '(minibuffer-depth-indicate-mode t)
  '(ns-function-modifier (quote hyper))
