@@ -38,7 +38,7 @@
  '(gnus-select-method (quote (nnimap "imap.yandex.ru")))
  '(grep-find-ignored-directories
    (quote
-    ("SCCS" "RCS" "CVS" "MCVS" ".src" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" "lib" "etc" "share" "bin" "include" "lib64" "src" ".mypy_cache")))
+    ("SCCS" "RCS" "CVS" "MCVS" ".src" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" ".mypy_cache" "venv")))
  '(ivy-mode t)
  '(keyboard-coding-system (quote utf-8-emacs))
  '(magit-log-mode-hook (quote (hl-line-mode)))
@@ -65,13 +65,15 @@
      ("org" . "https://orgmode.org/elpa/"))))
  '(package-selected-packages
    (quote
-    (auctex cdlatex move-text elpy zone-nyan nyan-mode xclip restart-emacs exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker py-isort counsel-projectile counsel dockerfile-mode realgud yaml-mode magit projectile markdown-mode)))
+    (f auctex cdlatex move-text elpy zone-nyan nyan-mode xclip restart-emacs exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker py-isort counsel-projectile counsel dockerfile-mode realgud yaml-mode magit projectile markdown-mode)))
  '(projectile-after-switch-project-hook
    (quote
     ((lambda nil
        (progn
 	 (pyvenv-activate
-	  (projectile-project-root))
+	  (f-join
+	   (projectile-project-root)
+	   "venv"))
 	 (setenv "PYTHONPATH"
 		 (projectile-project-root)))))))
  '(projectile-completion-system (quote ivy))
@@ -128,6 +130,7 @@
 ;; moving regions
 (require 'move-text)
 (move-text-default-bindings)
+(require 'f)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
