@@ -68,7 +68,7 @@
      ("org" . "https://orgmode.org/elpa/"))))
  '(package-selected-packages
    (quote
-    (f auctex cdlatex move-text elpy zone-nyan nyan-mode xclip restart-emacs exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker py-isort counsel-projectile counsel dockerfile-mode realgud yaml-mode magit projectile markdown-mode)))
+    (dictionary f auctex cdlatex move-text elpy zone-nyan nyan-mode xclip restart-emacs exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker py-isort counsel-projectile counsel dockerfile-mode realgud yaml-mode magit projectile markdown-mode)))
  '(projectile-after-switch-project-hook
    (quote
     ((lambda nil
@@ -105,6 +105,7 @@
       (global-set-key (kbd "H-g") 'magit-status)
       (global-set-key (kbd "H-d") 'docker)
       (global-set-key (kbd "H-s") 'swiper)
+      (global-set-key (kbd "H-l") 'dictionary-lookup-definition)
       (global-set-key (kbd "H-a") 'org-agenda)
       (global-set-key (kbd "H-c") 'org-capture))
   (progn
@@ -112,6 +113,7 @@
       (global-set-key (kbd "C-x g") 'magit-status)
       (global-set-key (kbd "C-c d") 'docker)
       (global-set-key (kbd "C-s") 'swiper)
+      (global-set-key (kbd "C-c l") 'dictionary-lookup-definition)
       (global-set-key (kbd "C-c a") 'org-agenda)
       (global-set-key (kbd "C-c c") 'org-capture)))
 ;; python
