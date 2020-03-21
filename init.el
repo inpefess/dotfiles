@@ -38,7 +38,7 @@
  '(gnus-select-method (quote (nnimap "imap.yandex.ru")))
  '(grep-find-ignored-directories
    (quote
-    ("SCCS" "RCS" "CVS" "MCVS" ".src" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" ".mypy_cache" "venv")))
+    ("SCCS" "RCS" "CVS" "MCVS" ".src" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" ".mypy_cache" "venv" "build")))
  '(ivy-mode t)
  '(keyboard-coding-system (quote utf-8-emacs))
  '(magit-log-mode-hook (quote (hl-line-mode)))
@@ -88,6 +88,7 @@
  '(realgud:pdb-command-name "python -m pdb")
  '(save-place-mode t)
  '(scroll-bar-mode nil)
+ '(send-mail-function (quote mailclient-send-it))
  '(sentence-end-double-space nil)
  '(show-paren-mode t)
  '(tool-bar-mode nil)
