@@ -39,7 +39,7 @@
  '(gnus-select-method (quote (nnimap "imap.yandex.ru")))
  '(grep-find-ignored-directories
    (quote
-    ("SCCS" "RCS" "CVS" "MCVS" ".src" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" ".mypy_cache" "venv" "build" "_build" ".coverage")))
+    ("SCCS" "RCS" "CVS" "MCVS" ".src" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" ".mypy_cache" "venv" "build" "_build" ".coverage" ".pytest_cache")))
  '(ivy-mode t)
  '(keyboard-coding-system (quote utf-8-emacs))
  '(magit-log-mode-hook (quote (hl-line-mode)))
