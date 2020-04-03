@@ -8,6 +8,7 @@
  '(before-save-hook (quote (py-isort-before-save)))
  '(calendar-latitude 55.75222)
  '(calendar-longitude 37.61556)
+ '(calendar-week-start-day 1)
  '(column-number-mode t)
  '(company-auto-complete t)
  '(company-backends
