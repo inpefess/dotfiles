@@ -30,6 +30,7 @@
    (quote
     (elpy-module-company elpy-module-eldoc elpy-module-pyvenv elpy-module-highlight-indentation elpy-module-sane-defaults)))
  '(elpy-rpc-virtualenv-path (quote current))
+ '(elpy-test-pytest-runner-command (quote ("py.test")))
  '(elpy-test-runner (quote elpy-test-pytest-runner))
  '(enable-recursive-minibuffers t)
  '(eshell-rc-script "~/.zshenv")
