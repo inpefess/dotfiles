@@ -25,7 +25,7 @@
  '(ediff-window-setup-function (quote ediff-setup-windows-plain))
  '(ein:completion-backend (quote ein:use-company-backend))
  '(ein:notebook-modes (quote (ein:notebook-python-mode)))
- '(elpy-mode-hook (quote (flycheck-mode)))
+ '(elpy-mode-hook (quote (flycheck-mode diff-hl-margin-mode)))
  '(elpy-modules
    (quote
     (elpy-module-company elpy-module-eldoc elpy-module-pyvenv elpy-module-highlight-indentation elpy-module-sane-defaults)))
@@ -72,7 +72,7 @@
      ("org" . "https://orgmode.org/elpa/"))))
  '(package-selected-packages
    (quote
-    (hungry-delete dictionary f auctex cdlatex move-text elpy zone-nyan nyan-mode xclip restart-emacs exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker py-isort counsel-projectile counsel dockerfile-mode realgud yaml-mode magit projectile markdown-mode)))
+    (diff-hl hungry-delete dictionary f auctex cdlatex move-text elpy zone-nyan nyan-mode xclip restart-emacs exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker py-isort counsel-projectile counsel dockerfile-mode realgud yaml-mode magit projectile markdown-mode)))
  '(projectile-after-switch-project-hook
    (quote
     ((lambda nil
