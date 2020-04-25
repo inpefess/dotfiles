@@ -25,6 +25,7 @@
  '(ediff-window-setup-function (quote ediff-setup-windows-plain))
  '(ein:completion-backend (quote ein:use-company-backend))
  '(ein:notebook-modes (quote (ein:notebook-python-mode)))
+ '(electric-operator-enable-in-docs t)
  '(elpy-mode-hook (quote (flycheck-mode diff-hl-margin-mode)))
  '(elpy-modules
    (quote
@@ -72,7 +73,7 @@
      ("org" . "https://orgmode.org/elpa/"))))
  '(package-selected-packages
    (quote
-    (fireplace diff-hl hungry-delete dictionary f auctex cdlatex move-text elpy zone-nyan nyan-mode xclip restart-emacs exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker py-isort counsel-projectile counsel dockerfile-mode realgud yaml-mode magit projectile markdown-mode)))
+    (which-key electric-operator fireplace diff-hl hungry-delete dictionary f auctex cdlatex move-text elpy zone-nyan nyan-mode xclip restart-emacs exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker py-isort counsel-projectile counsel dockerfile-mode realgud yaml-mode magit projectile markdown-mode)))
  '(projectile-after-switch-project-hook
    (quote
     ((lambda nil
@@ -140,6 +141,12 @@
 ;; moving regions
 (require 'move-text)
 (move-text-default-bindings)
+;; available keybindings
+(require 'which-key)
+(which-key-mode)
+;; electric operator
+(require 'electric-operator)
+(add-hook 'python-mode-hook #'electric-operator-mode)
 (require 'f)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
