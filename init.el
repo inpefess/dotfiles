@@ -38,6 +38,7 @@
  '(exec-path-from-shell-variables (quote ("PATH" "MANPATH" "LC_ALL" "LANG")))
  '(explicit-shell-file-name "/bin/zsh")
  '(fill-column 69)
+ '(global-diff-hl-mode t)
  '(global-hungry-delete-mode t)
  '(global-subword-mode t)
  '(gnus-select-method (quote (nnimap "imap.yandex.ru")))
