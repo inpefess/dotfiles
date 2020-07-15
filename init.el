@@ -74,7 +74,7 @@
      ("org" . "https://orgmode.org/elpa/"))))
  '(package-selected-packages
    (quote
-    (avy which-key electric-operator fireplace diff-hl hungry-delete dictionary f cdlatex move-text elpy zone-nyan nyan-mode xclip restart-emacs exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker py-isort counsel-projectile counsel dockerfile-mode realgud yaml-mode magit projectile markdown-mode)))
+    (sbt-mode scala-mode lsp-ui lsp-ivy lsp-metals avy which-key electric-operator fireplace diff-hl hungry-delete dictionary f cdlatex move-text elpy zone-nyan nyan-mode xclip restart-emacs exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker py-isort counsel-projectile counsel dockerfile-mode realgud yaml-mode magit projectile markdown-mode)))
  '(projectile-after-switch-project-hook
    (quote
     ((lambda nil
@@ -158,6 +158,9 @@
 (require 'electric-operator)
 (add-hook 'python-mode-hook #'electric-operator-mode)
 (require 'f)
+;; Language Protocol Server
+(require 'lsp-mode)
+(add-hook 'scala-mode-hook #'lsp)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
