@@ -6,8 +6,6 @@
  ;; If there is more than one, they won't work right.
  '(TeX-engine 'xetex)
  '(before-save-hook '(py-isort-before-save elpy-black-fix-code))
- '(calendar-latitude 55.75222)
- '(calendar-longitude 37.61556)
  '(calendar-week-start-day 1)
  '(column-number-mode t)
  '(company-auto-commit t)
@@ -40,7 +38,6 @@
  '(global-diff-hl-mode t)
  '(global-hungry-delete-mode t)
  '(global-subword-mode t)
- '(gnus-select-method '(nnimap "imap.yandex.ru"))
  '(grep-find-ignored-directories
    '("SCCS" "RCS" "CVS" "MCVS" ".src" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" ".mypy_cache" "venv" "build" "_build" ".coverage" ".pytest_cache" "test-results" "dist"))
  '(ivy-mode t)
@@ -156,6 +153,7 @@
 (add-hook 'scala-mode-hook #'lsp)
 (add-hook 'java-mode-hook #'lsp)
 (require 'dap-java)
+(load-file "~/.emacs.d/other-init.el")
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
