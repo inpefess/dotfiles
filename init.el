@@ -6,6 +6,9 @@
  ;; If there is more than one, they won't work right.
  '(TeX-engine 'xetex)
  '(before-save-hook '(py-isort-before-save elpy-black-fix-code))
+ '(calendar-date-style 'iso)
+ '(calendar-mark-diary-entries-flag t)
+ '(calendar-view-diary-initially-flag t)
  '(calendar-week-start-day 1)
  '(column-number-mode t)
  '(company-auto-commit t)
@@ -17,6 +20,7 @@
  '(counsel-mode t)
  '(custom-enabled-themes '(manoj-dark))
  '(default-frame-alist '((fullscreen . maximized)))
+ '(diary-number-of-entries 7)
  '(disable-mouse-global-mode t nil (disable-mouse))
  '(ediff-highlight-all-diffs nil)
  '(ediff-split-window-function 'split-window-vertically)
@@ -154,6 +158,7 @@
 (add-hook 'java-mode-hook #'lsp)
 (require 'dap-java)
 (load-file "~/.emacs.d/other-init.el")
+(appt-activate)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
