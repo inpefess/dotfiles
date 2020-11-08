@@ -80,14 +80,18 @@
 		"venv"))
 	 (if
 	     (file-directory-p venv-folder)
-	     (pyvenv-activate venv-folder)
-	   (setenv "PYTHONPATH"
-		   (projectile-project-root)))))))
+	     (progn
+	       (pyvenv-activate venv-folder)
+	       (setenv "PYTHONPATH"
+		       (projectile-project-root))
+	       (setq python-shell-interpreter
+		     (f-join venv-folder "bin" "python"))))))))
  '(projectile-before-switch-project-hook
    '((lambda nil
        (progn
 	 (pyvenv-deactivate)
-	 (setenv "PYTHONPATH" nil)))))
+	 (setenv "PYTHONPATH" nil)
+	 (setq python-shell-interpreter "python")))))
  '(projectile-completion-system 'ivy)
  '(projectile-mode t nil (projectile))
  '(projectile-project-search-path '("~/projects"))
