@@ -6,6 +6,7 @@
  ;; If there is more than one, they won't work right.
  '(TeX-engine 'xetex)
  '(before-save-hook '(py-isort-before-save elpy-black-fix-code))
+ '(browse-url-browser-function 'eww-browse-url)
  '(calendar-date-style 'iso)
  '(calendar-mark-diary-entries-flag t)
  '(calendar-view-diary-initially-flag t)
