@@ -37,6 +37,7 @@
  '(elpy-test-runner 'elpy-test-pytest-runner)
  '(enable-recursive-minibuffers t)
  '(eshell-rc-script "~/.zshenv")
+ '(exec-path-from-shell-arguments nil)
  '(exec-path-from-shell-variables '("PATH" "MANPATH" "LC_ALL" "LANG"))
  '(explicit-shell-file-name "/bin/zsh")
  '(fill-column 69)
