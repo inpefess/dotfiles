@@ -41,11 +41,13 @@
  '(exec-path-from-shell-variables '("PATH" "MANPATH" "LC_ALL" "LANG"))
  '(explicit-shell-file-name "/bin/zsh")
  '(fill-column 69)
+ '(fireplace-sound-on t)
  '(global-diff-hl-mode t)
  '(global-hungry-delete-mode t)
  '(global-subword-mode t)
  '(grep-find-ignored-directories
    '("SCCS" "RCS" "CVS" "MCVS" ".src" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" ".mypy_cache" "venv" "build" "_build" ".coverage" ".pytest_cache" "test-results" "dist"))
+ '(initial-buffer-choice 'fireplace)
  '(ivy-mode t)
  '(keyboard-coding-system 'utf-8-emacs)
  '(magit-log-mode-hook '(hl-line-mode))
