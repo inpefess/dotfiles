@@ -99,7 +99,8 @@
  '(projectile-project-search-path '("~/projects"))
  '(python-check-command "pylint")
  '(python-shell-completion-native-enable nil)
- '(pyvenv-exec-shell "/bin/zsh")
+ '(pyvenv-exec-shell
+   "(if (eq system-type 'darwin) \"/bin/zsh\" \"/usr/bin/zsh\")")
  '(realgud:pdb-command-name "python -m pdb")
  '(save-place-mode t)
  '(scroll-bar-mode nil)
