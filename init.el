@@ -165,7 +165,7 @@
 (add-hook 'scala-mode-hook #'lsp)
 (add-hook 'java-mode-hook #'lsp)
 (require 'dap-java)
-(load-file "~/.emacs.d/other-init.el")
+(load-file (f-join user-emacs-directory "other-init.el"))
 (appt-activate)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
