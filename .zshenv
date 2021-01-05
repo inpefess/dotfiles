@@ -4,6 +4,7 @@ export XDG_CONFIG_HOME=$HOME/.config
 export XDG_DATA_HOME=$LOCALDIR/share
 export XDG_CACHE_HOME=$HOME/.cache
 # locations for dotfiles
+export PYLINTHOME=$XDG_CONFIG_HOME/pylint
 export JUPYTER_CONFIG_DIR=$XDG_CONFIG_HOME/jupyter
 export IPYTHONDIR=$XDG_CONFIG_HOME/ipython
 export ZDOTDIR=$XDG_CONFIG_HOME/zsh
