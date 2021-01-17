@@ -39,7 +39,7 @@
  '(eshell-rc-script "~/.zshenv")
  '(exec-path-from-shell-arguments nil)
  '(exec-path-from-shell-variables
-   '("PATH" "MANPATH" "LC_ALL" "LANG" "PYLINTHOME" "JUPYTER_CONFIG_DIR" "IPYTHONDIR" "ZDOTDIR" "HISTFILE" "HISTSIZE" "HISTFILESIZE" "PYENV_ROOT"))
+   '("XDG_CONFIG_HOME" "PATH" "MANPATH" "LC_ALL" "LANG" "PYLINTHOME" "JUPYTER_CONFIG_DIR" "IPYTHONDIR" "ZDOTDIR" "HISTFILE" "HISTSIZE" "HISTFILESIZE" "PYENV_ROOT"))
  '(explicit-shell-file-name "/bin/zsh")
  '(fill-column 69)
  '(fireplace-sound-on t)
