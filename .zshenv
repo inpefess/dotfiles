@@ -11,6 +11,7 @@ export ZDOTDIR=$XDG_CONFIG_HOME/zsh
 export HISTFILE=$XDG_CONFIG_HOME/zsh/.zsh_history
 export HISTSIZE=10000
 export HISTFILESIZE=$HISTSIZE
+export SAVEHIST=$HISTSIZE
 # locale
 export LANG=fr_FR.UTF-8
 export LANGUAGE=fr_FR.UTF-8
