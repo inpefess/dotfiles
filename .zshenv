@@ -26,7 +26,7 @@ export LDFLAGS="-L$LOCALDIR/lib -L$LOCALDIR/lib64"
 export CFLAGS="-I$LOCALDIR/include"
 export CPPFLAGS="-I$LOCALDIR/include"
 export PKG_CONFIG_PATH=$LOCALDIR/lib64/pkgconfig:$LOCALDIR/lib/pkgconfig$PKG_CONFIG_PATH
-# PATH
+# pyenv
 export PYENV_ROOT=$HOME/.pyenv
 export PATH=$PYENV_ROOT/bin:$PATH
 # Isabelle proof assistant
