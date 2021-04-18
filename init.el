@@ -22,6 +22,7 @@
  '(custom-enabled-themes '(manoj-dark))
  '(default-frame-alist '((fullscreen . maximized)))
  '(diary-number-of-entries 7)
+ '(dictionary-server "localhost")
  '(disable-mouse-global-mode t nil (disable-mouse))
  '(ediff-highlight-all-diffs nil)
  '(ediff-split-window-function 'split-window-vertically)
