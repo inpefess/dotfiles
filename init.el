@@ -19,7 +19,8 @@
 		  (company-dabbrev-code company-gtags company-etags company-keywords)
 		  company-oddmuse company-dabbrev company-jedi))
  '(counsel-mode t)
- '(custom-enabled-themes '(manoj-dark))
+ '(custom-enabled-themes
+   '(\(if\ \(equal\ \(getenv\ \"TERM\"\)\ \"dumb\"\)\ nil\ \"manoj-dark\"\)))
  '(default-frame-alist '((fullscreen . maximized)))
  '(diary-number-of-entries 7)
  '(dictionary-server "localhost")
