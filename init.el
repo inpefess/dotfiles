@@ -19,7 +19,6 @@
 		  (company-dabbrev-code company-gtags company-etags company-keywords)
 		  company-oddmuse company-dabbrev company-jedi))
  '(counsel-mode t)
- '(custom-enabled-themes '(\(if\ \(window-system\)\ \"manoj-dark\"\ nil\)))
  '(default-frame-alist '((fullscreen . maximized)))
  '(diary-number-of-entries 7)
  '(dictionary-server "localhost")
@@ -174,3 +173,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background "black" :foreground "WhiteSmoke" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 174 :width normal :foundry "nil" :family "Menlo")))))
+(if (window-system) (load-theme 'manoj-dark))
