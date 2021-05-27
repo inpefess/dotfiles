@@ -55,6 +55,7 @@
  '(grep-find-ignored-directories
    '("SCCS" "RCS" "CVS" "MCVS" ".src" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" ".mypy_cache" "venv" "build" "_build" ".coverage" ".pytest_cache" "test-results" "dist"))
  '(ivy-mode t)
+ '(java-mode-hook '(lsp))
  '(keyboard-coding-system 'utf-8-emacs)
  '(menu-bar-mode nil)
  '(minibuffer-depth-indicate-mode t)
@@ -164,10 +165,6 @@
 (require 'electric-operator)
 (add-hook 'python-mode-hook #'electric-operator-mode)
 (require 'f)
-;; Language Protocol Server
-(require 'lsp-mode)
-(add-hook 'scala-mode-hook #'lsp)
-(add-hook 'java-mode-hook #'lsp)
 (require 'dap-java)
 (load-file (f-join user-emacs-directory "other-init.el"))
 (appt-activate)
