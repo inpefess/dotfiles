@@ -36,6 +36,10 @@
  '(elpy-test-pytest-runner-command '("py.test"))
  '(elpy-test-runner 'elpy-test-pytest-runner)
  '(enable-recursive-minibuffers t)
+ '(erc-join-buffer 'window-noselect)
+ '(erc-minibuffer-notice t)
+ '(erc-modules
+   '(autojoin button completion irccontrols list match menu move-to-prompt netsplit networks noncommands readonly stamp spelling))
  '(erc-server "localhost")
  '(eshell-rc-script "~/.zshenv")
  '(exec-path-from-shell-arguments nil)
