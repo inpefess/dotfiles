@@ -7,6 +7,8 @@
  '(TeX-engine 'xetex)
  '(before-save-hook '(py-isort-before-save elpy-black-fix-code))
  '(browse-url-browser-function 'eww-browse-url)
+ '(c++-mode-hook '(lsp))
+ '(c-mode-hook '(lsp))
  '(calendar-date-style 'iso)
  '(calendar-mark-diary-entries-flag t)
  '(calendar-view-diary-initially-flag t)
@@ -57,6 +59,7 @@
  '(ivy-mode t)
  '(java-mode-hook '(lsp))
  '(keyboard-coding-system 'utf-8-emacs)
+ '(lsp-after-initialize-hook '(lsp-enable-which-key-integration))
  '(menu-bar-mode nil)
  '(minibuffer-depth-indicate-mode t)
  '(ns-function-modifier 'hyper)
@@ -116,7 +119,8 @@
  '(tool-bar-mode nil)
  '(tramp-default-method "ssh")
  '(xclip-mode t)
- '(xclip-select-enable-clipboard nil))
+ '(xclip-select-enable-clipboard nil)
+ '(yas-global-mode t))
 ;; for the first start of the emacs daemon
 (unless package-archive-contents
   (package-refresh-contents))
