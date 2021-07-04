@@ -5,7 +5,15 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(TeX-engine 'xetex)
- '(before-save-hook '(py-isort-before-save elpy-black-fix-code))
+ '(before-save-hook
+   '((lambda nil
+       (if
+	   (executable-find "isort")
+	   (py-isort-before-save)))
+     (lambda nil
+       (if
+	   (executable-find "black")
+	   (elpy-black-fix-code)))))
  '(browse-url-browser-function 'eww-browse-url)
  '(c++-mode-hook '(lsp))
  '(c-mode-hook '(lsp))
