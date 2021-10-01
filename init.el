@@ -63,7 +63,7 @@
  '(global-subword-mode t)
  '(global-visual-line-mode t)
  '(grep-find-ignored-directories
-   '("SCCS" "RCS" "CVS" "MCVS" ".src" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" ".mypy_cache" "venv" "build" "_build" ".coverage" ".pytest_cache" "test-results" "dist"))
+   '("SCCS" "RCS" "CVS" "MCVS" ".src" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" ".mypy_cache" "venv*" "build" "_build" ".coverage" ".pytest_cache" "test-results" "dist"))
  '(ivy-mode t)
  '(java-mode-hook '(lsp))
  '(keyboard-coding-system 'utf-8-emacs)
