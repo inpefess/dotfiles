@@ -16,15 +16,15 @@ export HISTSIZE=10000
 export HISTFILESIZE=$HISTSIZE
 export SAVEHIST=$HISTSIZE
 # locale
-export LANG=fr_FR.UTF-8
-export LANGUAGE=fr_FR.UTF-8
-export LC_ALL=fr_FR.UTF-8
+export LANG=en_GB.UTF-8
+export LANGUAGE=$LANG
+export LC_ALL=$LANG
 # configurations for compilation
 export LD_LIBRARY_PATH=$LOCALDIR/lib64:$LOCALDIR/lib:$LD_LIBRARY_PATH
 export LD_RUN_PATH=$LOCALDIR/lib64:$LOCALDIR/lib:$LD_RUN_PATH
 export LDFLAGS="-L$LOCALDIR/lib -L$LOCALDIR/lib64"
-export CFLAGS="-I$LOCALDIR/include"
-export CPPFLAGS="-I$LOCALDIR/include"
+export CFLAGS="-I$LOCALDIR/include -I/usr/include/mkl"
+export CPPFLAGS=$CFLAGS
 export PKG_CONFIG_PATH=$LOCALDIR/lib64/pkgconfig:$LOCALDIR/lib/pkgconfig$PKG_CONFIG_PATH
 # pyenv
 export PYENV_ROOT=$HOME/.pyenv
@@ -41,3 +41,6 @@ export BUNDLE_PATH=$LOCALDIR/bundle
 export PARALLEL_HOME=$XDG_CONFIG_HOME/parallel
 # use fbterm
 [[ $TERM = "linux" ]] && fbterm
+. "$HOME/.cargo/env"
+# for Coq
+test -r $HOME/.opam/opam-init/init.sh && . $HOME/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
