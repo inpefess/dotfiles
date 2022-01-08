@@ -131,9 +131,12 @@
  '(send-mail-function 'mailclient-send-it)
  '(sentence-end-double-space nil)
  '(show-paren-mode t)
+ '(smartparens-global-mode t)
  '(tool-bar-mode nil)
  '(tooltip-mode nil)
  '(tramp-default-method "ssh")
+ '(which-key-mode t)
+ '(ws-butler-global-mode t)
  '(xclip-mode t)
  '(xclip-select-enable-clipboard nil)
  '(yas-global-mode t))
@@ -165,10 +168,6 @@
 (require 'realgud)
 ;; static code analysis
 (add-hook 'python-mode-hook 'jedi:setup)
-;; smart parentheses
-(smartparens-global-mode)
-;; trim trailing whitespaces
-(ws-butler-global-mode)
 ;; fix PATH for MacOS
 (exec-path-from-shell-initialize)
 ;; setup the screensaver
@@ -178,9 +177,6 @@
 ;; moving regions
 (require 'move-text)
 (move-text-default-bindings)
-;; available keybindings
-(require 'which-key)
-(which-key-mode)
 ;; electric operator
 (require 'electric-operator)
 (add-hook 'python-mode-hook #'electric-operator-mode)
