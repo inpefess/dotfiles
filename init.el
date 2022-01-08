@@ -130,6 +130,7 @@
  '(sentence-end-double-space nil)
  '(show-paren-mode t)
  '(tool-bar-mode nil)
+ '(tooltip-mode nil)
  '(tramp-default-method "ssh")
  '(xclip-mode t)
  '(xclip-select-enable-clipboard nil)
