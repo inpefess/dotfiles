@@ -73,7 +73,10 @@
  '(menu-bar-mode nil)
  '(minibuffer-depth-indicate-mode t)
  '(ns-function-modifier 'hyper)
+ '(nyan-animate-nyancat t)
+ '(nyan-bar-length 10)
  '(nyan-mode t)
+ '(nyan-wavy-trail t)
  '(org-agenda-files (list org-default-notes-file))
  '(org-capture-templates
    '(("t" "Task" entry
