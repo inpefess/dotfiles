@@ -137,6 +137,7 @@
  '(tool-bar-mode nil)
  '(tooltip-mode nil)
  '(tramp-default-method "ssh")
+ '(which-key-idle-delay 0.25)
  '(which-key-mode t)
  '(ws-butler-global-mode t)
  '(xclip-mode t)
