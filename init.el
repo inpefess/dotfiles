@@ -66,8 +66,10 @@
  '(global-hungry-delete-mode t)
  '(global-subword-mode t)
  '(global-visual-line-mode t)
+ '(gnus-inhibit-startup-message t)
  '(grep-find-ignored-directories
    '("SCCS" "RCS" "CVS" "MCVS" ".src" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" ".mypy_cache" "venv*" "build" "_build" ".coverage" ".pytest_cache" "test-results" "dist"))
+ '(inhibit-startup-screen t)
  '(ivy-mode t)
  '(java-mode-hook '(lsp))
  '(keyboard-coding-system 'utf-8-emacs)
