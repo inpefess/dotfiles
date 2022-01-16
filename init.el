@@ -69,8 +69,6 @@
  '(global-subword-mode t)
  '(global-visual-line-mode t)
  '(gnus-inhibit-startup-message t)
- '(grep-find-ignored-directories
-   '("SCCS" "RCS" "CVS" "MCVS" ".src" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" ".mypy_cache" "venv*" "build" "_build" ".coverage" ".pytest_cache" "test-results" "dist"))
  '(inhibit-startup-screen t)
  '(ivy-mode t)
  '(ivy-rich-mode t)
@@ -127,6 +125,7 @@
  '(projectile-mode t nil (projectile))
  '(projectile-project-search-path
    '("(when (file-directory-p \"~/projects\") \"~/projects\")"))
+ '(projectile-use-git-grep t)
  '(python-check-command "pylint")
  '(python-shell-completion-native-enable nil)
  '(pyvenv-exec-shell
