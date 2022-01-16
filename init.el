@@ -165,7 +165,6 @@
       (global-set-key (kbd "H-c") 'org-capture))
   (progn
       (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
-      (global-set-key (kbd "C-x g") 'magit-status)
       (global-set-key (kbd "C-c d") 'docker)
       (global-set-key (kbd "C-s") 'swiper)
       (global-set-key (kbd "C-c l") 'dictionary-lookup-definition)
