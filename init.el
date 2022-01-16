@@ -132,6 +132,8 @@
  '(pyvenv-exec-shell
    "(if (eq system-type 'darwin) \"/bin/zsh\" \"/usr/bin/zsh\")")
  '(realgud:pdb-command-name "python -m pdb")
+ '(safe-local-variable-values
+   '((projectile-project-run-cmd . "./show_report.sh")))
  '(save-place-mode t)
  '(scroll-bar-mode nil)
  '(send-mail-function 'mailclient-send-it)
