@@ -125,7 +125,8 @@
 	 (setq python-shell-interpreter "python")))))
  '(projectile-completion-system 'ivy)
  '(projectile-mode t nil (projectile))
- '(projectile-project-search-path '("~/projects"))
+ '(projectile-project-search-path
+   '("(when (file-directory-p \"~/projects\") \"~/projects\")"))
  '(python-check-command "pylint")
  '(python-shell-completion-native-enable nil)
  '(pyvenv-exec-shell
