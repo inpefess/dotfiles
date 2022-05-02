@@ -38,6 +38,7 @@
  '(diary-number-of-entries 7)
  '(dictionary-server "localhost")
  '(disable-mouse-global-mode t nil (disable-mouse))
+ '(doc-view-resolution 200)
  '(doom-modeline-height 10)
  '(doom-modeline-mode t)
  '(ediff-highlight-all-diffs nil)
