@@ -28,12 +28,13 @@
    '(company-bbdb company-eclim company-semantic company-clang company-xcode company-cmake company-capf company-files
 		  (company-dabbrev-code company-gtags company-etags company-keywords)
 		  company-oddmuse company-dabbrev company-jedi))
+ '(company-insertion-on-trigger t)
  '(counsel-describe-function-function 'helpful-callable)
  '(counsel-describe-variable-function 'helpful-variable)
  '(counsel-mode t)
- '(counsel-projectile-mode t nil (counsel-projectile))
+ '(counsel-projectile-mode t)
  '(custom-safe-themes
-   '("da186cce19b5aed3f6a2316845583dbee76aea9255ea0da857d1c058ff003546" default))
+   '("2dd4951e967990396142ec54d376cced3f135810b2b69920e77103e0bcedfba9" "da186cce19b5aed3f6a2316845583dbee76aea9255ea0da857d1c058ff003546" default))
  '(default-frame-alist '((fullscreen . maximized)))
  '(diary-number-of-entries 7)
  '(dictionary-server "localhost")
