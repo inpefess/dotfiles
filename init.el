@@ -72,6 +72,7 @@
  '(global-subword-mode t)
  '(global-visual-line-mode t)
  '(gnus-inhibit-startup-message t)
+ '(gnus-select-method '(nnml ""))
  '(inhibit-startup-screen t)
  '(ivy-mode t)
  '(ivy-rich-mode t)
