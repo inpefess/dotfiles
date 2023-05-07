@@ -37,9 +37,10 @@ export ML_OPTIONS="--minheap 4G --maxheap 64G"
 export PATH=$ISABELLE_HOME/bin:$PATH
 # GNU Parallel
 export PARALLEL_HOME=$XDG_CONFIG_HOME/parallel
-# use fbterm
-[[ $TERM = "linux" ]] && fbterm
-. "$HOME/.cargo/env"
+# TeX
+export PATH=/usr/local/texlive/2021/bin/x86_64-linux:$PATH
+export MANPATH=/usr/local/texlive/2021/texmf/doc/man:$MANPATH
+export INFOPATH=/usr/local/texlive/2021/texmf/doc/info:$INFOPATH
 # for Coq
 test -r $HOME/.opam/opam-init/init.sh && . $HOME/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 export PATH=$PATH:/opt/gradle/gradle-8.1.1/bin
