@@ -32,7 +32,7 @@
  '(counsel-describe-function-function 'helpful-callable)
  '(counsel-describe-variable-function 'helpful-variable)
  '(counsel-mode t)
- '(counsel-projectile-mode t)
+ '(counsel-projectile-mode t nil (counsel-projectile))
  '(custom-safe-themes
    '("2dd4951e967990396142ec54d376cced3f135810b2b69920e77103e0bcedfba9" "da186cce19b5aed3f6a2316845583dbee76aea9255ea0da857d1c058ff003546" default))
  '(default-frame-alist '((fullscreen . maximized)))
