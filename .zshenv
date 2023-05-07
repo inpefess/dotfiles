@@ -35,8 +35,6 @@ export ISABELLE_HOME=$OPTDIR/Isabelle2022
 export ISABELLE_TOOL_JAVA_OPTIONS="-Xms4g -Xmx64g -Xss32m"
 export ML_OPTIONS="--minheap 4G --maxheap 64G"
 export PATH=$ISABELLE_HOME/bin:$PATH
-# Bundler (Ruby)
-export BUNDLE_PATH=$LOCALDIR/bundle
 # GNU Parallel
 export PARALLEL_HOME=$XDG_CONFIG_HOME/parallel
 # use fbterm
