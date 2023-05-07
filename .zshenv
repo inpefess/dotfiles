@@ -41,6 +41,11 @@ export PARALLEL_HOME=$XDG_CONFIG_HOME/parallel
 export PATH=/usr/local/texlive/2021/bin/x86_64-linux:$PATH
 export MANPATH=/usr/local/texlive/2021/texmf/doc/man:$MANPATH
 export INFOPATH=/usr/local/texlive/2021/texmf/doc/info:$INFOPATH
-# for Coq
+# Coq
 test -r $HOME/.opam/opam-init/init.sh && . $HOME/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+# Gradle
 export PATH=$PATH:/opt/gradle/gradle-8.1.1/bin
+# VPN
+export PATH=/opt/cisco/anyconnect/bin:$PATH
+# Go
+export PATH=$HOME/go/bin:$PATH
