@@ -194,7 +194,6 @@
 (add-hook 'python-mode-hook #'electric-operator-mode)
 (require 'f)
 (require 'dap-java)
-(load-file (f-join user-emacs-directory "other-init.el"))
 (appt-activate)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
