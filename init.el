@@ -140,7 +140,7 @@
  '(safe-local-variable-values '((projectile-project-run-cmd . "./local_build.sh")))
  '(save-place-mode t)
  '(scroll-bar-mode nil)
- '(send-mail-function 'mailclient-send-it)
+ '(send-mail-function 'smtpmail-send-it)
  '(sentence-end-double-space nil)
  '(show-paren-mode t)
  '(smartparens-global-mode t)
