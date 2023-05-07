@@ -42,3 +42,4 @@ export PARALLEL_HOME=$XDG_CONFIG_HOME/parallel
 . "$HOME/.cargo/env"
 # for Coq
 test -r $HOME/.opam/opam-init/init.sh && . $HOME/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+export PATH=$PATH:/opt/gradle/gradle-8.1.1/bin
