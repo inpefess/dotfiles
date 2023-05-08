@@ -8,12 +8,12 @@
  '(before-save-hook
    '((lambda nil
        (if
-	   (executable-find "isort")
-	   (py-isort-before-save)))
+           (executable-find "isort")
+           (py-isort-before-save)))
      (lambda nil
        (if
-	   (executable-find "black")
-	   (elpy-black-fix-code)))))
+           (executable-find "black")
+           (elpy-black-fix-code)))))
  '(browse-url-browser-function 'eww-browse-url)
  '(c++-mode-hook '(lsp))
  '(c-mode-hook '(lsp))
@@ -26,8 +26,8 @@
  '(company-auto-complete t)
  '(company-backends
    '(company-bbdb company-eclim company-semantic company-clang company-xcode company-cmake company-capf company-files
-		  (company-dabbrev-code company-gtags company-etags company-keywords)
-		  company-oddmuse company-dabbrev company-jedi))
+                  (company-dabbrev-code company-gtags company-etags company-keywords)
+                  company-oddmuse company-dabbrev company-jedi))
  '(company-insertion-on-trigger t)
  '(counsel-describe-function-function 'helpful-callable)
  '(counsel-describe-variable-function 'helpful-variable)
@@ -101,7 +101,7 @@
 ")))
  '(org-format-latex-options
    '(:foreground default :background default :scale 3.0 :html-foreground "Black" :html-background "Transparent" :html-scale 1.0 :matchers
-		 ("begin" "$1" "$" "$$" "\\(" "\\[")))
+                 ("begin" "$1" "$" "$$" "\\(" "\\[")))
  '(org-trello-current-prefix-keybinding "C-c o" nil (org-trello))
  '(org-trello-files '("~/.trello.org") nil (org-trello))
  '(package-archives
@@ -114,24 +114,24 @@
  '(projectile-after-switch-project-hook
    '((lambda nil
        (progn
-	 (setq venv-folder
-	       (f-join
-		(projectile-project-root)
-		"venv"))
-	 (if
-	     (file-directory-p venv-folder)
-	     (progn
-	       (pyvenv-activate venv-folder)
-	       (setenv "PYTHONPATH"
-		       (projectile-project-root))
-	       (setq python-shell-interpreter
-		     (f-join venv-folder "bin" "python"))))))))
+         (setq venv-folder
+               (f-join
+                (projectile-project-root)
+                "venv"))
+         (if
+             (file-directory-p venv-folder)
+             (progn
+               (pyvenv-activate venv-folder)
+               (setenv "PYTHONPATH"
+                       (projectile-project-root))
+               (setq python-shell-interpreter
+                     (f-join venv-folder "bin" "python"))))))))
  '(projectile-before-switch-project-hook
    '((lambda nil
        (progn
-	 (pyvenv-deactivate)
-	 (setenv "PYTHONPATH" nil)
-	 (setq python-shell-interpreter "python")))))
+         (pyvenv-deactivate)
+         (setenv "PYTHONPATH" nil)
+         (setq python-shell-interpreter "python")))))
  '(projectile-completion-system 'ivy)
  '(projectile-mode t nil (projectile))
  '(projectile-project-search-path '("~/projects"))
