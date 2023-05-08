@@ -104,7 +104,7 @@
      ("melpa" . "https://melpa.org/packages/")
      ("org" . "https://orgmode.org/elpa/")))
  '(package-selected-packages
-   '(protobuf-mode elpy flymake-grammarly forge helpful ivy-rich doom-themes doom-modeline elpher org-trello lsp-java sbt-mode scala-mode lsp-ui lsp-ivy lsp-metals avy which-key electric-operator fireplace diff-hl hungry-delete dictionary f cdlatex move-text zone-nyan nyan-mode xclip restart-emacs exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker py-isort counsel-projectile counsel dockerfile-mode realgud yaml-mode magit projectile markdown-mode))
+   '(lsp-java protobuf-mode elpy flymake-grammarly forge helpful ivy-rich doom-themes doom-modeline elpher org-trello sbt-mode scala-mode lsp-ui lsp-ivy lsp-metals avy which-key electric-operator fireplace diff-hl hungry-delete dictionary cdlatex move-text zone-nyan nyan-mode xclip exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker py-isort counsel-projectile counsel dockerfile-mode realgud yaml-mode magit projectile markdown-mode))
  '(proced-auto-update-flag t)
  '(projectile-after-switch-project-hook
    '((lambda nil
@@ -193,8 +193,6 @@
 ;; electric operator
 (require 'electric-operator)
 (add-hook 'python-mode-hook #'electric-operator-mode)
-(require 'f)
-(require 'dap-java)
 (appt-activate)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
