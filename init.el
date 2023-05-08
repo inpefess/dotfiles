@@ -129,16 +129,14 @@
 	 (setq python-shell-interpreter "python")))))
  '(projectile-completion-system 'ivy)
  '(projectile-mode t nil (projectile))
- '(projectile-project-search-path
-   '("(when (file-directory-p \"~/projects\") \"~/projects\")"))
+ '(projectile-project-search-path '("~/projects"))
  '(projectile-use-git-grep t)
  '(python-check-command "pylint")
  '(python-shell-completion-native-enable nil)
  '(pyvenv-exec-shell
    "(if (eq system-type 'darwin) \"/bin/zsh\" \"/usr/bin/zsh\")")
  '(realgud:pdb-command-name "python -m pdb")
- '(safe-local-variable-values
-   '((projectile-project-run-cmd . "./local-build.sh")))
+ '(safe-local-variable-values '((projectile-project-run-cmd . "./local-build.sh")))
  '(save-place-mode t)
  '(scroll-bar-mode nil)
  '(send-mail-function 'smtpmail-send-it)
