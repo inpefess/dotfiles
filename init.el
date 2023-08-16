@@ -35,7 +35,7 @@
  '(counsel-mode t)
  '(counsel-projectile-mode t nil (counsel-projectile))
  '(custom-safe-themes
-   '("2dd4951e967990396142ec54d376cced3f135810b2b69920e77103e0bcedfba9" "da186cce19b5aed3f6a2316845583dbee76aea9255ea0da857d1c058ff003546" default))
+   '("2dd4951e967990396142ec54d376cced3f135810b2b69920e77103e0bcedfba9" default))
  '(default-frame-alist '((fullscreen . maximized)))
  '(diary-number-of-entries 7)
  '(dictionary-server "localhost")
@@ -81,7 +81,7 @@
  '(ivy-rich-mode t)
  '(java-mode-hook '(lsp))
  '(keyboard-coding-system 'utf-8-emacs)
- '(lsp-after-initialize-hook '(lsp-enable-which-key-integration))
+ '(lsp-after-initialize-hook '(lsp-enable-which-key-integration) t)
  '(lsp-java-format-comments-enabled nil)
  '(lsp-java-format-settings-profile "GoogleStyle")
  '(lsp-java-format-settings-url
@@ -97,9 +97,7 @@
  '(org-capture-templates
    '(("t" "Task" entry
       (file+headline org-default-notes-file "Inbox")
-      "** TODO %? [/]
-   :CAPTURED: %U
-")))
+      "** TODO %? [/]\12   :CAPTURED: %U\12")))
  '(org-format-latex-options
    '(:foreground default :background default :scale 3.0 :html-foreground "Black" :html-background "Transparent" :html-scale 1.0 :matchers
                  ("begin" "$1" "$" "$$" "\\(" "\\[")))
@@ -152,6 +150,7 @@
  '(tool-bar-mode nil)
  '(tooltip-mode nil)
  '(tramp-default-method "ssh")
+ '(transient-default-level 6)
  '(which-key-idle-delay 2.0)
  '(which-key-mode t)
  '(ws-butler-global-mode t)
@@ -204,4 +203,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:height 150)))))
-(if (window-system) (load-theme 'doom-acario-dark))
+(load-theme 'doom-acario-dark)
