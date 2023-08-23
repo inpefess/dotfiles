@@ -49,3 +49,5 @@ export PATH=$PATH:/opt/gradle/gradle-8.1.1/bin
 export PATH=/opt/cisco/anyconnect/bin:$PATH
 # Go
 export PATH=$HOME/go/bin:$PATH
+# for poetry
+export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
