@@ -8,10 +8,6 @@
  '(before-save-hook
    '((lambda nil
        (if
-           (executable-find "isort")
-           (py-isort-before-save)))
-     (lambda nil
-       (if
            (executable-find "black")
            (elpy-black-fix-code)))))
  '(browse-url-browser-function 'eww-browse-url)
@@ -49,7 +45,7 @@
  '(ein:completion-backend 'ein:use-company-backend)
  '(ein:notebook-modes '(ein:notebook-python-mode))
  '(electric-operator-enable-in-docs t)
- '(elpy-mode-hook '(flycheck-mode diff-hl-margin-mode))
+ '(elpy-mode-hook '(flycheck-mode diff-hl-margin-mode isortify-mode))
  '(elpy-modules
    '(elpy-module-company elpy-module-eldoc elpy-module-pyvenv elpy-module-highlight-indentation elpy-module-sane-defaults))
  '(elpy-rpc-virtualenv-path 'current)
@@ -120,7 +116,7 @@
      ("melpa" . "https://melpa.org/packages/")
      ("org" . "https://orgmode.org/elpa/")))
  '(package-selected-packages
-   '(org-modern lsp-metals lsp-java protobuf-mode elpy forge helpful ivy-rich doom-themes doom-modeline elpher lsp-ui lsp-ivy avy which-key electric-operator fireplace diff-hl hungry-delete dictionary cdlatex move-text zone-nyan nyan-mode xclip exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker py-isort counsel-projectile counsel dockerfile-mode realgud yaml-mode magit projectile markdown-mode))
+   '(isortify org-modern lsp-metals lsp-java protobuf-mode elpy forge helpful ivy-rich doom-themes doom-modeline elpher lsp-ui lsp-ivy avy which-key electric-operator fireplace diff-hl hungry-delete dictionary cdlatex move-text zone-nyan nyan-mode xclip exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker counsel-projectile counsel dockerfile-mode realgud yaml-mode magit projectile markdown-mode))
  '(proced-auto-update-flag t)
  '(projectile-after-switch-project-hook
    '((lambda nil
