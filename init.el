@@ -105,6 +105,14 @@
  '(org-format-latex-options
    '(:foreground default :background default :scale 3.0 :html-foreground "Black" :html-background "Transparent" :html-scale 1.0 :matchers
                  ("begin" "$1" "$" "$$" "\\(" "\\[")))
+ '(org-mode-hook
+   '(#[0 "\300\301\302\303\304$\207"
+         [add-hook change-major-mode-hook org-fold-show-all append local]
+         5]
+     #[0 "\300\301\302\303\304$\207"
+         [add-hook change-major-mode-hook org-babel-show-result-all append local]
+         5]
+     org-babel-result-hide-spec org-babel-hide-all-hashes org-modern-mode))
  '(org-trello-current-prefix-keybinding "C-c o")
  '(org-trello-files '("~/.trello.org"))
  '(package-archives
@@ -112,7 +120,7 @@
      ("melpa" . "https://melpa.org/packages/")
      ("org" . "https://orgmode.org/elpa/")))
  '(package-selected-packages
-   '(lsp-metals lsp-java protobuf-mode elpy forge helpful ivy-rich doom-themes doom-modeline elpher lsp-ui lsp-ivy avy which-key electric-operator fireplace diff-hl hungry-delete dictionary cdlatex move-text zone-nyan nyan-mode xclip exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker py-isort counsel-projectile counsel dockerfile-mode realgud yaml-mode magit projectile markdown-mode))
+   '(org-modern lsp-metals lsp-java protobuf-mode elpy forge helpful ivy-rich doom-themes doom-modeline elpher lsp-ui lsp-ivy avy which-key electric-operator fireplace diff-hl hungry-delete dictionary cdlatex move-text zone-nyan nyan-mode xclip exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker py-isort counsel-projectile counsel dockerfile-mode realgud yaml-mode magit projectile markdown-mode))
  '(proced-auto-update-flag t)
  '(projectile-after-switch-project-hook
    '((lambda nil
