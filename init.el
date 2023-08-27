@@ -105,14 +105,14 @@
  '(org-format-latex-options
    '(:foreground default :background default :scale 3.0 :html-foreground "Black" :html-background "Transparent" :html-scale 1.0 :matchers
                  ("begin" "$1" "$" "$$" "\\(" "\\[")))
- '(org-trello-current-prefix-keybinding "C-c o" nil (org-trello))
- '(org-trello-files '("~/.trello.org") nil (org-trello))
+ '(org-trello-current-prefix-keybinding "C-c o")
+ '(org-trello-files '("~/.trello.org"))
  '(package-archives
    '(("gnu" . "https://elpa.gnu.org/packages/")
      ("melpa" . "https://melpa.org/packages/")
      ("org" . "https://orgmode.org/elpa/")))
  '(package-selected-packages
-   '(lsp-java protobuf-mode elpy forge helpful ivy-rich doom-themes doom-modeline elpher org-trello sbt-mode scala-mode lsp-ui lsp-ivy lsp-metals avy which-key electric-operator fireplace diff-hl hungry-delete dictionary cdlatex move-text zone-nyan nyan-mode xclip exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker py-isort counsel-projectile counsel dockerfile-mode realgud yaml-mode magit projectile markdown-mode))
+   '(lsp-metals lsp-java protobuf-mode elpy forge helpful ivy-rich doom-themes doom-modeline elpher lsp-ui lsp-ivy avy which-key electric-operator fireplace diff-hl hungry-delete dictionary cdlatex move-text zone-nyan nyan-mode xclip exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker py-isort counsel-projectile counsel dockerfile-mode realgud yaml-mode magit projectile markdown-mode))
  '(proced-auto-update-flag t)
  '(projectile-after-switch-project-hook
    '((lambda nil
