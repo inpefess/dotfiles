@@ -64,6 +64,11 @@
  '(explicit-shell-file-name "/bin/zsh")
  '(fill-column 69)
  '(fireplace-sound-on t)
+ '(flycheck-languagetool-language "en-GB")
+ '(flycheck-languagetool-server-jar
+   (f-join
+    (getenv "OPTDIR")
+    "LanguageTool-6.2/languagetool-server.jar"))
  '(global-diff-hl-mode t)
  '(global-hungry-delete-mode t)
  '(global-subword-mode t)
@@ -77,7 +82,7 @@
  '(ivy-rich-mode t)
  '(java-mode-hook '(lsp))
  '(keyboard-coding-system 'utf-8-emacs)
- '(lsp-after-initialize-hook '(lsp-enable-which-key-integration))
+ '(lsp-after-initialize-hook '(lsp-enable-which-key-integration) t)
  '(lsp-java-format-comments-enabled nil)
  '(lsp-java-format-settings-profile "GoogleStyle")
  '(lsp-java-format-settings-url
@@ -116,7 +121,7 @@
      ("melpa" . "https://melpa.org/packages/")
      ("org" . "https://orgmode.org/elpa/")))
  '(package-selected-packages
-   '(graphviz-dot-mode lsp-java lsp-metals isortify org-modern protobuf-mode elpy forge helpful ivy-rich doom-themes doom-modeline elpher lsp-ui lsp-ivy which-key electric-operator fireplace diff-hl hungry-delete dictionary cdlatex move-text zone-nyan nyan-mode xclip exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker counsel-projectile counsel dockerfile-mode realgud yaml-mode magit projectile markdown-mode))
+   '(flycheck-languagetool graphviz-dot-mode lsp-java lsp-metals isortify org-modern protobuf-mode elpy forge helpful ivy-rich doom-themes doom-modeline elpher lsp-ui lsp-ivy which-key electric-operator fireplace diff-hl hungry-delete dictionary cdlatex move-text zone-nyan nyan-mode xclip exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker counsel-projectile counsel dockerfile-mode realgud yaml-mode magit projectile markdown-mode))
  '(proced-auto-update-flag t)
  '(projectile-after-switch-project-hook
    '((lambda nil
@@ -205,6 +210,7 @@
 (require 'electric-operator)
 (add-hook 'python-mode-hook #'electric-operator-mode)
 (appt-activate)
+(flycheck-languagetool-setup)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
