@@ -31,7 +31,7 @@
  '(counsel-mode t)
  '(counsel-projectile-mode t nil (counsel-projectile))
  '(custom-safe-themes
-   '("2dd4951e967990396142ec54d376cced3f135810b2b69920e77103e0bcedfba9" default))
+   '("dccf4a8f1aaf5f24d2ab63af1aa75fd9d535c83377f8e26380162e888be0c6a9" "2dd4951e967990396142ec54d376cced3f135810b2b69920e77103e0bcedfba9" default))
  '(default-frame-alist '((fullscreen . maximized)))
  '(diary-number-of-entries 7)
  '(dictionary-server "localhost")
@@ -82,7 +82,7 @@
  '(ivy-rich-mode t)
  '(java-mode-hook '(lsp))
  '(keyboard-coding-system 'utf-8-emacs)
- '(lsp-after-initialize-hook '(lsp-enable-which-key-integration) t)
+ '(lsp-after-initialize-hook '(lsp-enable-which-key-integration))
  '(lsp-java-format-comments-enabled nil)
  '(lsp-java-format-settings-profile "GoogleStyle")
  '(lsp-java-format-settings-url
@@ -121,7 +121,7 @@
      ("melpa" . "https://melpa.org/packages/")
      ("org" . "https://orgmode.org/elpa/")))
  '(package-selected-packages
-   '(flycheck-languagetool graphviz-dot-mode lsp-java lsp-metals isortify org-modern protobuf-mode elpy forge helpful ivy-rich doom-themes doom-modeline elpher lsp-ui lsp-ivy which-key electric-operator fireplace diff-hl hungry-delete dictionary cdlatex move-text zone-nyan nyan-mode xclip exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker counsel-projectile counsel dockerfile-mode realgud yaml-mode magit projectile markdown-mode))
+   '(rustic flycheck-languagetool graphviz-dot-mode lsp-java lsp-metals isortify org-modern protobuf-mode elpy forge helpful ivy-rich doom-themes doom-modeline elpher lsp-ui lsp-ivy which-key electric-operator fireplace diff-hl hungry-delete dictionary cdlatex move-text zone-nyan nyan-mode xclip exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker counsel-projectile counsel dockerfile-mode realgud yaml-mode magit projectile markdown-mode))
  '(proced-auto-update-flag t)
  '(projectile-after-switch-project-hook
    '((lambda nil
@@ -216,5 +216,5 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:height 150)))))
+ )
 (load-theme 'doom-acario-dark)
