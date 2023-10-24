@@ -31,7 +31,7 @@ export PYENV_ROOT=$HOME/.pyenv
 export PATH=$PYENV_ROOT/bin:$PATH
 # Isabelle proof assistant
 export ISABELLE_HOME_USER=$XDG_CONFIG_HOME/isabelle
-export ISABELLE_HOME=$OPTDIR/Isabelle2022
+export ISABELLE_HOME=$OPTDIR/Isabelle2023
 export ISABELLE_TOOL_JAVA_OPTIONS="-Xms4g -Xmx64g -Xss32m"
 export ML_OPTIONS="--minheap 4G --maxheap 64G"
 export PATH=$ISABELLE_HOME/bin:$PATH
