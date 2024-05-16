@@ -218,3 +218,4 @@
  ;; If there is more than one, they won't work right.
  )
 (load-theme 'doom-acario-dark)
+(setq egp-pinentry-mode 'loopback)
