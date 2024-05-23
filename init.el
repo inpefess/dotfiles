@@ -149,6 +149,7 @@
  '(pyvenv-exec-shell
    "(if (eq system-type 'darwin) \"/bin/zsh\" \"/usr/bin/zsh\")")
  '(realgud:pdb-command-name "python -m pdb")
+ '(ring-bell-function 'ignore)
  '(safe-local-variable-values '((projectile-project-run-cmd . "./local-build.sh")))
  '(save-place-mode t)
  '(scroll-bar-mode nil)
@@ -160,7 +161,6 @@
  '(tooltip-mode nil)
  '(tramp-default-method "ssh")
  '(transient-default-level 6)
- '(visible-bell t)
  '(which-key-idle-delay 2.0)
  '(which-key-mode t)
  '(ws-butler-global-mode t)
