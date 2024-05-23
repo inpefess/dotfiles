@@ -164,6 +164,7 @@
  '(tooltip-mode nil)
  '(tramp-default-method "ssh")
  '(transient-default-level 6)
+ '(visible-bell t)
  '(which-key-idle-delay 2.0)
  '(which-key-mode t)
  '(ws-butler-global-mode t)
