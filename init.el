@@ -87,10 +87,6 @@
  '(lsp-java-format-settings-profile "GoogleStyle")
  '(lsp-java-format-settings-url
    "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml")
- '(magit-mode-hook
-   '(magit-load-config-extensions
-     (lambda nil
-       (setenv "TERM" "linux"))))
  '(menu-bar-mode nil)
  '(minibuffer-depth-indicate-mode t)
  '(ns-function-modifier 'hyper)
