@@ -216,4 +216,5 @@
  )
 (load-theme 'doom-acario-dark)
 (setq egp-pinentry-mode 'loopback)
+(require 'python-coverage)
 (flycheck-add-next-checker 'python-mypy 'python-coverage)
