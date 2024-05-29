@@ -167,11 +167,9 @@
  '(xclip-mode t)
  '(xclip-select-enable-clipboard nil)
  '(yas-global-mode t))
-;; for the first start of the emacs daemon
 (unless package-archive-contents
   (package-refresh-contents))
 (package-install-selected-packages)
-;; using Hyper key only on Mac keyboard
 (if (eq system-type 'darwin)
     (progn
       (define-key projectile-mode-map (kbd "H-p") 'projectile-command-map)
@@ -188,19 +186,13 @@
       (global-set-key (kbd "C-c l") 'dictionary-lookup-definition)
       (global-set-key (kbd "C-c a") 'org-agenda)
       (global-set-key (kbd "C-c c") 'org-capture)))
-;; python
 (elpy-enable)
-;; debugger
 (require 'realgud)
-;; static code analysis
 (add-hook 'python-mode-hook 'jedi:setup)
-;; fix PATH for MacOS
 (exec-path-from-shell-initialize)
-;; setup the screensaver
 (require 'zone)
 (setq zone-programs [zone-nyan])
 (zone-when-idle 300)
-;; moving regions
 (require 'move-text)
 (move-text-default-bindings)
 (appt-activate)
