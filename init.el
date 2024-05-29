@@ -44,7 +44,6 @@
  '(ediff-window-setup-function 'ediff-setup-windows-plain)
  '(ein:completion-backend 'ein:use-company-backend)
  '(ein:notebook-modes '(ein:notebook-python-mode))
- '(electric-operator-enable-in-docs t)
  '(elpy-mode-hook '(flycheck-mode diff-hl-margin-mode isortify-mode))
  '(elpy-modules
    '(elpy-module-company elpy-module-eldoc elpy-module-pyvenv elpy-module-highlight-indentation elpy-module-sane-defaults))
@@ -118,7 +117,7 @@
      ("melpa" . "https://melpa.org/packages/")
      ("org" . "https://orgmode.org/elpa/")))
  '(package-selected-packages
-   '(python-coverage terraform-mode rustic flycheck-languagetool lsp-java lsp-metals isortify org-modern protobuf-mode elpy helpful ivy-rich doom-themes doom-modeline elpher lsp-ui lsp-ivy which-key electric-operator fireplace diff-hl hungry-delete dictionary cdlatex move-text zone-nyan nyan-mode xclip exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker counsel-projectile counsel dockerfile-mode realgud yaml-mode magit projectile markdown-mode))
+   '(python-coverage terraform-mode rustic flycheck-languagetool lsp-java lsp-metals isortify org-modern protobuf-mode elpy helpful ivy-rich doom-themes doom-modeline elpher lsp-ui lsp-ivy which-key fireplace diff-hl hungry-delete dictionary cdlatex move-text zone-nyan nyan-mode xclip exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker counsel-projectile counsel dockerfile-mode realgud yaml-mode magit projectile markdown-mode))
  '(proced-auto-update-flag t)
  '(projectile-after-switch-project-hook
    '((lambda nil
@@ -204,9 +203,6 @@
 ;; moving regions
 (require 'move-text)
 (move-text-default-bindings)
-;; electric operator
-(require 'electric-operator)
-(add-hook 'python-mode-hook #'electric-operator-mode)
 (appt-activate)
 (flycheck-languagetool-setup)
 (custom-set-faces
