@@ -78,6 +78,7 @@
  '(ignored-local-variable-values '((projectile-project-run-cmd . "./local-build.sh")))
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
+ '(ivy-initial-inputs-alist nil)
  '(ivy-mode t)
  '(ivy-rich-mode t)
  '(java-mode-hook '(lsp))
