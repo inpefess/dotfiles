@@ -119,7 +119,7 @@
      ("melpa" . "https://melpa.org/packages/")
      ("org" . "https://orgmode.org/elpa/")))
  '(package-selected-packages
-   '(forge python-coverage terraform-mode rustic flycheck-languagetool lsp-java lsp-metals isortify org-modern protobuf-mode elpy helpful ivy-rich doom-themes doom-modeline elpher lsp-ui lsp-ivy which-key fireplace diff-hl hungry-delete dictionary cdlatex move-text zone-nyan nyan-mode xclip exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker counsel-projectile counsel dockerfile-mode realgud yaml-mode magit projectile markdown-mode))
+   '(consult-flycheck consult forge python-coverage terraform-mode rustic flycheck-languagetool lsp-java lsp-metals isortify org-modern protobuf-mode elpy helpful ivy-rich doom-themes doom-modeline elpher lsp-ui lsp-ivy which-key fireplace diff-hl hungry-delete dictionary cdlatex move-text zone-nyan nyan-mode xclip exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker counsel-projectile counsel dockerfile-mode realgud yaml-mode magit projectile markdown-mode))
  '(proced-auto-update-flag t)
  '(projectile-after-switch-project-hook
    '((lambda nil
@@ -209,3 +209,11 @@
 (setq egp-pinentry-mode 'loopback)
 (require 'python-coverage)
 (flycheck-add-next-checker 'python-mypy 'python-coverage)
+(use-package consult
+  :bind (
+         ("C-c i" . consult-info)
+         ([remap Info-search] . consult-info)
+         ("C-x b" . consult-buffer)           ;; orig. switch-to-buffer
+         ("M-y" . consult-yank-pop)           ;; orig. yank-pop
+         ("M-g f" . consult-flycheck)
+         ("M-g M-g" . consult-goto-line)))    ;; orig. goto-line
