@@ -83,7 +83,7 @@
  '(ivy-rich-mode t)
  '(java-mode-hook '(lsp))
  '(keyboard-coding-system 'utf-8-emacs)
- '(lsp-after-initialize-hook '(lsp-enable-which-key-integration))
+ '(lsp-after-initialize-hook '(lsp-enable-which-key-integration) t)
  '(lsp-java-format-comments-enabled nil)
  '(lsp-java-format-settings-profile "GoogleStyle")
  '(lsp-java-format-settings-url
@@ -119,7 +119,7 @@
      ("melpa" . "https://melpa.org/packages/")
      ("org" . "https://orgmode.org/elpa/")))
  '(package-selected-packages
-   '(consult-flycheck consult forge python-coverage terraform-mode rustic flycheck-languagetool lsp-java lsp-metals isortify org-modern protobuf-mode elpy helpful ivy-rich doom-themes doom-modeline elpher lsp-ui lsp-ivy which-key fireplace diff-hl hungry-delete dictionary cdlatex move-text zone-nyan nyan-mode xclip exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker counsel-projectile counsel dockerfile-mode realgud yaml-mode magit projectile markdown-mode))
+   '(vertico consult-flycheck consult forge python-coverage terraform-mode rustic flycheck-languagetool lsp-java lsp-metals isortify org-modern protobuf-mode elpy helpful ivy-rich doom-themes doom-modeline elpher lsp-ui lsp-ivy which-key fireplace diff-hl hungry-delete dictionary cdlatex move-text zone-nyan nyan-mode xclip exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker counsel-projectile counsel dockerfile-mode realgud yaml-mode magit projectile markdown-mode))
  '(proced-auto-update-flag t)
  '(projectile-after-switch-project-hook
    '((lambda nil
@@ -163,6 +163,7 @@
  '(tooltip-mode nil)
  '(tramp-default-method "ssh")
  '(transient-default-level 6)
+ '(vertico-mode t)
  '(which-key-idle-delay 2.0)
  '(which-key-mode t)
  '(ws-butler-global-mode t)
