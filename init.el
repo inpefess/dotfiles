@@ -218,3 +218,4 @@
          ("M-y" . consult-yank-pop)           ;; orig. yank-pop
          ("M-g f" . consult-flycheck)
          ("M-g M-g" . consult-goto-line)))    ;; orig. goto-line
+(projectile-reset-known-projects)
