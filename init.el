@@ -23,8 +23,11 @@
  '(company-auto-commit t)
  '(company-auto-complete t)
  '(company-backends
-   '(company-bbdb company-eclim company-semantic company-clang company-xcode company-cmake company-capf company-files
-                  (company-dabbrev-code company-gtags company-etags company-keywords)
+   '(company-bbdb company-eclim company-semantic company-clang
+                  company-xcode company-cmake company-capf
+                  company-files
+                  (company-dabbrev-code company-gtags company-etags
+                                        company-keywords)
                   company-oddmuse company-dabbrev company-jedi))
  '(company-insertion-on-trigger t)
  '(counsel-describe-function-function 'helpful-callable)
@@ -32,7 +35,9 @@
  '(counsel-mode t)
  '(counsel-projectile-mode t nil (counsel-projectile))
  '(custom-safe-themes
-   '("dccf4a8f1aaf5f24d2ab63af1aa75fd9d535c83377f8e26380162e888be0c6a9" "2dd4951e967990396142ec54d376cced3f135810b2b69920e77103e0bcedfba9" default))
+   '("dccf4a8f1aaf5f24d2ab63af1aa75fd9d535c83377f8e26380162e888be0c6a9"
+     "2dd4951e967990396142ec54d376cced3f135810b2b69920e77103e0bcedfba9"
+     default))
  '(default-frame-alist '((fullscreen . maximized)))
  '(diary-number-of-entries 7)
  '(dictionary-server "localhost")
@@ -47,7 +52,9 @@
  '(ein:notebook-modes '(ein:notebook-python-mode))
  '(elpy-mode-hook '(flycheck-mode diff-hl-margin-mode isortify-mode))
  '(elpy-modules
-   '(elpy-module-company elpy-module-eldoc elpy-module-pyvenv elpy-module-highlight-indentation elpy-module-sane-defaults))
+   '(elpy-module-company elpy-module-eldoc elpy-module-pyvenv
+                         elpy-module-highlight-indentation
+                         elpy-module-sane-defaults))
  '(elpy-rpc-virtualenv-path 'current)
  '(elpy-test-pytest-runner-command '("py.test"))
  '(elpy-test-runner 'elpy-test-pytest-runner)
@@ -55,12 +62,16 @@
  '(erc-join-buffer 'window-noselect)
  '(erc-minibuffer-notice t)
  '(erc-modules
-   '(autojoin button completion irccontrols list match menu move-to-prompt netsplit networks noncommands readonly stamp spelling))
+   '(autojoin button completion irccontrols list match menu
+              move-to-prompt netsplit networks noncommands readonly
+              stamp spelling))
  '(erc-server "localhost")
  '(eshell-rc-script "~/.zshenv")
  '(exec-path-from-shell-arguments nil)
  '(exec-path-from-shell-variables
-   '("XDG_CONFIG_HOME" "PATH" "MANPATH" "LC_ALL" "LANG" "PYLINTHOME" "JUPYTER_CONFIG_DIR" "IPYTHONDIR" "ZDOTDIR" "HISTFILE" "HISTSIZE" "HISTFILESIZE" "PYENV_ROOT"))
+   '("XDG_CONFIG_HOME" "PATH" "MANPATH" "LC_ALL" "LANG" "PYLINTHOME"
+     "JUPYTER_CONFIG_DIR" "IPYTHONDIR" "ZDOTDIR" "HISTFILE"
+     "HISTSIZE" "HISTFILESIZE" "PYENV_ROOT"))
  '(explicit-shell-file-name "/bin/zsh")
  '(fill-column 69)
  '(fireplace-sound-on t)
@@ -102,16 +113,20 @@
       (file+headline org-default-notes-file "Inbox")
       "** TODO %? [/]\12   :CAPTURED: %U\12")))
  '(org-format-latex-options
-   '(:foreground default :background default :scale 3.0 :html-foreground "Black" :html-background "Transparent" :html-scale 1.0 :matchers
-                 ("begin" "$1" "$" "$$" "\\(" "\\[")))
+   '(:foreground default :background default :scale 3.0 :html-foreground
+                 "Black" :html-background "Transparent" :html-scale
+                 1.0 :matchers ("begin" "$1" "$" "$$" "\\(" "\\[")))
  '(org-mode-hook
    '(#[0 "\300\301\302\303\304$\207"
-         [add-hook change-major-mode-hook org-fold-show-all append local]
+         [add-hook change-major-mode-hook org-fold-show-all append
+                   local]
          5]
      #[0 "\300\301\302\303\304$\207"
-         [add-hook change-major-mode-hook org-babel-show-result-all append local]
+         [add-hook change-major-mode-hook org-babel-show-result-all
+                   append local]
          5]
-     org-babel-result-hide-spec org-babel-hide-all-hashes org-modern-mode))
+     org-babel-result-hide-spec org-babel-hide-all-hashes
+     org-modern-mode))
  '(org-trello-current-prefix-keybinding "C-c o")
  '(org-trello-files '("~/.trello.org"))
  '(package-archives
@@ -119,7 +134,17 @@
      ("melpa" . "https://melpa.org/packages/")
      ("org" . "https://orgmode.org/elpa/")))
  '(package-selected-packages
-   '(vertico consult-flycheck consult forge python-coverage terraform-mode rustic flycheck-languagetool lsp-java lsp-metals isortify org-modern protobuf-mode elpy helpful ivy-rich doom-themes doom-modeline elpher lsp-ui lsp-ivy which-key fireplace diff-hl hungry-delete dictionary cdlatex move-text zone-nyan nyan-mode xclip exec-path-from-shell disable-mouse ein ws-butler smartparens flycheck company-jedi docker counsel-projectile counsel dockerfile-mode realgud yaml-mode magit projectile markdown-mode))
+   '(cdlatex company-jedi consult consult-flycheck counsel
+             counsel-projectile dictionary diff-hl disable-mouse
+             docker dockerfile-mode doom-modeline doom-themes ein
+             ellama elpher elpy exec-path-from-shell fireplace
+             flycheck flycheck-languagetool forge helpful
+             hungry-delete isortify ivy-rich lsp-ivy lsp-java
+             lsp-metals lsp-ui magit markdown-mode move-text
+             nyan-mode org-modern projectile protobuf-mode
+             python-coverage realgud rustic smartparens
+             terraform-mode vertico which-key ws-butler xclip
+             yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
  '(projectile-after-switch-project-hook
    '((lambda nil
