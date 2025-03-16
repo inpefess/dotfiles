@@ -244,3 +244,5 @@
          ("M-g f" . consult-flycheck)
          ("M-g M-g" . consult-goto-line)))    ;; orig. goto-line
 (projectile-reset-known-projects)
+(use-package ellama
+  :bind ("C-c e" . ellama-transient-main-menu))
