@@ -152,7 +152,7 @@
          (setq venv-folder
                (f-join
                 (projectile-project-root)
-                "venv"))
+                ".venv"))
          (if
              (file-directory-p venv-folder)
              (progn
