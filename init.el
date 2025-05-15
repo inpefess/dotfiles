@@ -19,13 +19,6 @@
  '(column-number-mode t)
  '(company-auto-commit t)
  '(company-auto-complete t)
- '(company-backends
-   '(company-bbdb company-eclim company-semantic company-clang
-                  company-xcode company-cmake company-capf
-                  company-files
-                  (company-dabbrev-code company-gtags company-etags
-                                        company-keywords)
-                  company-oddmuse company-dabbrev company-jedi))
  '(company-insertion-on-trigger t)
  '(counsel-describe-function-function 'helpful-callable)
  '(counsel-describe-variable-function 'helpful-variable)
