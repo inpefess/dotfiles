@@ -7,10 +7,7 @@
  '(TeX-engine 'xetex)
  '(auth-source-save-behavior nil)
  '(before-save-hook
-   '((lambda nil
-       (if
-           (executable-find "black")
-           (elpy-black-fix-code)))))
+   '((lambda nil (if (executable-find "black") (elpy-black-fix-code)))))
  '(browse-url-browser-function 'eww-browse-url)
  '(c++-mode-hook '(lsp))
  '(c-basic-offset 2)
@@ -77,9 +74,7 @@
  '(fireplace-sound-on t)
  '(flycheck-languagetool-language "en-GB")
  '(flycheck-languagetool-server-jar
-   (f-join
-    (getenv "OPTDIR")
-    "LanguageTool-6.2/languagetool-server.jar"))
+   (f-join (getenv "OPTDIR") "LanguageTool-6.2/languagetool-server.jar"))
  '(global-diff-hl-mode t)
  '(global-hungry-delete-mode t)
  '(global-subword-mode t)
@@ -109,8 +104,7 @@
  '(nyan-wavy-trail t)
  '(org-agenda-files (list org-default-notes-file))
  '(org-capture-templates
-   '(("t" "Task" entry
-      (file+headline org-default-notes-file "Inbox")
+   '(("t" "Task" entry (file+headline org-default-notes-file "Inbox")
       "** TODO %? [/]\12   :CAPTURED: %U\12")))
  '(org-format-latex-options
    '(:foreground default :background default :scale 3.0 :html-foreground
@@ -134,38 +128,31 @@
      ("melpa" . "https://melpa.org/packages/")
      ("org" . "https://orgmode.org/elpa/")))
  '(package-selected-packages
-   '(cdlatex company-jedi consult consult-flycheck counsel
-             counsel-projectile dictionary diff-hl disable-mouse
-             docker dockerfile-mode doom-modeline doom-themes ein
-             ellama elpher elpy exec-path-from-shell fireplace
-             flycheck flycheck-languagetool forge helpful
-             hungry-delete isortify ivy-rich lsp-ivy lsp-java
-             lsp-metals lsp-ui magit markdown-mode move-text
-             nyan-mode org-modern projectile protobuf-mode
-             python-coverage realgud rustic smartparens
-             terraform-mode vertico which-key ws-butler xclip
-             yaml-mode zone-nyan))
+   '(cdlatex consult consult-flycheck counsel counsel-projectile
+             dictionary diff-hl disable-mouse docker dockerfile-mode
+             doom-modeline doom-themes ein ellama elpher elpy
+             exec-path-from-shell fireplace flycheck
+             flycheck-languagetool forge helpful hungry-delete
+             isortify ivy-rich lsp-ivy lsp-java lsp-metals lsp-ui
+             magit markdown-mode move-text nyan-mode org-modern
+             projectile protobuf-mode python-coverage realgud rustic
+             smartparens terraform-mode vertico which-key ws-butler
+             xclip yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
  '(projectile-after-switch-project-hook
    '((lambda nil
        (progn
-         (setq venv-folder
-               (f-join
-                (projectile-project-root)
-                ".venv"))
-         (if
-             (file-directory-p venv-folder)
+         (setq venv-folder (f-join (projectile-project-root) ".venv"))
+         (if (file-directory-p venv-folder)
              (progn
                (pyvenv-activate venv-folder)
-               (setenv "PYTHONPATH"
-                       (projectile-project-root))
+               (setenv "PYTHONPATH" (projectile-project-root))
                (setq python-shell-interpreter
                      (f-join venv-folder "bin" "python"))))))))
  '(projectile-before-switch-project-hook
    '((lambda nil
        (progn
-         (pyvenv-deactivate)
-         (setenv "PYTHONPATH" nil)
+         (pyvenv-deactivate) (setenv "PYTHONPATH" nil)
          (setq python-shell-interpreter "python")))))
  '(projectile-completion-system 'ivy)
  '(projectile-mode t nil (projectile))
