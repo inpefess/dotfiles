@@ -6,8 +6,6 @@
  ;; If there is more than one, they won't work right.
  '(TeX-engine 'xetex)
  '(auth-source-save-behavior nil)
- '(before-save-hook
-   '((lambda nil (if (executable-find "black") (elpy-black-fix-code)))))
  '(browse-url-browser-function 'eww-browse-url)
  '(c++-mode-hook '(lsp))
  '(c-basic-offset 2)
@@ -40,15 +38,6 @@
  '(ediff-window-setup-function 'ediff-setup-windows-plain)
  '(ein:completion-backend 'ein:use-company-backend)
  '(ein:notebook-modes '(ein:notebook-python-mode))
- '(elpy-mode-hook '(flycheck-mode diff-hl-margin-mode isortify-mode))
- '(elpy-modules
-   '(elpy-module-company elpy-module-eldoc elpy-module-pyvenv
-                         elpy-module-highlight-indentation
-                         elpy-module-sane-defaults))
- '(elpy-rpc-virtualenv-path 'current)
- '(elpy-syntax-check-command "ruff check")
- '(elpy-test-pytest-runner-command '("py.test"))
- '(elpy-test-runner 'elpy-test-pytest-runner)
  '(enable-recursive-minibuffers t)
  '(erc-join-buffer 'window-noselect)
  '(erc-minibuffer-notice t)
@@ -69,6 +58,7 @@
  '(flycheck-languagetool-language "en-GB")
  '(flycheck-languagetool-server-jar
    (f-join (getenv "OPTDIR") "LanguageTool-6.2/languagetool-server.jar"))
+ '(global-company-mode t)
  '(global-diff-hl-mode t)
  '(global-hungry-delete-mode t)
  '(global-subword-mode t)
@@ -89,6 +79,7 @@
  '(lsp-java-format-settings-url
    "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml")
  '(magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1)
+ '(major-mode-remap-alist '((python-mode . python-ts-mode)))
  '(menu-bar-mode nil)
  '(minibuffer-depth-indicate-mode t)
  '(ns-function-modifier 'hyper)
@@ -122,7 +113,7 @@
  '(package-selected-packages
    '(cdlatex consult consult-flycheck counsel counsel-projectile
              dictionary diff-hl disable-mouse docker dockerfile-mode
-             doom-modeline doom-themes ein ellama elpher elpy
+             doom-modeline doom-themes ein ellama elpher
              exec-path-from-shell fireplace flycheck
              flycheck-languagetool forge helpful hungry-delete
              isortify ivy-rich lsp-ivy lsp-java lsp-metals lsp-ui
@@ -193,9 +184,9 @@
       (global-set-key (kbd "C-c l") 'dictionary-lookup-definition)
       (global-set-key (kbd "C-c a") 'org-agenda)
       (global-set-key (kbd "C-c c") 'org-capture)))
-(elpy-enable)
 (require 'realgud)
-(add-hook 'python-mode-hook 'jedi:setup)
+(add-hook 'python-ts-mode-hook 'eglot-ensure)
+(add-hook 'after-save-hook 'eglot-format)
 (exec-path-from-shell-initialize)
 (require 'zone)
 (setq zone-programs [zone-nyan])
