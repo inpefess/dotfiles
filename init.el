@@ -114,8 +114,6 @@
          5]
      org-babel-result-hide-spec org-babel-hide-all-hashes
      org-modern-mode))
- '(org-trello-current-prefix-keybinding "C-c o")
- '(org-trello-files '("~/.trello.org"))
  '(package-archives
    '(("gnu" . "https://elpa.gnu.org/packages/")
      ("melpa" . "https://melpa.org/packages/")
