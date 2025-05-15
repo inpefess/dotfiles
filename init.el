@@ -46,6 +46,7 @@
                          elpy-module-highlight-indentation
                          elpy-module-sane-defaults))
  '(elpy-rpc-virtualenv-path 'current)
+ '(elpy-syntax-check-command "ruff check")
  '(elpy-test-pytest-runner-command '("py.test"))
  '(elpy-test-runner 'elpy-test-pytest-runner)
  '(enable-recursive-minibuffers t)
