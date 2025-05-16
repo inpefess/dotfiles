@@ -183,7 +183,9 @@
       (global-set-key (kbd "C-c c") 'org-capture)))
 (require 'realgud)
 (add-hook 'python-ts-mode-hook 'eglot-ensure)
-(add-hook 'after-save-hook 'eglot-format)
+(add-hook
+ 'before-save-hook
+ (lambda nil (if (executable-find "ruff") (eglot-format-buffer))))
 (exec-path-from-shell-initialize)
 (require 'zone)
 (setq zone-programs [zone-nyan])
