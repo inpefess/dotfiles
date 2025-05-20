@@ -46,7 +46,7 @@
  '(eshell-rc-script "~/.zshenv")
  '(exec-path-from-shell-arguments nil)
  '(exec-path-from-shell-variables
-   '("XDG_CONFIG_HOME" "PATH" "MANPATH" "LC_ALL" "LANG" "PYLINTHOME"
+   '("XDG_CONFIG_HOME" "PATH" "MANPATH" "LC_ALL" "LANG"
      "JUPYTER_CONFIG_DIR" "IPYTHONDIR" "ZDOTDIR" "HISTFILE"
      "HISTSIZE" "HISTFILESIZE" "PYENV_ROOT"))
  '(explicit-shell-file-name "/bin/zsh")
@@ -138,7 +138,6 @@
  '(projectile-mode t nil (projectile))
  '(projectile-project-search-path '("~/projects"))
  '(projectile-use-git-grep t)
- '(python-check-command "pylint")
  '(python-shell-completion-native-enable nil)
  '(pyvenv-exec-shell
    "(if (eq system-type 'darwin) \"/bin/zsh\" \"/usr/bin/zsh\")")
