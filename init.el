@@ -105,38 +105,22 @@
      ("melpa" . "https://melpa.org/packages/")
      ("org" . "https://orgmode.org/elpa/")))
  '(package-selected-packages
-   '(cdlatex consult counsel counsel-projectile dictionary diff-hl
-             disable-mouse docker dockerfile-mode doom-modeline
-             doom-themes ein ellama elpher exec-path-from-shell
-             fireplace forge helpful hungry-delete isortify ivy-rich
-             lsp-ivy lsp-java lsp-metals lsp-ui magit markdown-mode
-             move-text nyan-mode org-modern projectile protobuf-mode
-             python-coverage realgud rustic smartparens
-             terraform-mode vertico which-key ws-butler xclip
-             yaml-mode zone-nyan))
+   '(auto-virtualenv cdlatex consult counsel counsel-projectile
+                     dictionary diff-hl disable-mouse docker
+                     dockerfile-mode doom-modeline doom-themes ein
+                     ellama elpher exec-path-from-shell fireplace
+                     forge helpful hungry-delete isortify ivy-rich
+                     lsp-ivy lsp-java lsp-metals lsp-ui magit
+                     markdown-mode move-text nyan-mode org-modern
+                     projectile protobuf-mode python-coverage realgud
+                     rustic smartparens terraform-mode vertico
+                     which-key ws-butler xclip yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
- '(projectile-after-switch-project-hook
-   '((lambda nil
-       (progn
-         (setq venv-folder (f-join (projectile-project-root) ".venv"))
-         (if (file-directory-p venv-folder)
-             (progn
-               (pyvenv-activate venv-folder)
-               (setenv "PYTHONPATH" (projectile-project-root))
-               (setq python-shell-interpreter
-                     (f-join venv-folder "bin" "python"))))))))
- '(projectile-before-switch-project-hook
-   '((lambda nil
-       (progn
-         (pyvenv-deactivate) (setenv "PYTHONPATH" nil)
-         (setq python-shell-interpreter "python")))))
  '(projectile-completion-system 'ivy)
  '(projectile-mode t nil (projectile))
  '(projectile-project-search-path '("~/projects"))
  '(projectile-use-git-grep t)
  '(python-shell-completion-native-enable nil)
- '(pyvenv-exec-shell
-   "(if (eq system-type 'darwin) \"/bin/zsh\" \"/usr/bin/zsh\")")
  '(realgud:pdb-command-name "python -m pdb")
  '(ring-bell-function 'ignore)
  '(safe-local-variable-values '((projectile-project-run-cmd . "./local-build.sh")))
@@ -207,3 +191,5 @@
 (projectile-reset-known-projects)
 (use-package ellama
   :bind ("C-c e" . ellama-transient-main-menu))
+(require 'auto-virtualenv)
+(auto-virtualenv-setup)
