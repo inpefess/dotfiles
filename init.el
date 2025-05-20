@@ -52,9 +52,6 @@
  '(explicit-shell-file-name "/bin/zsh")
  '(fill-column 69)
  '(fireplace-sound-on t)
- '(flycheck-languagetool-language "en-GB")
- '(flycheck-languagetool-server-jar
-   (f-join (getenv "OPTDIR") "LanguageTool-6.2/languagetool-server.jar"))
  '(global-company-mode t)
  '(global-diff-hl-mode t)
  '(global-hungry-delete-mode t)
@@ -70,7 +67,7 @@
  '(ivy-rich-mode t)
  '(java-mode-hook '(lsp))
  '(keyboard-coding-system 'utf-8-emacs)
- '(lsp-after-initialize-hook '(lsp-enable-which-key-integration) t)
+ '(lsp-after-initialize-hook '(lsp-enable-which-key-integration))
  '(lsp-java-format-comments-enabled nil)
  '(lsp-java-format-settings-profile "GoogleStyle")
  '(lsp-java-format-settings-url
@@ -108,16 +105,15 @@
      ("melpa" . "https://melpa.org/packages/")
      ("org" . "https://orgmode.org/elpa/")))
  '(package-selected-packages
-   '(cdlatex consult consult-flycheck counsel counsel-projectile
-             dictionary diff-hl disable-mouse docker dockerfile-mode
-             doom-modeline doom-themes ein ellama elpher
-             exec-path-from-shell fireplace flycheck
-             flycheck-languagetool forge helpful hungry-delete
-             isortify ivy-rich lsp-ivy lsp-java lsp-metals lsp-ui
-             magit markdown-mode move-text nyan-mode org-modern
-             projectile protobuf-mode python-coverage realgud rustic
-             smartparens terraform-mode vertico which-key ws-butler
-             xclip yaml-mode zone-nyan))
+   '(cdlatex consult counsel counsel-projectile dictionary diff-hl
+             disable-mouse docker dockerfile-mode doom-modeline
+             doom-themes ein ellama elpher exec-path-from-shell
+             fireplace forge helpful hungry-delete isortify ivy-rich
+             lsp-ivy lsp-java lsp-metals lsp-ui magit markdown-mode
+             move-text nyan-mode org-modern projectile protobuf-mode
+             python-coverage realgud rustic smartparens
+             terraform-mode vertico which-key ws-butler xclip
+             yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
  '(projectile-after-switch-project-hook
    '((lambda nil
@@ -192,7 +188,6 @@
 (require 'move-text)
 (move-text-default-bindings)
 (appt-activate)
-(flycheck-languagetool-setup)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -202,14 +197,12 @@
 (load-theme 'doom-acario-dark)
 (setq egp-pinentry-mode 'loopback)
 (require 'python-coverage)
-(flycheck-add-next-checker 'python-mypy 'python-coverage)
 (use-package consult
   :bind (
          ("C-c i" . consult-info)
          ([remap Info-search] . consult-info)
          ("C-x b" . consult-buffer)           ;; orig. switch-to-buffer
          ("M-y" . consult-yank-pop)           ;; orig. yank-pop
-         ("M-g f" . consult-flycheck)
          ("M-g M-g" . consult-goto-line)))    ;; orig. goto-line
 (projectile-reset-known-projects)
 (use-package ellama
