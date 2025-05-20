@@ -67,7 +67,7 @@
  '(ivy-rich-mode t)
  '(java-mode-hook '(lsp))
  '(keyboard-coding-system 'utf-8-emacs)
- '(lsp-after-initialize-hook '(lsp-enable-which-key-integration))
+ '(lsp-after-initialize-hook '(lsp-enable-which-key-integration) t)
  '(lsp-java-format-comments-enabled nil)
  '(lsp-java-format-settings-profile "GoogleStyle")
  '(lsp-java-format-settings-url
@@ -116,6 +116,7 @@
                      rustic smartparens terraform-mode vertico
                      which-key ws-butler xclip yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
+ '(prog-mode-hook '(flyspell-mode))
  '(projectile-completion-system 'ivy)
  '(projectile-mode t nil (projectile))
  '(projectile-project-search-path '("~/projects"))
