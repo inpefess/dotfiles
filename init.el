@@ -105,7 +105,7 @@
      ("melpa" . "https://melpa.org/packages/")
      ("org" . "https://orgmode.org/elpa/")))
  '(package-selected-packages
-   '(auto-virtualenv cdlatex consult counsel counsel-projectile
+   '(auto-virtualenv cdlatex company consult counsel counsel-projectile
                      dictionary diff-hl disable-mouse docker
                      dockerfile-mode doom-modeline doom-themes ein
                      ellama elpher exec-path-from-shell fireplace
