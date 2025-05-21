@@ -194,3 +194,4 @@
   :bind ("C-c e" . ellama-transient-main-menu))
 (require 'auto-virtualenv)
 (auto-virtualenv-setup)
+(global-set-key (kbd "C-:") 'avy-goto-char-timer)
