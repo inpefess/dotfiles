@@ -54,6 +54,7 @@
  '(fireplace-sound-on t)
  '(global-company-mode t)
  '(global-diff-hl-mode t)
+ '(global-flycheck-mode t)
  '(global-hungry-delete-mode t)
  '(global-subword-mode t)
  '(global-visual-line-mode t)
@@ -109,13 +110,13 @@
                      dictionary diff-hl disable-mouse docker
                      dockerfile-mode doom-modeline doom-themes ein
                      ellama elpher exec-path-from-shell fireplace
-                     forge helpful hungry-delete isortify ivy-rich
-                     lsp-ivy lsp-java lsp-metals lsp-ui magit
-                     markdown-mode move-text nyan-mode org-modern
-                     projectile protobuf-mode python-coverage realgud
-                     rustic smartparens terraform-mode vertico
-                     which-key writeroom-mode ws-butler xclip
-                     yaml-mode zone-nyan))
+                     flycheck forge helpful hungry-delete isortify
+                     ivy-rich lsp-ivy lsp-java lsp-metals lsp-ui
+                     magit markdown-mode move-text nyan-mode
+                     org-modern projectile protobuf-mode
+                     python-coverage realgud rustic smartparens
+                     terraform-mode vertico which-key writeroom-mode
+                     ws-butler xclip yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
  '(prog-mode-hook '(flyspell-mode))
  '(projectile-completion-system 'ivy)
@@ -194,3 +195,4 @@
 (require 'auto-virtualenv)
 (auto-virtualenv-setup)
 (global-set-key (kbd "C-:") 'avy-goto-char-timer)
+(flycheck-add-next-checker 'python-ruff 'python-pyright)
