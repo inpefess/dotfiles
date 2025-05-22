@@ -20,8 +20,7 @@
  '(counsel-mode t)
  '(counsel-projectile-mode t nil (counsel-projectile))
  '(custom-safe-themes
-   '("dccf4a8f1aaf5f24d2ab63af1aa75fd9d535c83377f8e26380162e888be0c6a9"
-     "2dd4951e967990396142ec54d376cced3f135810b2b69920e77103e0bcedfba9"
+   '("7de64ff2bb2f94d7679a7e9019e23c3bf1a6a04ba54341c36e7cf2d2e56e2bcc"
      default))
  '(default-frame-alist '((fullscreen . maximized)))
  '(diary-number-of-entries 7)
