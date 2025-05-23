@@ -109,13 +109,13 @@
                      dictionary diff-hl disable-mouse docker
                      dockerfile-mode doom-modeline doom-themes ein
                      ellama elpher exec-path-from-shell fireplace
-                     flycheck forge helpful hungry-delete isortify
-                     ivy-rich lsp-ivy lsp-java lsp-metals lsp-ui
-                     magit markdown-mode move-text nyan-mode
-                     org-modern projectile protobuf-mode
-                     python-coverage realgud rustic smartparens
-                     terraform-mode vertico which-key writeroom-mode
-                     ws-butler xclip yaml-mode zone-nyan))
+                     flycheck forge helpful hungry-delete ivy-rich
+                     lsp-ivy lsp-java lsp-metals lsp-ui magit
+                     markdown-mode move-text nyan-mode org-modern
+                     projectile protobuf-mode python-coverage realgud
+                     rustic smartparens terraform-mode vertico
+                     which-key writeroom-mode ws-butler xclip
+                     yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
  '(prog-mode-hook '(flyspell-mode))
  '(projectile-completion-system 'ivy)
