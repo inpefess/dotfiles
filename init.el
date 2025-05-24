@@ -108,6 +108,7 @@
              zone-nyan))
  '(proced-auto-update-flag t)
  '(prog-mode-hook '(flyspell-mode))
+ '(project-switch-commands 'project-find-file)
  '(python-shell-completion-native-enable nil)
  '(realgud:pdb-command-name "python -m pdb")
  '(ring-bell-function 'ignore)
