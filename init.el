@@ -97,17 +97,15 @@
      ("melpa" . "https://melpa.org/packages/")
      ("org" . "https://orgmode.org/elpa/")))
  '(package-selected-packages
-   '(auto-virtualenv cdlatex company consult dictionary diff-hl
-                     disable-mouse docker dockerfile-mode
-                     doom-modeline doom-themes ein ellama elpher
-                     exec-path-from-shell fireplace flycheck forge
-                     helpful hungry-delete lsp-java lsp-metals lsp-ui
-                     magit marginalia markdown-mode move-text
-                     nerd-icons-completion nov nyan-mode org-modern
-                     protobuf-mode python-coverage realgud rustic
-                     smartparens terraform-mode vertico which-key
-                     writeroom-mode ws-butler xclip yaml-mode
-                     zone-nyan))
+   '(cdlatex company consult dictionary diff-hl disable-mouse docker
+             dockerfile-mode doom-modeline doom-themes ein ellama
+             elpher exec-path-from-shell fireplace flycheck forge
+             helpful hungry-delete lsp-java lsp-metals lsp-ui magit
+             marginalia markdown-mode move-text nerd-icons-completion
+             nov nyan-mode org-modern protobuf-mode python-coverage
+             realgud rustic smartparens terraform-mode vertico
+             which-key writeroom-mode ws-butler xclip yaml-mode
+             zone-nyan))
  '(proced-auto-update-flag t)
  '(prog-mode-hook '(flyspell-mode))
  '(python-shell-completion-native-enable nil)
@@ -171,12 +169,10 @@
          ([remap Info-search] . consult-info)
          ("C-x b" . consult-buffer)           ;; orig. switch-to-buffer
          ("M-y" . consult-yank-pop)           ;; orig. yank-pop
-         ("M-g M-g" . consult-goto-line))     ;; orig. goto-line
-         ("M-s r" . consult-ripgrep))
+         ("M-g M-g" . consult-goto-line)      ;; orig. goto-line
+         ("M-s r" . consult-ripgrep)))
 (use-package ellama
   :bind ("C-c e" . ellama-transient-main-menu))
-(require 'auto-virtualenv)
-(auto-virtualenv-setup)
 (global-set-key (kbd "C-:") 'avy-goto-char-timer)
 (flycheck-add-next-checker 'python-ruff 'python-pyright)
 (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
