@@ -56,7 +56,6 @@
  '(global-writeroom-mode t nil (writeroom-mode))
  '(gnus-inhibit-startup-message t)
  '(gnus-select-method '(nnml ""))
- '(ignored-local-variable-values '((projectile-project-run-cmd . "./local-build.sh")))
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(java-mode-hook '(lsp))
@@ -105,19 +104,15 @@
                      helpful hungry-delete lsp-java lsp-metals lsp-ui
                      magit marginalia markdown-mode move-text
                      nerd-icons-completion nov nyan-mode org-modern
-                     projectile protobuf-mode python-coverage realgud
-                     rustic smartparens terraform-mode vertico
-                     which-key writeroom-mode ws-butler xclip
-                     yaml-mode zone-nyan))
+                     protobuf-mode python-coverage realgud rustic
+                     smartparens terraform-mode vertico which-key
+                     writeroom-mode ws-butler xclip yaml-mode
+                     zone-nyan))
  '(proced-auto-update-flag t)
  '(prog-mode-hook '(flyspell-mode))
- '(projectile-mode t nil (projectile))
- '(projectile-project-search-path '("~/projects"))
- '(projectile-use-git-grep t)
  '(python-shell-completion-native-enable nil)
  '(realgud:pdb-command-name "python -m pdb")
  '(ring-bell-function 'ignore)
- '(safe-local-variable-values '((projectile-project-run-cmd . "./local-build.sh")))
  '(save-place-mode t)
  '(send-mail-function 'smtpmail-send-it)
  '(sentence-end-double-space nil)
@@ -139,14 +134,12 @@
 (package-install-selected-packages)
 (if (eq system-type 'darwin)
     (progn
-      (define-key projectile-mode-map (kbd "H-p") 'projectile-command-map)
       (global-set-key (kbd "H-g") 'magit-status)
       (global-set-key (kbd "H-d") 'docker)
       (global-set-key (kbd "H-l") 'dictionary-lookup-definition)
       (global-set-key (kbd "H-a") 'org-agenda)
       (global-set-key (kbd "H-c") 'org-capture))
   (progn
-      (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
       (global-set-key (kbd "C-c d") 'docker)
       (global-set-key (kbd "C-c l") 'dictionary-lookup-definition)
       (global-set-key (kbd "C-c a") 'org-agenda)
@@ -179,7 +172,6 @@
          ("C-x b" . consult-buffer)           ;; orig. switch-to-buffer
          ("M-y" . consult-yank-pop)           ;; orig. yank-pop
          ("M-g M-g" . consult-goto-line)))    ;; orig. goto-line
-(projectile-reset-known-projects)
 (use-package ellama
   :bind ("C-c e" . ellama-transient-main-menu))
 (require 'auto-virtualenv)
