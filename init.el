@@ -111,11 +111,11 @@
                      ellama elpher exec-path-from-shell fireplace
                      flycheck forge helpful hungry-delete ivy-rich
                      lsp-ivy lsp-java lsp-metals lsp-ui magit
-                     markdown-mode move-text nov nyan-mode org-modern
-                     projectile protobuf-mode python-coverage realgud
-                     rustic smartparens terraform-mode vertico
-                     which-key writeroom-mode ws-butler xclip
-                     yaml-mode zone-nyan))
+                     marginalia markdown-mode move-text nov nyan-mode
+                     org-modern projectile protobuf-mode
+                     python-coverage realgud rustic smartparens
+                     terraform-mode vertico which-key writeroom-mode
+                     ws-butler xclip yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
  '(prog-mode-hook '(flyspell-mode))
  '(projectile-completion-system 'ivy)
@@ -197,3 +197,18 @@
 (global-set-key (kbd "C-:") 'avy-goto-char-timer)
 (flycheck-add-next-checker 'python-ruff 'python-pyright)
 (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
+;; Enable rich annotations using the Marginalia package
+(use-package marginalia
+  ;; Bind `marginalia-cycle' locally in the minibuffer.  To make the binding
+  ;; available in the *Completions* buffer, add it to the
+  ;; `completion-list-mode-map'.
+  :bind (:map minibuffer-local-map
+         ("M-A" . marginalia-cycle))
+
+  ;; The :init section is always executed.
+  :init
+
+  ;; Marginalia must be activated in the :init section of use-package such that
+  ;; the mode gets enabled right away. Note that this forces loading the
+  ;; package.
+  (marginalia-mode))
