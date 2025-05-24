@@ -15,9 +15,6 @@
  '(calendar-view-diary-initially-flag t)
  '(calendar-week-start-day 1)
  '(column-number-mode t)
- '(counsel-describe-function-function 'helpful-callable)
- '(counsel-describe-variable-function 'helpful-variable)
- '(counsel-mode t)
  '(custom-safe-themes
    '("7de64ff2bb2f94d7679a7e9019e23c3bf1a6a04ba54341c36e7cf2d2e56e2bcc"
      default))
@@ -104,7 +101,7 @@
      ("melpa" . "https://melpa.org/packages/")
      ("org" . "https://orgmode.org/elpa/")))
  '(package-selected-packages
-   '(auto-virtualenv cdlatex company consult counsel dictionary diff-hl
+   '(auto-virtualenv cdlatex company consult dictionary diff-hl
                      disable-mouse docker dockerfile-mode
                      doom-modeline doom-themes ein ellama elpher
                      exec-path-from-shell fireplace flycheck forge
