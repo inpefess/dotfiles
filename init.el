@@ -111,7 +111,7 @@
                      ellama elpher exec-path-from-shell fireplace
                      flycheck forge helpful hungry-delete ivy-rich
                      lsp-ivy lsp-java lsp-metals lsp-ui magit
-                     markdown-mode move-text nyan-mode org-modern
+                     markdown-mode move-text nov nyan-mode org-modern
                      projectile protobuf-mode python-coverage realgud
                      rustic smartparens terraform-mode vertico
                      which-key writeroom-mode ws-butler xclip
@@ -195,3 +195,4 @@
 (auto-virtualenv-setup)
 (global-set-key (kbd "C-:") 'avy-goto-char-timer)
 (flycheck-add-next-checker 'python-ruff 'python-pyright)
+(add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
