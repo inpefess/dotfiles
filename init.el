@@ -171,7 +171,8 @@
          ([remap Info-search] . consult-info)
          ("C-x b" . consult-buffer)           ;; orig. switch-to-buffer
          ("M-y" . consult-yank-pop)           ;; orig. yank-pop
-         ("M-g M-g" . consult-goto-line)))    ;; orig. goto-line
+         ("M-g M-g" . consult-goto-line))     ;; orig. goto-line
+         ("M-s r" . consult-ripgrep))
 (use-package ellama
   :bind ("C-c e" . ellama-transient-main-menu))
 (require 'auto-virtualenv)
