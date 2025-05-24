@@ -111,11 +111,12 @@
                      ellama elpher exec-path-from-shell fireplace
                      flycheck forge helpful hungry-delete ivy-rich
                      lsp-ivy lsp-java lsp-metals lsp-ui magit
-                     marginalia markdown-mode move-text nov nyan-mode
-                     org-modern projectile protobuf-mode
-                     python-coverage realgud rustic smartparens
-                     terraform-mode vertico which-key writeroom-mode
-                     ws-butler xclip yaml-mode zone-nyan))
+                     marginalia markdown-mode move-text
+                     nerd-icons-completion nov nyan-mode org-modern
+                     projectile protobuf-mode python-coverage realgud
+                     rustic smartparens terraform-mode vertico
+                     which-key writeroom-mode ws-butler xclip
+                     yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
  '(prog-mode-hook '(flyspell-mode))
  '(projectile-completion-system 'ivy)
@@ -212,3 +213,8 @@
   ;; the mode gets enabled right away. Note that this forces loading the
   ;; package.
   (marginalia-mode))
+(use-package nerd-icons-completion
+  :after marginalia
+  :config
+  (nerd-icons-completion-mode)
+  (add-hook 'marginalia-mode-hook #'nerd-icons-completion-marginalia-setup))
