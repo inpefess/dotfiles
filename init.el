@@ -15,6 +15,10 @@
  '(calendar-view-diary-initially-flag t)
  '(calendar-week-start-day 1)
  '(column-number-mode t)
+ '(counsel-describe-function-function 'helpful-callable)
+ '(counsel-describe-variable-function 'helpful-variable)
+ '(counsel-mode t)
+ '(counsel-projectile-mode t nil (counsel-projectile))
  '(custom-safe-themes
    '("7de64ff2bb2f94d7679a7e9019e23c3bf1a6a04ba54341c36e7cf2d2e56e2bcc"
      default))
@@ -59,9 +63,6 @@
  '(ignored-local-variable-values '((projectile-project-run-cmd . "./local-build.sh")))
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
- '(ivy-initial-inputs-alist nil)
- '(ivy-mode t)
- '(ivy-rich-mode t)
  '(java-mode-hook '(lsp))
  '(keyboard-coding-system 'utf-8-emacs)
  '(lsp-after-initialize-hook '(lsp-enable-which-key-integration) t)
@@ -105,16 +106,15 @@
                      disable-mouse docker dockerfile-mode
                      doom-modeline doom-themes ein ellama elpher
                      exec-path-from-shell fireplace flycheck forge
-                     helpful hungry-delete ivy-rich lsp-ivy lsp-java
-                     lsp-metals lsp-ui magit marginalia markdown-mode
-                     move-text nerd-icons-completion nov nyan-mode
-                     org-modern projectile protobuf-mode
-                     python-coverage realgud rustic smartparens
-                     terraform-mode vertico which-key writeroom-mode
-                     ws-butler xclip yaml-mode zone-nyan))
+                     helpful hungry-delete lsp-java lsp-metals lsp-ui
+                     magit marginalia markdown-mode move-text
+                     nerd-icons-completion nov nyan-mode org-modern
+                     projectile protobuf-mode python-coverage realgud
+                     rustic smartparens terraform-mode vertico
+                     which-key writeroom-mode ws-butler xclip
+                     yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
  '(prog-mode-hook '(flyspell-mode))
- '(projectile-completion-system 'ivy)
  '(projectile-mode t nil (projectile))
  '(projectile-project-search-path '("~/projects"))
  '(projectile-use-git-grep t)
@@ -146,14 +146,12 @@
       (define-key projectile-mode-map (kbd "H-p") 'projectile-command-map)
       (global-set-key (kbd "H-g") 'magit-status)
       (global-set-key (kbd "H-d") 'docker)
-      (global-set-key (kbd "H-s") 'swiper)
       (global-set-key (kbd "H-l") 'dictionary-lookup-definition)
       (global-set-key (kbd "H-a") 'org-agenda)
       (global-set-key (kbd "H-c") 'org-capture))
   (progn
       (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
       (global-set-key (kbd "C-c d") 'docker)
-      (global-set-key (kbd "C-s") 'swiper)
       (global-set-key (kbd "C-c l") 'dictionary-lookup-definition)
       (global-set-key (kbd "C-c a") 'org-agenda)
       (global-set-key (kbd "C-c c") 'org-capture)))
