@@ -124,7 +124,8 @@
  '(which-key-idle-delay 2.0)
  '(which-key-mode t)
  '(writeroom-major-modes
-   '(prog-mode text-mode special-mode term-mode org-agenda-mode))
+   '(Custom-mode prog-mode text-mode special-mode term-mode
+                 org-agenda-mode))
  '(ws-butler-global-mode t)
  '(xclip-mode t)
  '(xclip-select-enable-clipboard nil)
