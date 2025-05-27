@@ -103,9 +103,9 @@
              elpher exec-path-from-shell fireplace flycheck forge
              helpful hungry-delete lsp-java lsp-metals lsp-ui magit
              markdown-mode move-text nov nyan-mode org-modern
-             protobuf-mode python-coverage realgud rustic smartparens
-             terraform-mode which-key writeroom-mode ws-butler xclip
-             yaml-mode zone-nyan))
+             protobuf-mode realgud rustic smartparens terraform-mode
+             which-key writeroom-mode ws-butler xclip yaml-mode
+             zone-nyan))
  '(proced-auto-update-flag t)
  '(prog-mode-hook '(flyspell-mode))
  '(project-switch-commands 'project-find-file)
@@ -165,7 +165,6 @@
  )
 (load-theme 'doom-acario-dark)
 (setq egp-pinentry-mode 'loopback)
-(require 'python-coverage)
 (use-package ellama
   :bind ("C-c e" . ellama-transient-main-menu))
 (global-set-key (kbd "C-:") 'avy-goto-char-timer)
