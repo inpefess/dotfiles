@@ -171,11 +171,21 @@
 (global-set-key (kbd "C-h F") #'helpful-function)
 (require 'f)
 (defun activate-virtualenv(dir)
-  (setq venv-bin-dir (f-join dir ".venv" "bin"))
-  (if (f-directory-p venv-bin-dir)
-      (progn
-        (push venv-bin-dir exec-path)
-        (setenv "PATH" (concat venv-bin-dir ":" (getenv "PATH"))))))
+  "Activate Python virtual environment.
+If it exists in `.venv` sub-directory of DIR."
+  (if (project-current)
+      (let ((old-venv-bin-dir
+             (f-join (project-root (project-current)) ".venv" "bin")))
+        (when (f-directory-p old-venv-bin-dir)
+          (let ((paths (split-string (getenv "PATH") ":")))
+            (when (string-equal old-venv-bin-dir (car paths))
+              (pop paths)
+              (setenv "PATH" (mapconcat #'identity paths ":"))
+              (exec-path-from-shell-initialize))))))
+  (let ((venv-bin-dir (f-join dir ".venv" "bin")))
+    (when (f-directory-p venv-bin-dir)
+      (setenv "PATH" (concat venv-bin-dir ":" (getenv "PATH")))
+      (exec-path-from-shell-initialize))))
 (advice-add 'project-switch-project :before #'activate-virtualenv)
 (provide 'init)
 ;;; init.el ends here
