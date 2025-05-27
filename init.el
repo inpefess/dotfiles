@@ -23,8 +23,6 @@
  '(dictionary-server "localhost")
  '(disable-mouse-global-mode t nil (disable-mouse))
  '(doc-view-resolution 200)
- '(doom-modeline-height 10)
- '(doom-modeline-mode t)
  '(ediff-highlight-all-diffs nil)
  '(ediff-split-window-function 'split-window-vertically)
  '(ediff-window-setup-function 'ediff-setup-windows-plain)
@@ -97,9 +95,9 @@
      ("org" . "https://orgmode.org/elpa/")))
  '(package-selected-packages
    '(cdlatex company dictionary diff-hl disable-mouse docker
-             dockerfile-mode doom-modeline doom-themes eglot ellama
-             elpher exec-path-from-shell fireplace flycheck forge
-             helpful hungry-delete lsp-java lsp-metals lsp-ui magit
+             dockerfile-mode doom-themes eglot ellama elpher
+             exec-path-from-shell fireplace flycheck forge helpful
+             hungry-delete lsp-java lsp-metals lsp-ui magit
              markdown-mode move-text nov nyan-mode org-modern
              protobuf-mode realgud rustic smartparens terraform-mode
              which-key writeroom-mode ws-butler xclip yaml-mode
@@ -174,6 +172,7 @@
 (global-set-key (kbd "C-h x") #'helpful-command)
 (global-set-key (kbd "C-c C-d") #'helpful-at-point)
 (global-set-key (kbd "C-h F") #'helpful-function)
+(require 'f)
 (defun activate-virtualenv(dir)
   (setq venv-bin-dir (f-join dir ".venv" "bin"))
   (if (f-directory-p venv-bin-dir)
