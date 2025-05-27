@@ -28,8 +28,6 @@
  '(ediff-highlight-all-diffs nil)
  '(ediff-split-window-function 'split-window-vertically)
  '(ediff-window-setup-function 'ediff-setup-windows-plain)
- '(ein:completion-backend 'ein:use-company-backend)
- '(ein:notebook-modes '(ein:notebook-python-mode))
  '(enable-recursive-minibuffers t)
  '(erc-join-buffer 'window-noselect)
  '(erc-minibuffer-notice t)
@@ -99,7 +97,7 @@
      ("org" . "https://orgmode.org/elpa/")))
  '(package-selected-packages
    '(cdlatex company dictionary diff-hl disable-mouse docker
-             dockerfile-mode doom-modeline doom-themes ein ellama
+             dockerfile-mode doom-modeline doom-themes eglot ellama
              elpher exec-path-from-shell fireplace flycheck forge
              helpful hungry-delete lsp-java lsp-metals lsp-ui magit
              markdown-mode move-text nov nyan-mode org-modern
