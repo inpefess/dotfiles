@@ -97,15 +97,14 @@
      ("melpa" . "https://melpa.org/packages/")
      ("org" . "https://orgmode.org/elpa/")))
  '(package-selected-packages
-   '(cdlatex company consult dictionary diff-hl disable-mouse docker
+   '(cdlatex company dictionary diff-hl disable-mouse docker
              dockerfile-mode doom-modeline doom-themes ein ellama
              elpher exec-path-from-shell fireplace flycheck forge
              helpful hungry-delete lsp-java lsp-metals lsp-ui magit
-             marginalia markdown-mode move-text nerd-icons-completion
-             nov nyan-mode org-modern protobuf-mode python-coverage
-             realgud rustic smartparens terraform-mode vertico
-             which-key writeroom-mode ws-butler xclip yaml-mode
-             zone-nyan))
+             markdown-mode move-text nov nyan-mode org-modern
+             protobuf-mode python-coverage realgud rustic smartparens
+             terraform-mode which-key writeroom-mode ws-butler xclip
+             yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
  '(prog-mode-hook '(flyspell-mode))
  '(project-switch-commands 'project-find-file)
@@ -119,7 +118,6 @@
  '(smartparens-global-mode t)
  '(tramp-default-method "ssh")
  '(transient-default-level 6)
- '(vertico-mode t)
  '(which-key-idle-delay 2.0)
  '(which-key-mode t)
  '(writeroom-major-modes
@@ -164,39 +162,11 @@
 (load-theme 'doom-acario-dark)
 (setq egp-pinentry-mode 'loopback)
 (require 'python-coverage)
-(use-package consult
-  :bind (
-         ("C-c i" . consult-info)
-         ([remap Info-search] . consult-info)
-         ("C-x b" . consult-buffer)           ;; orig. switch-to-buffer
-         ("M-y" . consult-yank-pop)           ;; orig. yank-pop
-         ("M-g M-g" . consult-goto-line)      ;; orig. goto-line
-         ("M-s r" . consult-ripgrep)))
 (use-package ellama
   :bind ("C-c e" . ellama-transient-main-menu))
 (global-set-key (kbd "C-:") 'avy-goto-char-timer)
 (flycheck-add-next-checker 'python-ruff 'python-pyright)
 (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
-;; Enable rich annotations using the Marginalia package
-(use-package marginalia
-  ;; Bind `marginalia-cycle' locally in the minibuffer.  To make the binding
-  ;; available in the *Completions* buffer, add it to the
-  ;; `completion-list-mode-map'.
-  :bind (:map minibuffer-local-map
-         ("M-A" . marginalia-cycle))
-
-  ;; The :init section is always executed.
-  :init
-
-  ;; Marginalia must be activated in the :init section of use-package such that
-  ;; the mode gets enabled right away. Note that this forces loading the
-  ;; package.
-  (marginalia-mode))
-(use-package nerd-icons-completion
-  :after marginalia
-  :config
-  (nerd-icons-completion-mode)
-  (add-hook 'marginalia-mode-hook #'nerd-icons-completion-marginalia-setup))
 (global-set-key (kbd "C-h f") #'helpful-callable)
 (global-set-key (kbd "C-h v") #'helpful-variable)
 (global-set-key (kbd "C-h k") #'helpful-key)
