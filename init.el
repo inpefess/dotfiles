@@ -176,3 +176,10 @@
 (global-set-key (kbd "C-h x") #'helpful-command)
 (global-set-key (kbd "C-c C-d") #'helpful-at-point)
 (global-set-key (kbd "C-h F") #'helpful-function)
+(defun activate-virtualenv(dir)
+  (setq venv-bin-dir (f-join dir ".venv" "bin"))
+  (if (f-directory-p venv-bin-dir)
+      (progn
+        (push venv-bin-dir exec-path)
+        (setenv "PATH" (concat venv-bin-dir ":" (getenv "PATH"))))))
+(advice-add 'project-switch-project :before #'activate-virtualenv)
