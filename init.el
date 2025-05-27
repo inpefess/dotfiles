@@ -57,6 +57,7 @@
  '(global-writeroom-mode t nil (writeroom-mode))
  '(gnus-inhibit-startup-message t)
  '(gnus-select-method '(nnml ""))
+ '(icomplete-vertical-mode t)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(java-mode-hook '(lsp))
