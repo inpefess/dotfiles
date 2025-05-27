@@ -1,3 +1,6 @@
+;;; initl.el --- my Emacs config -*- lexical-binding: t; -*-
+;;; Commentary:
+;;; Code:
 (package-initialize)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -153,12 +156,6 @@
 (require 'move-text)
 (move-text-default-bindings)
 (appt-activate)
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 (load-theme 'doom-acario-dark)
 (setq egp-pinentry-mode 'loopback)
 (use-package ellama
@@ -180,3 +177,5 @@
         (push venv-bin-dir exec-path)
         (setenv "PATH" (concat venv-bin-dir ":" (getenv "PATH"))))))
 (advice-add 'project-switch-project :before #'activate-virtualenv)
+(provide 'init)
+;;; init.el ends here
