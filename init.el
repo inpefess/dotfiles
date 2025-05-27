@@ -15,6 +15,7 @@
  '(calendar-view-diary-initially-flag t)
  '(calendar-week-start-day 1)
  '(column-number-mode t)
+ '(completion-styles '(flex basic partial-completion emacs22))
  '(custom-safe-themes
    '("7de64ff2bb2f94d7679a7e9019e23c3bf1a6a04ba54341c36e7cf2d2e56e2bcc"
      default))
@@ -109,6 +110,8 @@
  '(prog-mode-hook '(flyspell-mode))
  '(project-switch-commands 'project-find-file)
  '(python-shell-completion-native-enable nil)
+ '(read-buffer-completion-ignore-case t)
+ '(read-file-name-completion-ignore-case t)
  '(realgud:pdb-command-name "python -m pdb")
  '(ring-bell-function 'ignore)
  '(save-place-mode t)
