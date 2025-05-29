@@ -121,6 +121,11 @@
  '(transient-default-level 6)
  '(which-key-idle-delay 2.0)
  '(which-key-mode t)
+ '(writeroom-global-effects
+   '(writeroom-set-fullscreen writeroom-set-alpha
+                              writeroom-set-menu-bar-lines
+                              writeroom-set-tool-bar-lines
+                              writeroom-set-vertical-scroll-bars))
  '(writeroom-major-modes
    '(Custom-mode prog-mode text-mode special-mode term-mode
                  org-agenda-mode))
