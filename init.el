@@ -66,10 +66,6 @@
  '(magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1)
  '(major-mode-remap-alist '((python-mode . python-ts-mode)))
  '(minibuffer-depth-indicate-mode t)
- '(nyan-animate-nyancat t)
- '(nyan-bar-length 10)
- '(nyan-mode t)
- '(nyan-wavy-trail t)
  '(org-agenda-files (list org-default-notes-file))
  '(org-capture-templates
    '(("t" "Task" entry (file+headline org-default-notes-file "Inbox")
@@ -98,10 +94,9 @@
              dockerfile-mode doom-themes eglot ellama elpher
              exec-path-from-shell fireplace flycheck forge helpful
              hungry-delete lsp-java lsp-metals lsp-ui magit
-             markdown-mode move-text nov nyan-mode org-modern
-             protobuf-mode realgud rustic smartparens terraform-mode
-             which-key writeroom-mode ws-butler xclip yaml-mode
-             zone-nyan))
+             markdown-mode move-text nov org-modern protobuf-mode
+             realgud rustic smartparens terraform-mode which-key
+             writeroom-mode ws-butler xclip yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
  '(prog-mode-hook '(flyspell-mode))
  '(project-switch-commands 'project-find-file)
