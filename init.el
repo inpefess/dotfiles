@@ -9,6 +9,7 @@
  ;; If there is more than one, they won't work right.
  '(TeX-engine 'xetex)
  '(auth-source-save-behavior nil)
+ '(auth-sources '("~/.authinfo.gpg"))
  '(browse-url-browser-function 'eww-browse-url)
  '(c++-mode-hook '(lsp))
  '(c-basic-offset 2)
