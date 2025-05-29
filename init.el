@@ -146,7 +146,6 @@
 (move-text-default-bindings)
 (appt-activate)
 (load-theme 'doom-acario-dark)
-(setq egp-pinentry-mode 'loopback)
 (use-package ellama
   :bind ("C-c e" . ellama-transient-main-menu))
 (global-set-key (kbd "C-:") 'avy-goto-char-timer)
