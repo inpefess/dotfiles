@@ -37,13 +37,11 @@
               move-to-prompt netsplit networks noncommands readonly
               stamp spelling))
  '(erc-server "localhost")
- '(eshell-rc-script "~/.zshenv")
  '(exec-path-from-shell-arguments nil)
  '(exec-path-from-shell-variables
    '("XDG_CONFIG_HOME" "PATH" "MANPATH" "LC_ALL" "LANG"
      "JUPYTER_CONFIG_DIR" "IPYTHONDIR" "ZDOTDIR" "HISTFILE"
      "HISTSIZE" "HISTFILESIZE" "PYENV_ROOT"))
- '(explicit-shell-file-name "/bin/zsh")
  '(fill-column 69)
  '(fireplace-sound-on t)
  '(global-company-mode t)
