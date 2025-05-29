@@ -22,7 +22,6 @@
  '(custom-safe-themes
    '("7de64ff2bb2f94d7679a7e9019e23c3bf1a6a04ba54341c36e7cf2d2e56e2bcc"
      default))
- '(default-frame-alist '((fullscreen . maximized)))
  '(diary-number-of-entries 7)
  '(dictionary-server "localhost")
  '(disable-mouse-global-mode t nil (disable-mouse))
