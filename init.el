@@ -68,7 +68,6 @@
  '(magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1)
  '(major-mode-remap-alist '((python-mode . python-ts-mode)))
  '(minibuffer-depth-indicate-mode t)
- '(ns-function-modifier 'hyper)
  '(nyan-animate-nyancat t)
  '(nyan-bar-length 10)
  '(nyan-mode t)
@@ -132,18 +131,10 @@
 (unless package-archive-contents
   (package-refresh-contents))
 (package-install-selected-packages)
-(if (eq system-type 'darwin)
-    (progn
-      (global-set-key (kbd "H-g") 'magit-status)
-      (global-set-key (kbd "H-d") 'docker)
-      (global-set-key (kbd "H-l") 'dictionary-lookup-definition)
-      (global-set-key (kbd "H-a") 'org-agenda)
-      (global-set-key (kbd "H-c") 'org-capture))
-  (progn
-      (global-set-key (kbd "C-c d") 'docker)
-      (global-set-key (kbd "C-c l") 'dictionary-lookup-definition)
-      (global-set-key (kbd "C-c a") 'org-agenda)
-      (global-set-key (kbd "C-c c") 'org-capture)))
+(global-set-key (kbd "C-c d") 'docker)
+(global-set-key (kbd "C-c l") 'dictionary-lookup-definition)
+(global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c c") 'org-capture)
 (require 'realgud)
 (add-hook 'python-ts-mode-hook 'eglot-ensure)
 (add-hook
