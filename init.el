@@ -69,6 +69,7 @@
    '(:foreground default :background default :scale 3.0 :html-foreground
                  "Black" :html-background "Transparent" :html-scale
                  1.0 :matchers ("begin" "$1" "$" "$$" "\\(" "\\[")))
+ '(org-journal-dir "~/projects/my-journal")
  '(org-mode-hook
    '(#[0 "\300\301\302\303\304$\207"
          [add-hook change-major-mode-hook org-fold-show-all append
@@ -89,9 +90,9 @@
              dockerfile-mode doom-themes eglot ellama elpher
              fireplace flycheck forge helpful hungry-delete lsp-java
              lsp-metals lsp-ui magit markdown-mode move-text nov
-             org-modern protobuf-mode realgud rustic smartparens
-             terraform-mode which-key writeroom-mode ws-butler xclip
-             yaml-mode zone-nyan))
+             org-journal org-modern protobuf-mode realgud rustic
+             smartparens terraform-mode which-key writeroom-mode
+             ws-butler xclip yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
  '(prog-mode-hook '(flyspell-mode))
  '(project-switch-commands 'project-find-file)
@@ -170,5 +171,6 @@ If it exists in `.venv` sub-directory of DIR."
       (push venv-bin-dir exec-path)
       (setenv "PATH" (concat venv-bin-dir ":" (getenv "PATH"))))))
 (advice-add 'project-switch-project :before #'activate-virtualenv)
+(require 'org-journal)
 (provide 'init)
 ;;; init.el ends here
