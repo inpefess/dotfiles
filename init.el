@@ -37,11 +37,6 @@
               move-to-prompt netsplit networks noncommands readonly
               stamp spelling))
  '(erc-server "localhost")
- '(exec-path-from-shell-arguments nil)
- '(exec-path-from-shell-variables
-   '("XDG_CONFIG_HOME" "PATH" "MANPATH" "LC_ALL" "LANG"
-     "JUPYTER_CONFIG_DIR" "IPYTHONDIR" "ZDOTDIR" "HISTFILE"
-     "HISTSIZE" "HISTFILESIZE" "PYENV_ROOT"))
  '(fill-column 69)
  '(fireplace-sound-on t)
  '(global-company-mode t)
@@ -92,11 +87,11 @@
  '(package-selected-packages
    '(cdlatex company dictionary diff-hl disable-mouse docker
              dockerfile-mode doom-themes eglot ellama elpher
-             exec-path-from-shell fireplace flycheck forge helpful
-             hungry-delete lsp-java lsp-metals lsp-ui magit
-             markdown-mode move-text nov org-modern protobuf-mode
-             realgud rustic smartparens terraform-mode which-key
-             writeroom-mode ws-butler xclip yaml-mode zone-nyan))
+             fireplace flycheck forge helpful hungry-delete lsp-java
+             lsp-metals lsp-ui magit markdown-mode move-text nov
+             org-modern protobuf-mode realgud rustic smartparens
+             terraform-mode which-key writeroom-mode ws-butler xclip
+             yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
  '(prog-mode-hook '(flyspell-mode))
  '(project-switch-commands 'project-find-file)
@@ -138,7 +133,6 @@
 (add-hook
  'before-save-hook
  (lambda nil (if (executable-find "ruff") (eglot-format-buffer))))
-(exec-path-from-shell-initialize)
 (require 'zone)
 (setq zone-programs [zone-nyan])
 (zone-when-idle 300)
