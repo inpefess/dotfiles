@@ -22,6 +22,8 @@
  '(custom-safe-themes
    '("7de64ff2bb2f94d7679a7e9019e23c3bf1a6a04ba54341c36e7cf2d2e56e2bcc"
      default))
+ '(dap-mode t nil (dap-mode))
+ '(dap-python-debugger 'debugpy)
  '(diary-number-of-entries 7)
  '(dictionary-server "localhost")
  '(disable-mouse-global-mode t nil (disable-mouse))
@@ -178,5 +180,8 @@ If it exists in `.venv` sub-directory of DIR."
       (setenv "PATH" (concat venv-bin-dir ":" (getenv "PATH"))))))
 (advice-add 'project-switch-project :before #'activate-virtualenv)
 (require 'org-journal)
+(add-hook 'dap-stopped-hook
+          (lambda (arg) (call-interactively #'dap-hydra)))
+(require 'dap-python)
 (provide 'init)
 ;;; init.el ends here
