@@ -92,16 +92,15 @@
              dockerfile-mode doom-themes eglot ellama elpher
              fireplace flycheck forge helpful hungry-delete lsp-java
              lsp-metals lsp-ui magit markdown-mode move-text nov
-             org-journal org-modern protobuf-mode realgud rustic
-             smartparens terraform-mode which-key writeroom-mode
-             ws-butler xclip yaml-mode zone-nyan))
+             org-journal org-modern protobuf-mode rustic smartparens
+             terraform-mode which-key writeroom-mode ws-butler xclip
+             yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
  '(prog-mode-hook '(flyspell-mode))
  '(project-switch-commands 'project-find-file)
  '(python-shell-completion-native-enable nil)
  '(read-buffer-completion-ignore-case t)
  '(read-file-name-completion-ignore-case t)
- '(realgud:pdb-command-name "python -m pdb")
  '(ring-bell-function 'ignore)
  '(save-place-mode t)
  '(send-mail-function 'smtpmail-send-it)
@@ -137,7 +136,6 @@
 (global-set-key (kbd "C-c l") 'dictionary-lookup-definition)
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c c") 'org-capture)
-(require 'realgud)
 (add-hook 'python-ts-mode-hook 'eglot-ensure)
 (add-hook
  'before-save-hook
