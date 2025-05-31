@@ -93,7 +93,7 @@
              dockerfile-mode doom-themes eglot ellama elpher
              fireplace flycheck forge helpful hungry-delete lsp-java
              lsp-metals lsp-ui magit markdown-mode move-text nov
-             org-journal org-modern org-super-agenda ox-pandoc
+             org-journal org-modern org-super-agenda ox-pandoc ox-rst
              protobuf-mode rustic smartparens terraform-mode
              which-key writeroom-mode ws-butler xclip yaml-mode
              zone-nyan))
@@ -184,5 +184,6 @@ If it exists in `.venv` sub-directory of DIR."
           (lambda (arg) (call-interactively #'dap-hydra)))
 (require 'dap-python)
 (require 'ox-pandoc)
+(require 'ox-rst)
 (provide 'init)
 ;;; init.el ends here
