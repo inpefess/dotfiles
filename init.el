@@ -83,6 +83,7 @@
          5]
      org-babel-result-hide-spec org-babel-hide-all-hashes
      org-modern-mode))
+ '(org-super-agenda-mode t)
  '(package-archives
    '(("gnu" . "https://elpa.gnu.org/packages/")
      ("melpa" . "https://melpa.org/packages/")
@@ -92,9 +93,9 @@
              dockerfile-mode doom-themes eglot ellama elpher
              fireplace flycheck forge helpful hungry-delete lsp-java
              lsp-metals lsp-ui magit markdown-mode move-text nov
-             org-journal org-modern protobuf-mode rustic smartparens
-             terraform-mode which-key writeroom-mode ws-butler xclip
-             yaml-mode zone-nyan))
+             org-journal org-modern org-super-agenda protobuf-mode
+             rustic smartparens terraform-mode which-key
+             writeroom-mode ws-butler xclip yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
  '(prog-mode-hook '(flyspell-mode))
  '(project-switch-commands 'project-find-file)
