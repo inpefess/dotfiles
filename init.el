@@ -93,9 +93,10 @@
              dockerfile-mode doom-themes eglot ellama elpher
              fireplace flycheck forge helpful hungry-delete lsp-java
              lsp-metals lsp-ui magit markdown-mode move-text nov
-             org-journal org-modern org-super-agenda protobuf-mode
-             rustic smartparens terraform-mode which-key
-             writeroom-mode ws-butler xclip yaml-mode zone-nyan))
+             org-journal org-modern org-super-agenda ox-pandoc
+             protobuf-mode rustic smartparens terraform-mode
+             which-key writeroom-mode ws-butler xclip yaml-mode
+             zone-nyan))
  '(proced-auto-update-flag t)
  '(prog-mode-hook '(flyspell-mode))
  '(project-switch-commands 'project-find-file)
@@ -182,5 +183,6 @@ If it exists in `.venv` sub-directory of DIR."
 (add-hook 'dap-stopped-hook
           (lambda (arg) (call-interactively #'dap-hydra)))
 (require 'dap-python)
+(require 'ox-pandoc)
 (provide 'init)
 ;;; init.el ends here
