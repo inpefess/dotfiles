@@ -64,9 +64,11 @@
  '(major-mode-remap-alist '((python-mode . python-ts-mode)))
  '(minibuffer-depth-indicate-mode t)
  '(org-agenda-files (list org-default-notes-file))
+ '(org-babel-load-languages '((emacs-lisp . t) (python . t)))
  '(org-capture-templates
    '(("t" "Task" entry (file+headline org-default-notes-file "Inbox")
       "** TODO %? [/]\12   :CAPTURED: %U\12")))
+ '(org-confirm-babel-evaluate nil)
  '(org-format-latex-options
    '(:foreground default :background default :scale 3.0 :html-foreground
                  "Black" :html-background "Transparent" :html-scale
@@ -185,5 +187,9 @@ If it exists in `.venv` sub-directory of DIR."
 (require 'dap-python)
 (require 'ox-pandoc)
 (require 'ox-rst)
+(setq org-babel-default-header-args:python
+      `((:session . "*Python*")
+        (:exports . "both")
+        (:results . "output")))
 (provide 'init)
 ;;; init.el ends here
