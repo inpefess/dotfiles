@@ -190,6 +190,8 @@ If it exists in `.venv` sub-directory of DIR."
 (setq org-babel-default-header-args:python
       `((:session . "*Python*")
         (:exports . "both")
-        (:results . "output")))
+        (:results . "output")
+        (:tangle . "yes")
+        (:padline . "no")))
 (provide 'init)
 ;;; init.el ends here
