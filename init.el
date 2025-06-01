@@ -22,6 +22,7 @@
  '(custom-safe-themes
    '("7de64ff2bb2f94d7679a7e9019e23c3bf1a6a04ba54341c36e7cf2d2e56e2bcc"
      default))
+ '(dap-auto-configure-mode t)
  '(dap-mode t nil (dap-mode))
  '(dap-python-debugger 'debugpy)
  '(diary-number-of-entries 7)
@@ -55,7 +56,7 @@
  '(inhibit-startup-screen t)
  '(java-mode-hook '(lsp))
  '(keyboard-coding-system 'utf-8-emacs)
- '(lsp-after-initialize-hook '(lsp-enable-which-key-integration) t)
+ '(lsp-after-initialize-hook '(lsp-enable-which-key-integration))
  '(lsp-java-format-comments-enabled nil)
  '(lsp-java-format-settings-profile "GoogleStyle")
  '(lsp-java-format-settings-url
@@ -121,8 +122,8 @@
                               writeroom-set-tool-bar-lines
                               writeroom-set-vertical-scroll-bars))
  '(writeroom-major-modes
-   '(Custom-mode prog-mode text-mode special-mode term-mode
-                 org-agenda-mode))
+   '(Custom-mode prog-mode text-mode term-mode org-agenda-mode
+                 magit-mode))
  '(ws-butler-global-mode t)
  '(xclip-mode t)
  '(xclip-select-enable-clipboard nil)
