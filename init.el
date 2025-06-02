@@ -11,9 +11,7 @@
  '(auth-source-save-behavior nil)
  '(auth-sources '("~/.authinfo.gpg"))
  '(browse-url-browser-function 'eww-browse-url)
- '(c++-mode-hook '(lsp))
  '(c-basic-offset 2)
- '(c-mode-hook '(lsp))
  '(calendar-date-style 'iso)
  '(calendar-mark-diary-entries-flag t)
  '(calendar-view-diary-initially-flag t)
@@ -22,9 +20,6 @@
  '(custom-safe-themes
    '("7de64ff2bb2f94d7679a7e9019e23c3bf1a6a04ba54341c36e7cf2d2e56e2bcc"
      default))
- '(dap-auto-configure-mode t)
- '(dap-mode t nil (dap-mode))
- '(dap-python-debugger 'debugpy)
  '(diary-number-of-entries 7)
  '(dictionary-server "localhost")
  '(disable-mouse-global-mode t nil (disable-mouse))
@@ -54,13 +49,7 @@
  '(icomplete-vertical-mode t)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
- '(java-mode-hook '(lsp))
  '(keyboard-coding-system 'utf-8-emacs)
- '(lsp-after-initialize-hook '(lsp-enable-which-key-integration))
- '(lsp-java-format-comments-enabled nil)
- '(lsp-java-format-settings-profile "GoogleStyle")
- '(lsp-java-format-settings-url
-   "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml")
  '(magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1)
  '(major-mode-remap-alist '((python-mode . python-ts-mode)))
  '(minibuffer-depth-indicate-mode t)
@@ -94,12 +83,11 @@
  '(package-selected-packages
    '(cdlatex company dictionary diff-hl disable-mouse docker
              dockerfile-mode doom-themes eglot ellama elpher
-             fireplace flycheck forge helpful hungry-delete lsp-java
-             lsp-metals lsp-ui magit markdown-mode move-text nov
-             org-journal org-modern org-super-agenda ox-pandoc ox-rst
-             protobuf-mode rustic smartparens terraform-mode
-             which-key writeroom-mode ws-butler xclip yaml-mode
-             zone-nyan))
+             fireplace flycheck forge helpful hungry-delete magit
+             markdown-mode move-text nov org-journal org-modern
+             org-super-agenda ox-pandoc ox-rst protobuf-mode rustic
+             smartparens terraform-mode which-key writeroom-mode
+             ws-butler xclip yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
  '(prog-mode-hook '(flyspell-mode))
  '(project-switch-commands 'project-find-file)
@@ -123,7 +111,7 @@
                               writeroom-set-vertical-scroll-bars))
  '(writeroom-major-modes
    '(Custom-mode prog-mode text-mode term-mode org-agenda-mode
-                 magit-mode))
+                 special-mode))
  '(ws-butler-global-mode t)
  '(xclip-mode t)
  '(xclip-select-enable-clipboard nil)
@@ -183,9 +171,6 @@ If it exists in `.venv` sub-directory of DIR."
       (setenv "PATH" (concat venv-bin-dir ":" (getenv "PATH"))))))
 (advice-add 'project-switch-project :before #'activate-virtualenv)
 (require 'org-journal)
-(add-hook 'dap-stopped-hook
-          (lambda (arg) (call-interactively #'dap-hydra)))
-(require 'dap-python)
 (require 'ox-pandoc)
 (require 'ox-rst)
 (setq org-babel-default-header-args:python
