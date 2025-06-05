@@ -126,32 +126,40 @@
 (unless package-archive-contents
   (package-refresh-contents))
 (package-install-selected-packages)
-(global-set-key (kbd "C-c d") 'docker)
-(global-set-key (kbd "C-c l") 'dictionary-lookup-definition)
-(global-set-key (kbd "C-c a") 'org-agenda)
-(global-set-key (kbd "C-c c") 'org-capture)
+(use-package docker
+  :bind ("C-c d" . docker))
+(use-package dictionary
+  :bind ("C-c l" . dictionary-lookup-definition))
+(use-package org-agenda
+  :bind ("C-c a" . org-agenda))
+(use-package org-capture
+  :bind ("C-c c" . org-capture))
 (add-hook 'python-ts-mode-hook 'eglot-ensure)
 (add-hook
  'before-save-hook
  (lambda nil (if (executable-find "ruff") (eglot-format-buffer))))
-(require 'zone)
-(setq zone-programs [zone-nyan])
-(zone-when-idle 300)
-(require 'move-text)
-(move-text-default-bindings)
-(appt-activate)
+(use-package zone
+  :init (setq zone-programs [zone-nyan])
+  :config (zone-when-idle 300))
+(use-package move-text
+  :config (move-text-default-bindings))
+(use-package appt
+  :config (appt-activate))
 (load-theme 'doom-acario-dark)
 (use-package ellama
   :bind ("C-c e" . ellama-transient-main-menu))
-(global-set-key (kbd "C-:") 'avy-goto-char-timer)
-(flycheck-add-next-checker 'python-ruff 'python-pyright)
+(use-package avy
+  :bind ("C-:" . avy-goto-char-timer))
+(use-package flycheck
+  :config (flycheck-add-next-checker 'python-ruff 'python-pyright))
 (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
-(global-set-key (kbd "C-h f") #'helpful-callable)
-(global-set-key (kbd "C-h v") #'helpful-variable)
-(global-set-key (kbd "C-h k") #'helpful-key)
-(global-set-key (kbd "C-h x") #'helpful-command)
-(global-set-key (kbd "C-c C-d") #'helpful-at-point)
-(global-set-key (kbd "C-h F") #'helpful-function)
+(use-package helpful
+  :bind (("C-h f" . helpful-callable)
+         ("C-h v" . helpful-variable)
+         ("C-h k" . helpful-key)
+         ("C-h x" . helpful-command)
+         ("C-c C-d" . helpful-at-point)
+         ("C-h F" . helpful-function)))
 (require 'f)
 (defun activate-virtualenv(dir)
   "Activate Python virtual environment.
@@ -171,9 +179,9 @@ If it exists in `.venv` sub-directory of DIR."
       (push venv-bin-dir exec-path)
       (setenv "PATH" (concat venv-bin-dir ":" (getenv "PATH"))))))
 (advice-add 'project-switch-project :before #'activate-virtualenv)
-(require 'org-journal)
-(require 'ox-pandoc)
-(require 'ox-rst)
+(use-package org-journal)
+(use-package ox-pandoc)
+(use-package ox-rst)
 (setq org-babel-default-header-args:python
       `((:session . "*Python*")
         (:exports . "both")
