@@ -81,7 +81,7 @@
      ("melpa" . "https://melpa.org/packages/")
      ("org" . "https://orgmode.org/elpa/")))
  '(package-selected-packages
-   '(cdlatex company dictionary diff-hl disable-mouse docker
+   '(cdlatex company dape dictionary diff-hl disable-mouse docker
              dockerfile-mode doom-themes eglot ellama elpher
              fireplace flycheck forge helpful hungry-delete magit
              markdown-mode move-text nov org-journal org-modern
@@ -94,6 +94,7 @@
  '(python-shell-completion-native-enable nil)
  '(read-buffer-completion-ignore-case t)
  '(read-file-name-completion-ignore-case t)
+ '(repeat-mode t)
  '(ring-bell-function 'ignore)
  '(save-place-mode t)
  '(send-mail-function 'smtpmail-send-it)
