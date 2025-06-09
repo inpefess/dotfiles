@@ -36,8 +36,6 @@ export PATH=$ISABELLE_HOME/bin:$PATH
 export PATH=/usr/local/texlive/2021/bin/x86_64-linux:$PATH
 export MANPATH=/usr/local/texlive/2021/texmf/doc/man:$MANPATH
 export INFOPATH=/usr/local/texlive/2021/texmf/doc/info:$INFOPATH
-# Gradle
-export PATH=$PATH:/opt/gradle/gradle-8.1.1/bin
 # VPN
 export PATH=/opt/cisco/anyconnect/bin:$PATH
 # Go
