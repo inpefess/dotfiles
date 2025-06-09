@@ -32,9 +32,5 @@ export PATH=$PYENV_ROOT/bin:$PATH
 export ISABELLE_HOME_USER=$XDG_CONFIG_HOME/isabelle
 export ISABELLE_HOME=$OPTDIR/Isabelle
 export PATH=$ISABELLE_HOME/bin:$PATH
-# TeX
-export PATH=/usr/local/texlive/2021/bin/x86_64-linux:$PATH
-export MANPATH=/usr/local/texlive/2021/texmf/doc/man:$MANPATH
-export INFOPATH=/usr/local/texlive/2021/texmf/doc/info:$INFOPATH
 # for poetry
 export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
