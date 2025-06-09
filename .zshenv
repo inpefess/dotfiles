@@ -32,8 +32,6 @@ export PATH=$PYENV_ROOT/bin:$PATH
 export ISABELLE_HOME_USER=$XDG_CONFIG_HOME/isabelle
 export ISABELLE_HOME=$OPTDIR/Isabelle
 export PATH=$ISABELLE_HOME/bin:$PATH
-# GNU Parallel
-export PARALLEL_HOME=$XDG_CONFIG_HOME/parallel
 # TeX
 export PATH=/usr/local/texlive/2021/bin/x86_64-linux:$PATH
 export MANPATH=/usr/local/texlive/2021/texmf/doc/man:$MANPATH
