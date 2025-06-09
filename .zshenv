@@ -36,8 +36,6 @@ export PATH=$ISABELLE_HOME/bin:$PATH
 export PATH=/usr/local/texlive/2021/bin/x86_64-linux:$PATH
 export MANPATH=/usr/local/texlive/2021/texmf/doc/man:$MANPATH
 export INFOPATH=/usr/local/texlive/2021/texmf/doc/info:$INFOPATH
-# VPN
-export PATH=/opt/cisco/anyconnect/bin:$PATH
 # Go
 export PATH=$HOME/go/bin:$PATH
 # for poetry
