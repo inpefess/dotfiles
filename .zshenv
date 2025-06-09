@@ -36,8 +36,6 @@ export PATH=$ISABELLE_HOME/bin:$PATH
 export PATH=/usr/local/texlive/2021/bin/x86_64-linux:$PATH
 export MANPATH=/usr/local/texlive/2021/texmf/doc/man:$MANPATH
 export INFOPATH=/usr/local/texlive/2021/texmf/doc/info:$INFOPATH
-# Coq
-test -r $HOME/.opam/opam-init/init.sh && . $HOME/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 # Gradle
 export PATH=$PATH:/opt/gradle/gradle-8.1.1/bin
 # VPN
