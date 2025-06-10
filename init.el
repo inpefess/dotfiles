@@ -187,6 +187,7 @@ If it exists in `.venv` sub-directory of DIR."
         (:exports . "both")
         (:results . "output")
         (:tangle . "yes")
-        (:padline . "no")))
+        (:padline . "no")
+        (:comments . "org")))
 (provide 'init)
 ;;; init.el ends here
