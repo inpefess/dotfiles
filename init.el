@@ -89,7 +89,7 @@
              smartparens terraform-mode which-key writeroom-mode
              ws-butler xclip yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
- '(prog-mode-hook '(flyspell-mode))
+ '(prog-mode-hook '(flyspell-mode format-all-mode))
  '(project-switch-commands 'project-find-file)
  '(python-shell-completion-native-enable nil)
  '(read-buffer-completion-ignore-case t)
@@ -135,9 +135,6 @@
 (use-package org-capture
   :bind ("C-c c" . org-capture))
 (add-hook 'python-ts-mode-hook 'eglot-ensure)
-(add-hook
- 'before-save-hook
- (lambda nil (if (executable-find "ruff") (eglot-format-buffer))))
 (use-package zone
   :init (setq zone-programs [zone-nyan])
   :config (zone-when-idle 300))
@@ -189,5 +186,9 @@ If it exists in `.venv` sub-directory of DIR."
         (:tangle . "yes")
         (:padline . "no")
         (:comments . "org")))
+(use-package format-all
+  :config
+  (setq-default format-all-formatters
+                '(("Python" (ruff "format")))))
 (provide 'init)
 ;;; init.el ends here
