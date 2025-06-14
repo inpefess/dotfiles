@@ -81,13 +81,12 @@
      ("melpa" . "https://melpa.org/packages/")
      ("org" . "https://orgmode.org/elpa/")))
  '(package-selected-packages
-   '(cdlatex company dape dictionary diff-hl disable-mouse docker
-             dockerfile-mode doom-themes eglot ellama elpher
-             fireplace flycheck forge helpful hungry-delete magit
-             markdown-mode move-text nov org-journal org-modern
-             org-super-agenda ox-pandoc ox-rst protobuf-mode rustic
-             smartparens terraform-mode which-key writeroom-mode
-             ws-butler xclip yaml-mode zone-nyan))
+   '(cdlatex company dape diff-hl disable-mouse docker dockerfile-mode
+             doom-themes ellama elpher fireplace flycheck forge
+             helpful hungry-delete magit markdown-mode move-text nov
+             org-journal org-modern org-super-agenda ox-pandoc ox-rst
+             protobuf-mode rustic smartparens terraform-mode
+             writeroom-mode ws-butler xclip yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
  '(prog-mode-hook '(flyspell-mode format-all-mode))
  '(project-switch-commands 'project-find-file)
