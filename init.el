@@ -103,6 +103,9 @@
  '(smartparens-global-mode t)
  '(tramp-default-method "ssh")
  '(transient-default-level 6)
+ '(use-package-always-defer t)
+ '(use-package-always-ensure t)
+ '(use-package-check-before-init t)
  '(which-key-idle-delay 2.0)
  '(which-key-mode t)
  '(writeroom-global-effects
