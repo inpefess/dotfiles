@@ -115,8 +115,7 @@
                  special-mode))
  '(ws-butler-global-mode t)
  '(xclip-mode t)
- '(xclip-select-enable-clipboard nil)
- '(yas-global-mode t))
+ '(xclip-select-enable-clipboard nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
