@@ -22,7 +22,7 @@
      default))
  '(diary-number-of-entries 7)
  '(dictionary-server "localhost")
- '(disable-mouse-global-mode t nil (disable-mouse))
+ '(disable-mouse-global-mode t)
  '(doc-view-resolution 200)
  '(ediff-highlight-all-diffs nil)
  '(ediff-split-window-function 'split-window-vertically)
@@ -43,7 +43,7 @@
  '(global-hungry-delete-mode t)
  '(global-subword-mode t)
  '(global-visual-line-mode t)
- '(global-writeroom-mode t nil (writeroom-mode))
+ '(global-writeroom-mode t)
  '(gnus-inhibit-startup-message t)
  '(gnus-select-method '(nnml ""))
  '(icomplete-vertical-mode t)
@@ -83,12 +83,13 @@
  '(package-selected-packages
    '(cdlatex company dape diff-hl disable-mouse docker dockerfile-mode
              doom-themes ellama elpher fireplace flycheck forge
-             helpful hungry-delete magit markdown-mode move-text nov
-             org-journal org-modern org-super-agenda ox-pandoc ox-rst
-             protobuf-mode rustic smartparens terraform-mode
-             writeroom-mode ws-butler xclip yaml-mode zone-nyan))
+             format-all helpful hungry-delete magit markdown-mode
+             move-text nov org-journal org-modern org-super-agenda
+             ox-pandoc ox-rst protobuf-mode rustic smartparens
+             terraform-mode writeroom-mode ws-butler xclip yaml-mode
+             zone-nyan))
  '(proced-auto-update-flag t)
- '(prog-mode-hook '(flyspell-mode format-all-mode))
+ '(prog-mode-hook '(flyspell-mode))
  '(project-switch-commands 'project-find-file)
  '(python-shell-completion-native-enable nil)
  '(read-buffer-completion-ignore-case t)
@@ -102,9 +103,6 @@
  '(smartparens-global-mode t)
  '(tramp-default-method "ssh")
  '(transient-default-level 6)
- '(use-package-always-defer t)
- '(use-package-always-ensure t)
- '(use-package-check-before-init t)
  '(which-key-idle-delay 2.0)
  '(which-key-mode t)
  '(writeroom-global-effects
@@ -189,6 +187,8 @@ If it exists in `.venv` sub-directory of DIR."
         (:padline . "no")
         (:comments . "org")))
 (use-package format-all
+  :commands format-all-mode
+  :hook (prog-mode . format-all-mode)
   :config
   (setq-default format-all-formatters
                 '(("Python" (ruff "format")))))
