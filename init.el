@@ -133,7 +133,8 @@
   :bind ("C-c a" . org-agenda))
 (use-package org-capture
   :bind ("C-c c" . org-capture))
-(add-hook 'python-ts-mode-hook 'eglot-ensure)
+(use-package eglot
+  :hook (python-ts-mode-hook . eglot-ensure))
 (use-package zone
   :init (setq zone-programs [zone-nyan])
   :config (zone-when-idle 300))
@@ -141,14 +142,16 @@
   :config (move-text-default-bindings))
 (use-package appt
   :config (appt-activate))
-(load-theme 'doom-acario-dark)
+(use-package doom-themes
+  :config (load-theme 'doom-acario-dark))
 (use-package ellama
   :bind ("C-c e" . ellama-transient-main-menu))
 (use-package avy
   :bind ("C-:" . avy-goto-char-timer))
 (use-package flycheck
   :config (flycheck-add-next-checker 'python-ruff 'python-pyright))
-(add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
+(use-package nov
+  :config (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
 (use-package helpful
   :bind (("C-h f" . helpful-callable)
          ("C-h v" . helpful-variable)
@@ -156,7 +159,7 @@
          ("C-h x" . helpful-command)
          ("C-c C-d" . helpful-at-point)
          ("C-h F" . helpful-function)))
-(require 'f)
+(use-package f)
 (defun activate-virtualenv(dir)
   "Activate Python virtual environment.
 If it exists in `.venv` sub-directory of DIR."
@@ -178,13 +181,15 @@ If it exists in `.venv` sub-directory of DIR."
 (use-package org-journal)
 (use-package ox-pandoc)
 (use-package ox-rst)
-(setq org-babel-default-header-args:python
-      `((:session . "*Python*")
-        (:exports . "both")
-        (:results . "output")
-        (:tangle . "yes")
-        (:padline . "no")
-        (:comments . "org")))
+(use-package org-babel
+  :init
+  (setq org-babel-default-header-args:python
+        `((:session . "*Python*")
+          (:exports . "both")
+          (:results . "output")
+          (:tangle . "yes")
+          (:padline . "no")
+          (:comments . "org"))))
 (use-package format-all
   :commands format-all-mode
   :hook (prog-mode . format-all-mode)
