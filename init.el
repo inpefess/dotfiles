@@ -183,7 +183,7 @@ If it exists in `.venv` sub-directory of DIR."
 (use-package org-journal)
 (use-package ox-pandoc)
 (use-package ox-rst)
-(use-package org-babel
+(use-package org
   :init
   (setq org-babel-default-header-args:python
         `((:session . "*Python*")
