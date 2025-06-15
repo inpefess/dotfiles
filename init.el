@@ -53,6 +53,8 @@
  '(magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1)
  '(major-mode-remap-alist '((python-mode . python-ts-mode)))
  '(minibuffer-depth-indicate-mode t)
+ '(nerd-icons-completion-mode t)
+ '(nerd-icons-font-family "Inconsolate LGC Nerd Font")
  '(org-agenda-files (list org-default-notes-file))
  '(org-babel-load-languages '((emacs-lisp . t) (python . t)))
  '(org-capture-templates
@@ -84,9 +86,10 @@
    '(avy company dape diff-hl disable-mouse docker dockerfile-mode
          doom-themes ellama elpher fireplace flycheck forge
          format-all helpful hungry-delete magit markdown-mode
-         move-text nov org-journal org-modern org-super-agenda
-         ox-pandoc ox-rst protobuf-mode smartparens terraform-mode
-         writeroom-mode ws-butler xclip yaml-mode zone-nyan))
+         move-text nerd-icons-completion nov org-journal org-modern
+         org-super-agenda ox-pandoc ox-rst protobuf-mode smartparens
+         terraform-mode writeroom-mode ws-butler xclip yaml-mode
+         zone-nyan))
  '(proced-auto-update-flag t)
  '(prog-mode-hook '(flyspell-mode))
  '(project-switch-commands 'project-find-file)
