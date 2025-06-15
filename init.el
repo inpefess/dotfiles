@@ -22,7 +22,7 @@
      default))
  '(diary-number-of-entries 7)
  '(dictionary-server "localhost")
- '(disable-mouse-global-mode t)
+ '(disable-mouse-global-mode t nil (disable-mouse))
  '(doc-view-resolution 200)
  '(ediff-highlight-all-diffs nil)
  '(ediff-split-window-function 'split-window-vertically)
@@ -43,7 +43,7 @@
  '(global-hungry-delete-mode t)
  '(global-subword-mode t)
  '(global-visual-line-mode t)
- '(global-writeroom-mode t)
+ '(global-writeroom-mode t nil (writeroom-mode))
  '(gnus-inhibit-startup-message t)
  '(gnus-select-method '(nnml ""))
  '(icomplete-vertical-mode t)
@@ -81,13 +81,12 @@
      ("melpa" . "https://melpa.org/packages/")
      ("org" . "https://orgmode.org/elpa/")))
  '(package-selected-packages
-   '(avy cdlatex company dape diff-hl disable-mouse docker
-         dockerfile-mode doom-themes ellama elpher fireplace flycheck
-         forge format-all helpful hungry-delete magit markdown-mode
+   '(avy company dape diff-hl disable-mouse docker dockerfile-mode
+         doom-themes ellama elpher fireplace flycheck forge
+         format-all helpful hungry-delete magit markdown-mode
          move-text nov org-journal org-modern org-super-agenda
-         ox-pandoc ox-rst protobuf-mode rustic smartparens
-         terraform-mode writeroom-mode ws-butler xclip yaml-mode
-         zone-nyan))
+         ox-pandoc ox-rst protobuf-mode smartparens terraform-mode
+         writeroom-mode ws-butler xclip yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
  '(prog-mode-hook '(flyspell-mode))
  '(project-switch-commands 'project-find-file)
