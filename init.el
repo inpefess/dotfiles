@@ -87,10 +87,10 @@
    '(avy company dape diff-hl disable-mouse docker dockerfile-mode
          doom-themes ellama elpher fireplace flycheck forge
          format-all helpful hungry-delete magit marginalia
-         markdown-mode move-text nerd-icons-completion nov
-         org-journal org-modern org-super-agenda ox-pandoc ox-rst
-         protobuf-mode smartparens terraform-mode writeroom-mode
-         ws-butler xclip yaml-mode zone-nyan))
+         markdown-mode move-text nerd-icons-completion
+         nerd-icons-dired nov org-journal org-modern org-super-agenda
+         ox-pandoc ox-rst protobuf-mode smartparens terraform-mode
+         writeroom-mode ws-butler xclip yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
  '(prog-mode-hook '(flyspell-mode))
  '(project-switch-commands 'project-find-file)
@@ -207,5 +207,8 @@ If it exists in `.venv` sub-directory of DIR."
   :config
   (nerd-icons-completion-mode)
   (add-hook 'marginalia-mode-hook #'nerd-icons-completion-marginalia-setup))
+(use-package nerd-icons-dired
+  :hook
+  (dired-mode . nerd-icons-dired-mode))
 (provide 'init)
 ;;; init.el ends here
