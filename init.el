@@ -52,6 +52,7 @@
  '(keyboard-coding-system 'utf-8-emacs)
  '(magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1)
  '(major-mode-remap-alist '((python-mode . python-ts-mode)))
+ '(marginalia-mode t)
  '(minibuffer-depth-indicate-mode t)
  '(nerd-icons-completion-mode t)
  '(nerd-icons-font-family "Inconsolate LGC Nerd Font")
@@ -85,11 +86,11 @@
  '(package-selected-packages
    '(avy company dape diff-hl disable-mouse docker dockerfile-mode
          doom-themes ellama elpher fireplace flycheck forge
-         format-all helpful hungry-delete magit markdown-mode
-         move-text nerd-icons-completion nov org-journal org-modern
-         org-super-agenda ox-pandoc ox-rst protobuf-mode smartparens
-         terraform-mode writeroom-mode ws-butler xclip yaml-mode
-         zone-nyan))
+         format-all helpful hungry-delete magit marginalia
+         markdown-mode move-text nerd-icons-completion nov
+         org-journal org-modern org-super-agenda ox-pandoc ox-rst
+         protobuf-mode smartparens terraform-mode writeroom-mode
+         ws-butler xclip yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
  '(prog-mode-hook '(flyspell-mode))
  '(project-switch-commands 'project-find-file)
@@ -198,5 +199,13 @@ If it exists in `.venv` sub-directory of DIR."
   :config
   (setq-default format-all-formatters
                 '(("Python" (ruff "format")))))
+(use-package marginalia
+  :bind (:map minibuffer-local-map
+              ("M-A" . marginalia-cycle)))
+(use-package nerd-icons-completion
+  :after marginalia
+  :config
+  (nerd-icons-completion-mode)
+  (add-hook 'marginalia-mode-hook #'nerd-icons-completion-marginalia-setup))
 (provide 'init)
 ;;; init.el ends here
