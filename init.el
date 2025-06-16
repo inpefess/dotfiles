@@ -47,6 +47,7 @@
  '(gnus-inhibit-startup-message t)
  '(gnus-select-method '(nnml ""))
  '(icomplete-vertical-mode t)
+ '(indent-bars-treesit-support t)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(keyboard-coding-system 'utf-8-emacs)
@@ -86,8 +87,8 @@
  '(package-selected-packages
    '(avy company dape diff-hl disable-mouse docker dockerfile-mode
          doom-themes ellama elpher fireplace flycheck forge
-         format-all helpful hungry-delete magit marginalia
-         markdown-mode move-text nerd-icons-completion
+         format-all helpful hungry-delete indent-bars magit
+         marginalia markdown-mode move-text nerd-icons-completion
          nerd-icons-dired nov org-journal org-modern org-super-agenda
          ox-pandoc ox-rst protobuf-mode smartparens terraform-mode
          writeroom-mode ws-butler xclip yaml-mode zone-nyan))
@@ -210,5 +211,7 @@ If it exists in `.venv` sub-directory of DIR."
 (use-package nerd-icons-dired
   :hook
   (dired-mode . nerd-icons-dired-mode))
+(use-package indent-bars
+  :hook ((python-base-mode) . indent-bars-mode))
 (provide 'init)
 ;;; init.el ends here
