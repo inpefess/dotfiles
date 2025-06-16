@@ -85,9 +85,9 @@
      ("melpa" . "https://melpa.org/packages/")
      ("org" . "https://orgmode.org/elpa/")))
  '(package-selected-packages
-   '(avy company dape diff-hl disable-mouse docker dockerfile-mode
-         doom-themes ellama elpher fireplace flycheck forge
-         format-all helpful hungry-delete indent-bars magit
+   '(avy company dape diff-hl disable-mouse disk-usage docker
+         dockerfile-mode doom-themes ellama elpher fireplace flycheck
+         forge format-all helpful hungry-delete indent-bars magit
          marginalia markdown-mode move-text nerd-icons-completion
          nerd-icons-dired nov org-journal org-modern org-super-agenda
          ox-pandoc ox-rst protobuf-mode smartparens terraform-mode
