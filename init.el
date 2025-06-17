@@ -95,9 +95,9 @@
                            markdown-mode move-text
                            nerd-icons-completion nerd-icons-dired nov
                            org-journal org-modern org-super-agenda
-                           ox-pandoc ox-rst protobuf-mode smartparens
-                           terraform-mode writeroom-mode ws-butler
-                           xclip yaml-mode zone-nyan))
+                           ox-pandoc ox-rst phi-search protobuf-mode
+                           smartparens terraform-mode writeroom-mode
+                           ws-butler xclip yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
  '(prog-mode-hook '(flyspell-mode))
  '(project-switch-commands 'project-find-file)
@@ -219,5 +219,8 @@ If it exists in `.venv` sub-directory of DIR."
   (dired-mode . nerd-icons-dired-mode))
 (use-package indent-bars
   :hook ((python-base-mode) . indent-bars-mode))
+(use-package phi-search
+  :bind (("C-s" . phi-search)
+         ("C-r" . phi-search-backward)))
 (provide 'init)
 ;;; init.el ends here
