@@ -8,6 +8,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(TeX-engine 'xetex)
+ '(aggressive-completion-auto-completion-help nil)
+ '(aggressive-completion-mode t)
  '(auth-source-save-behavior nil)
  '(auth-sources '("~/.authinfo.gpg"))
  '(browse-url-browser-function 'eww-browse-url)
@@ -85,13 +87,17 @@
      ("melpa" . "https://melpa.org/packages/")
      ("org" . "https://orgmode.org/elpa/")))
  '(package-selected-packages
-   '(avy company dape diff-hl disable-mouse disk-usage docker
-         dockerfile-mode doom-themes ellama elpher fireplace flycheck
-         forge format-all helpful hungry-delete indent-bars magit
-         marginalia markdown-mode move-text nerd-icons-completion
-         nerd-icons-dired nov org-journal org-modern org-super-agenda
-         ox-pandoc ox-rst protobuf-mode smartparens terraform-mode
-         writeroom-mode ws-butler xclip yaml-mode zone-nyan))
+   '(aggressive-completion avy company dape diff-hl disable-mouse
+                           disk-usage docker dockerfile-mode
+                           doom-themes ellama elpher fireplace
+                           flycheck forge format-all helpful
+                           hungry-delete indent-bars magit marginalia
+                           markdown-mode move-text
+                           nerd-icons-completion nerd-icons-dired nov
+                           org-journal org-modern org-super-agenda
+                           ox-pandoc ox-rst protobuf-mode smartparens
+                           terraform-mode writeroom-mode ws-butler
+                           xclip yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
  '(prog-mode-hook '(flyspell-mode))
  '(project-switch-commands 'project-find-file)
