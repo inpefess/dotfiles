@@ -211,9 +211,7 @@ If it exists in `.venv` sub-directory of DIR."
               ("M-A" . marginalia-cycle)))
 (use-package nerd-icons-completion
   :after marginalia
-  :config
-  (nerd-icons-completion-mode)
-  (add-hook 'marginalia-mode-hook #'nerd-icons-completion-marginalia-setup))
+  :config (nerd-icons-completion-mode))
 (use-package nerd-icons-dired
   :hook
   (dired-mode . nerd-icons-dired-mode))
