@@ -41,7 +41,6 @@
  '(fireplace-sound-on t)
  '(global-company-mode t)
  '(global-diff-hl-mode t)
- '(global-flycheck-mode t)
  '(global-hungry-delete-mode t)
  '(global-subword-mode t)
  '(global-visual-line-mode t)
@@ -89,13 +88,13 @@
  '(package-selected-packages
    '(aggressive-completion avy company dape diff-hl disable-mouse
                            disk-usage docker dockerfile-mode
-                           doom-themes ellama elpher fireplace
-                           flycheck forge format-all helpful
-                           hungry-delete indent-bars magit marginalia
-                           markdown-mode move-text
-                           nerd-icons-completion nerd-icons-dired nov
-                           org-journal org-modern org-super-agenda
-                           ox-pandoc ox-rst phi-search protobuf-mode
+                           doom-themes ellama elpher fireplace forge
+                           format-all helpful hungry-delete
+                           indent-bars magit marginalia markdown-mode
+                           move-text nerd-icons-completion
+                           nerd-icons-dired nov org-journal
+                           org-modern org-super-agenda ox-pandoc
+                           ox-rst phi-search protobuf-mode
                            smartparens terraform-mode writeroom-mode
                            ws-butler xclip yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
@@ -158,8 +157,6 @@
   :bind ("C-c e" . ellama-transient-main-menu))
 (use-package avy
   :bind ("C-:" . avy-goto-char-timer))
-(use-package flycheck
-  :config (flycheck-add-next-checker 'python-ruff 'python-pyright))
 (use-package nov
   :config (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
 (use-package helpful
