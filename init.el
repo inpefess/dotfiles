@@ -89,13 +89,13 @@
  '(package-selected-packages
    '(aggressive-completion avy company dape diff-hl disable-mouse
                            disk-usage docker dockerfile-mode
-                           doom-themes ellama elpher fireplace forge
-                           format-all helpful hungry-delete
-                           indent-bars magit marginalia markdown-mode
-                           move-text nerd-icons-completion
-                           nerd-icons-dired nov org-journal
-                           org-modern org-super-agenda ox-pandoc
-                           ox-rst phi-search protobuf-mode
+                           doom-themes ellama elpher fireplace
+                           flymake-ruff forge format-all helpful
+                           hungry-delete indent-bars magit marginalia
+                           markdown-mode move-text
+                           nerd-icons-completion nerd-icons-dired nov
+                           org-journal org-modern org-super-agenda
+                           ox-pandoc ox-rst phi-search protobuf-mode
                            smartparens terraform-mode writeroom-mode
                            ws-butler xclip yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
@@ -144,9 +144,13 @@
 (use-package org-capture
   :bind ("C-c c" . org-capture))
 (use-package eglot
-  :hook (python-ts-mode-hook . eglot-ensure)
-  :config (add-to-list 'eglot-server-programs
-                       '((python-ts-mode) "jedi-language-server")))
+  :hook
+  ((python-base-mode . eglot-ensure)
+   (python-ts-mode . flymake-mode))
+  :config
+  (add-to-list 'eglot-server-programs
+               '((python-ts-mode) "jedi-language-server"))
+  (add-to-list 'eglot-stay-out-of 'flymake))
 (use-package zone
   :init (setq zone-programs [zone-nyan])
   :config (zone-when-idle 300))
@@ -220,5 +224,7 @@ If it exists in `.venv` sub-directory of DIR."
 (use-package phi-search
   :bind (("C-s" . phi-search)
          ("C-r" . phi-search-backward)))
+(use-package flymake-ruff
+  :hook (flymake-mode . flymake-ruff-load))
 (provide 'init)
 ;;; init.el ends here
