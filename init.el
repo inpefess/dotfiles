@@ -144,13 +144,10 @@
 (use-package org-capture
   :bind ("C-c c" . org-capture))
 (use-package eglot
-  :hook
-  ((python-base-mode . eglot-ensure)
-   (python-ts-mode . flymake-mode))
+  :hook(python-base-mode . eglot-ensure)
   :config
   (add-to-list 'eglot-server-programs
-               '((python-ts-mode) "jedi-language-server"))
-  (add-to-list 'eglot-stay-out-of 'flymake))
+               '((python-ts-mode) "jedi-language-server")))
 (use-package zone
   :init (setq zone-programs [zone-nyan])
   :config (zone-when-idle 300))
@@ -225,6 +222,6 @@ If it exists in `.venv` sub-directory of DIR."
   :bind (("C-s" . phi-search)
          ("C-r" . phi-search-backward)))
 (use-package flymake-ruff
-  :hook (flymake-mode . flymake-ruff-load))
+  :hook (eglot-managed-mode . flymake-ruff-load))
 (provide 'init)
 ;;; init.el ends here
