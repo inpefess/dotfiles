@@ -1,4 +1,4 @@
-;;; initl.el --- my Emacs config -*- lexical-binding: t; -*-
+;;; init.el --- my Emacs config -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 (package-initialize)
