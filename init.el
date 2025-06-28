@@ -29,6 +29,7 @@
  '(ediff-highlight-all-diffs nil)
  '(ediff-split-window-function 'split-window-vertically)
  '(ediff-window-setup-function 'ediff-setup-windows-plain)
+ '(eglot-autoshutdown t)
  '(enable-recursive-minibuffers t)
  '(erc-join-buffer 'window-noselect)
  '(erc-minibuffer-notice t)
