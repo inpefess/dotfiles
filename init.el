@@ -143,7 +143,9 @@
 (use-package org-capture
   :bind ("C-c c" . org-capture))
 (use-package eglot
-  :hook (python-ts-mode-hook . eglot-ensure))
+  :hook (python-ts-mode-hook . eglot-ensure)
+  :config (add-to-list 'eglot-server-programs
+                       '((python-ts-mode) "jedi-language-server")))
 (use-package zone
   :init (setq zone-programs [zone-nyan])
   :config (zone-when-idle 300))
