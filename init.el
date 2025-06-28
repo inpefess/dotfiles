@@ -218,7 +218,7 @@ If it exists in `.venv` sub-directory of DIR."
   :hook
   (dired-mode . nerd-icons-dired-mode))
 (use-package indent-bars
-  :hook ((python-base-mode) . indent-bars-mode))
+  :hook (python-base-mode . indent-bars-mode))
 (use-package phi-search
   :bind (("C-s" . phi-search)
          ("C-r" . phi-search-backward)))
