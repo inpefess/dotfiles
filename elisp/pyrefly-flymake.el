@@ -37,7 +37,7 @@
         ;; Make output go to a temporary buffer.
         ;;
         :buffer (generate-new-buffer " *pyrefly-flymake*")
-        :command '("pyrefly" "-w" "-c")
+        :command '("pyrefly" "check" "--output-format" "min-text" "--no-summary")
         :sentinel
         (lambda (proc _event)
           ;; Check that the process has indeed exited, as it might
