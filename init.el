@@ -223,7 +223,11 @@ If it exists in `.venv` sub-directory of DIR."
 (use-package flymake-ruff
   :hook (eglot-managed-mode . flymake-ruff-load))
 (use-package flymake
-  :hook (prog-mode . flymake-mode)
-  :hook (prog-mode . flyspell-mode))
+  :hook
+  ((prog-mode . flymake-mode)
+   (prog-mode . flyspell-mode))
+  :bind
+  (("M-n" . flymake-goto-next-error)
+   ("M-p" . flymake-goto-prev-error)))
 (provide 'init)
 ;;; init.el ends here
