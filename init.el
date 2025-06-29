@@ -214,5 +214,8 @@
   :load-path "elisp"
   :config
   (advice-add 'project-switch-project :before #'activate-venv))
+(use-package pyrefly-flymake
+  :load-path "elisp"
+  :hook (eglot-managed-mode . pyrefly-setup-flymake-backend))
 (provide 'init)
 ;;; init.el ends here
