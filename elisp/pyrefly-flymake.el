@@ -1,13 +1,18 @@
 ;;; pyrefly-flymake.el --- A pyrefly Flymake backend  -*- lexical-binding: t; -*-
+;;; Commentary:
+;;; Based on the annotated example from Flymake info. To start using:
+;;; (add-hook 'python-mode-hook 'pyrefly-setup-flymake-backend)
+;;; Code:
 (require 'cl-lib)
 (defvar-local pyrefly--flymake-proc nil)
 
 (defun pyrefly-flymake (report-fn &rest _args)
-  ;; Not having a pyrefly interpreter is a serious problem which should cause
+  "Report pyrefly diagnostic with REPORT-FN."
+  ;; Not having pyrefly installed is a serious problem which should cause
   ;; the backend to disable itself, so an error is signaled.
   ;;
   (unless (executable-find
-           "pyrefly") (error "Cannot find a suitable pyrefly"))
+           "pyrefly") (error "Cannot find pyrefly"))
   ;; If a live process launched in an earlier check was found, that
   ;; process is killed.  When that process's sentinel eventually runs,
   ;; it will notice its obsoletion, since it have since reset
@@ -83,6 +88,7 @@
       (process-send-eof pyrefly--flymake-proc))))
 
 (defun pyrefly-setup-flymake-backend ()
+  "Setup pyrefly as Flymake backend."
   (add-hook 'flymake-diagnostic-functions 'pyrefly-flymake nil t))
-
-(add-hook 'pyrefly-mode-hook 'pyrefly-setup-flymake-backend)
+(provide 'pyrefly-flymake)
+;;; pyrefly-flymake.el ends here
