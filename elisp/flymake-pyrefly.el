@@ -1,4 +1,4 @@
-;;; pyrefly-flymake.el --- A Pyrefly Flymake backend. -*- lexical-binding: t; -*-
+;;; flymake-pyrefly.el --- A Pyrefly Flymake backend. -*- lexical-binding: t; -*-
 ;; Copyright (C) 2025  Boris Shminke
 
 ;; This program is free software: you can redistribute it and/or modify
@@ -17,14 +17,14 @@
 ;;; Commentary:
 ;; Based on the annotated example from Flymake info.
 ;; Usage:
-;;   (use-package pyrefly-flymake
+;;   (use-package flymake-pyrefly
 ;;     :hook (python-mode . pyrefly-setup-flymake-backend))
 
 ;;; Code:
 (require 'cl-lib)
 (defvar-local pyrefly--flymake-proc nil)
 
-(defun pyrefly-flymake (report-fn &rest _args)
+(defun flymake-pyrefly (report-fn &rest _args)
   "Report pyrefly diagnostic with REPORT-FN."
   ;; Not having pyrefly installed is a serious problem which should cause
   ;; the backend to disable itself, so an error is signaled.
@@ -34,7 +34,7 @@
   ;; If a live process launched in an earlier check was found, that
   ;; process is killed.  When that process's sentinel eventually runs,
   ;; it will notice its obsoletion, since it have since reset
-  ;; `pyrefly-flymake-proc' to a different value
+  ;; `flymake-pyrefly-proc' to a different value
   ;;
   (when (process-live-p pyrefly--flymake-proc)
     (kill-process pyrefly--flymake-proc))
@@ -51,10 +51,10 @@
       (setq
        pyrefly--flymake-proc
        (make-process
-        :name "pyrefly-flymake" :noquery t :connection-type 'pipe
+        :name "flymake-pyrefly" :noquery t :connection-type 'pipe
         ;; Make output go to a temporary buffer.
         ;;
-        :buffer (generate-new-buffer " *pyrefly-flymake*")
+        :buffer (generate-new-buffer " *flymake-pyrefly*")
         :command
         (append
          '("pyrefly" "check" "--output-format" "min-text" "--no-summary")
@@ -110,6 +110,6 @@
 
 (defun pyrefly-setup-flymake-backend ()
   "Setup Pyrefly as Flymake backend."
-  (add-hook 'flymake-diagnostic-functions 'pyrefly-flymake nil t))
-(provide 'pyrefly-flymake)
-;;; pyrefly-flymake.el ends here
+  (add-hook 'flymake-diagnostic-functions 'flymake-pyrefly nil t))
+(provide 'flymake-pyrefly)
+;;; flymake-pyrefly.el ends here
