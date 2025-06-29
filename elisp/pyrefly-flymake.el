@@ -1,7 +1,25 @@
-;;; pyrefly-flymake.el --- A pyrefly Flymake backend  -*- lexical-binding: t; -*-
+;;; pyrefly-flymake.el --- A Pyrefly Flymake backend. -*- lexical-binding: t; -*-
+;; Copyright (C) 2025  Boris Shminke
+
+;; This program is free software: you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 ;;; Commentary:
-;;; Based on the annotated example from Flymake info. To start using:
-;;; (add-hook 'python-mode-hook 'pyrefly-setup-flymake-backend)
+;; Based on the annotated example from Flymake info.
+;; Usage:
+;;   (use-package pyrefly-flymake
+;;     :hook (python-mode . pyrefly-setup-flymake-backend))
+
 ;;; Code:
 (require 'cl-lib)
 (defvar-local pyrefly--flymake-proc nil)
@@ -91,7 +109,7 @@
       (process-send-eof pyrefly--flymake-proc))))
 
 (defun pyrefly-setup-flymake-backend ()
-  "Setup pyrefly as Flymake backend."
+  "Setup Pyrefly as Flymake backend."
   (add-hook 'flymake-diagnostic-functions 'pyrefly-flymake nil t))
 (provide 'pyrefly-flymake)
 ;;; pyrefly-flymake.el ends here
