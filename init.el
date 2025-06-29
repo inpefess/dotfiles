@@ -99,7 +99,6 @@
                            smartparens terraform-mode writeroom-mode
                            ws-butler xclip yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
- '(prog-mode-hook '(flyspell-mode))
  '(project-switch-commands 'project-find-file)
  '(python-shell-completion-native-enable nil)
  '(read-buffer-completion-ignore-case t)
@@ -223,5 +222,8 @@ If it exists in `.venv` sub-directory of DIR."
          ("C-r" . phi-search-backward)))
 (use-package flymake-ruff
   :hook (eglot-managed-mode . flymake-ruff-load))
+(use-package flymake
+  :hook (prog-mode . flymake-mode)
+  :hook (prog-mode . flyspell-mode))
 (provide 'init)
 ;;; init.el ends here
