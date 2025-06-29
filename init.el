@@ -169,25 +169,6 @@
          ("C-h x" . helpful-command)
          ("C-c C-d" . helpful-at-point)
          ("C-h F" . helpful-function)))
-(use-package f)
-(defun activate-virtualenv(dir)
-  "Activate Python virtual environment.
-If it exists in `.venv` sub-directory of DIR."
-  (if (project-current)
-      (let ((old-venv-bin-dir
-             (f-join (project-root (project-current)) ".venv" "bin")))
-        (when (f-directory-p old-venv-bin-dir)
-          (let ((paths (split-string (getenv "PATH") ":")))
-            (when (string-equal old-venv-bin-dir (car paths))
-              (pop paths)
-              (setenv "PATH" (mapconcat #'identity paths ":")))
-            (when (string-equal old-venv-bin-dir (car exec-path))
-              (pop exec-path))))))
-  (let ((venv-bin-dir (f-join dir ".venv" "bin")))
-    (when (f-directory-p venv-bin-dir)
-      (push venv-bin-dir exec-path)
-      (setenv "PATH" (concat venv-bin-dir ":" (getenv "PATH"))))))
-(advice-add 'project-switch-project :before #'activate-virtualenv)
 (use-package org-journal)
 (use-package ox-pandoc)
 (use-package ox-rst)
@@ -229,5 +210,9 @@ If it exists in `.venv` sub-directory of DIR."
   :bind
   (("M-n" . flymake-goto-next-error)
    ("M-p" . flymake-goto-prev-error)))
+(use-package activate-venv
+  :load-path "elisp"
+  :config
+  (advice-add 'project-switch-project :before #'activate-venv))
 (provide 'init)
 ;;; init.el ends here
