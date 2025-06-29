@@ -58,15 +58,15 @@
                       ;;
                       (cl-loop
                        while (search-forward-regexp
-                              "^\\(?:.*.rb\\|-\\):\\([0-9]+\\): \\(.*\\)$"
+                              "^\\([A-Z]+\\) .+\.py:\\([0-9]+\\):[0-9]+\-[0-9]+: \\(.*\\)$"
                               nil t)
-                       for msg = (match-string 2)
+                       for msg = (match-string 3)
                        for (beg . end) = (flymake-diag-region
                                           source
-                                          (string-to-number (match-string 1)))
-                       for type = (if (string-match "^warning" msg)
-                                      :warning
-                                    :error)
+                                          (string-to-number (match-string 2)))
+                       for type = (if (equal "ERROR" (match-string 1))
+                                      :error
+                                    :warning)
                        when (and beg end)
                        collect (flymake-make-diagnostic source
                                                         beg
