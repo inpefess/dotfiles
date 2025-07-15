@@ -89,13 +89,13 @@
  '(package-selected-packages
    '(aggressive-completion avy company dape diff-hl disable-mouse
                            disk-usage docker dockerfile-mode
-                           doom-themes eat ellama elpher fireplace
-                           flymake-ruff forge format-all helpful
-                           hungry-delete indent-bars magit marginalia
-                           markdown-mode move-text
-                           nerd-icons-completion nerd-icons-dired nov
-                           org-journal org-modern org-super-agenda
-                           ox-pandoc ox-rst phi-search protobuf-mode
+                           doom-themes eat ellama elpher flymake-ruff
+                           forge format-all helpful hungry-delete
+                           indent-bars magit marginalia markdown-mode
+                           move-text nerd-icons-completion
+                           nerd-icons-dired nov org-journal
+                           org-modern org-super-agenda ox-pandoc
+                           ox-rst phi-search protobuf-mode
                            smartparens terraform-mode writeroom-mode
                            ws-butler xclip yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
