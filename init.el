@@ -89,7 +89,7 @@
  '(package-selected-packages
    '(aggressive-completion avy company dape diff-hl disable-mouse
                            disk-usage docker dockerfile-mode
-                           doom-themes ellama elpher fireplace
+                           doom-themes eat ellama elpher fireplace
                            flymake-ruff forge format-all helpful
                            hungry-delete indent-bars magit marginalia
                            markdown-mode move-text
@@ -120,7 +120,7 @@
                               writeroom-set-tool-bar-lines
                               writeroom-set-vertical-scroll-bars))
  '(writeroom-major-modes
-   '(Custom-mode prog-mode text-mode term-mode org-agenda-mode
+   '(Custom-mode prog-mode text-mode eat-mode org-agenda-mode
                  special-mode))
  '(ws-butler-global-mode t)
  '(xclip-mode t)
