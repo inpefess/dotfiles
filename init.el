@@ -26,6 +26,7 @@
  '(dictionary-server "localhost")
  '(disable-mouse-global-mode t)
  '(doc-view-resolution 200)
+ '(eat-term-name "xterm-direct")
  '(ediff-highlight-all-diffs nil)
  '(ediff-split-window-function 'split-window-vertically)
  '(ediff-window-setup-function 'ediff-setup-windows-plain)
