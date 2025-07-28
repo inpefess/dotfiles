@@ -95,8 +95,8 @@
                            indent-bars magit marginalia markdown-mode
                            move-text nerd-icons-completion
                            nerd-icons-dired nov org-journal
-                           org-modern org-super-agenda ox-pandoc
-                           ox-rst phi-search protobuf-mode
+                           org-modern org-roam org-super-agenda
+                           ox-pandoc ox-rst phi-search protobuf-mode
                            smartparens terraform-mode writeroom-mode
                            ws-butler xclip yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
@@ -218,5 +218,10 @@
 (use-package flymake-pyrefly
   :vc (:url "https://github.com/inpefess/flymake-pyrefly.git")
   :hook (eglot-managed-mode . pyrefly-setup-flymake-backend))
+(use-package org-roam
+  :config (org-roam-db-autosync-mode)
+  :bind
+  (("M-o n i" . org-roam-node-insert)
+   ("M-o n f" . org-roam-node-find)))
 (provide 'init)
 ;;; init.el ends here
