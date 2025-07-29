@@ -221,7 +221,8 @@
 (use-package org-roam
   :config (org-roam-db-autosync-mode)
   :bind
-  (("M-o n i" . org-roam-node-insert)
-   ("M-o n f" . org-roam-node-find)))
+  (("C-c n i" . org-roam-node-insert)
+   ("C-c n f" . org-roam-node-find))
+   ("C-c n l" . org-roam-buffer-toggle))
 (provide 'init)
 ;;; init.el ends here
