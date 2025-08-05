@@ -91,8 +91,9 @@
  '(package-selected-packages
    '(aggressive-completion avy company dape diff-hl disable-mouse
                            disk-usage docker dockerfile-mode
-                           doom-themes eat ellama elpher flymake-ruff
-                           forge format-all helpful hungry-delete
+                           doom-themes eat ellama elpher
+                           flymake-pyrefly flymake-ruff forge
+                           format-all helpful hungry-delete
                            indent-bars magit marginalia markdown-mode
                            move-text nerd-icons-completion
                            nerd-icons-dired nov org-journal
@@ -217,13 +218,6 @@
   :config
   (advice-add 'project-switch-project :before #'activate-venv))
 (use-package flymake-pyrefly
-  :vc (:url "https://github.com/inpefess/flymake-pyrefly.git")
   :hook (eglot-managed-mode . pyrefly-setup-flymake-backend))
-(use-package org-roam
-  :config (org-roam-db-autosync-mode)
-  :bind
-  (("C-c n i" . org-roam-node-insert)
-   ("C-c n f" . org-roam-node-find))
-   ("C-c n l" . org-roam-buffer-toggle))
 (provide 'init)
 ;;; init.el ends here
