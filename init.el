@@ -71,6 +71,7 @@
    '(:foreground default :background default :scale 3.0 :html-foreground
                  "Black" :html-background "Transparent" :html-scale
                  1.0 :matchers ("begin" "$1" "$" "$$" "\\(" "\\[")))
+ '(org-id-link-to-org-use-id t)
  '(org-journal-dir "~/projects/my-journal")
  '(org-super-agenda-mode t)
  '(package-archives
@@ -210,5 +211,7 @@
   :hook (eglot-managed-mode . pyrefly-setup-flymake-backend))
 (use-package org-modern
   :hook (org-mode . org-modern-mode))
+(use-package org-mode
+  :bind (("C-c M-s" . org-store-link)))
 (provide 'init)
 ;;; init.el ends here
