@@ -72,17 +72,6 @@
                  "Black" :html-background "Transparent" :html-scale
                  1.0 :matchers ("begin" "$1" "$" "$$" "\\(" "\\[")))
  '(org-journal-dir "~/projects/my-journal")
- '(org-mode-hook
-   '(#[0 "\300\301\302\303\304$\207"
-         [add-hook change-major-mode-hook org-fold-show-all append
-                   local]
-         5]
-     #[0 "\300\301\302\303\304$\207"
-         [add-hook change-major-mode-hook org-babel-show-result-all
-                   append local]
-         5]
-     org-babel-result-hide-spec org-babel-hide-all-hashes
-     org-modern-mode))
  '(org-super-agenda-mode t)
  '(package-archives
    '(("gnu" . "https://elpa.gnu.org/packages/")
@@ -219,5 +208,7 @@
   (advice-add 'project-switch-project :before #'activate-venv))
 (use-package flymake-pyrefly
   :hook (eglot-managed-mode . pyrefly-setup-flymake-backend))
+(use-package org-modern
+  :hook (org-mode . org-modern-mode))
 (provide 'init)
 ;;; init.el ends here
