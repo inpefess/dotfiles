@@ -40,6 +40,13 @@
               move-to-prompt netsplit networks noncommands readonly
               stamp spelling))
  '(erc-server "localhost")
+ '(exwm-input-global-keys
+   '(([8388646] lambda (cmd)
+      (interactive (list (read-shell-command "$ ")))
+      (start-process-shell-command cmd nil cmd))))
+ '(exwm-randr-mode t)
+ '(exwm-randr-workspace-monitor-plist '(0 "DP-2"))
+ '(exwm-wm-mode t)
  '(fill-column 69)
  '(fireplace-sound-on t)
  '(global-company-mode t)
@@ -81,7 +88,7 @@
  '(package-selected-packages
    '(aggressive-completion avy company dape diff-hl disable-mouse
                            disk-usage docker dockerfile-mode
-                           doom-themes eat ellama elpher
+                           doom-themes eat ellama elpher exwm
                            flymake-pyrefly flymake-ruff forge
                            format-all helpful hungry-delete
                            indent-bars magit marginalia markdown-mode
@@ -210,5 +217,8 @@
   :hook (org-mode . org-modern-mode))
 (use-package org-mode
   :bind (("C-c M-s" . org-store-link)))
+(use-package exwm
+  :hook (exwm-update-class . (lambda () (exwm-workspace-rename-buffer exwm-class-name)))
+  :hook (exwm-randr-screen-change . (lambda () (start-process-shell-command "xrandr" nil "xrandr --output DP-2 --auto"))))
 (provide 'init)
 ;;; init.el ends here
