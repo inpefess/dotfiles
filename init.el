@@ -44,9 +44,9 @@
    '(([8388646] lambda (cmd)
       (interactive (list (read-shell-command "$ ")))
       (start-process-shell-command cmd nil cmd))))
- '(exwm-randr-mode t)
+ '(exwm-randr-mode (display-graphic-p))
  '(exwm-randr-workspace-monitor-plist '(0 "DP-2"))
- '(exwm-wm-mode t)
+ '(exwm-wm-mode (display-graphic-p))
  '(fill-column 69)
  '(fireplace-sound-on t)
  '(global-company-mode t)
@@ -218,7 +218,6 @@
 (use-package org-mode
   :bind (("C-c M-s" . org-store-link)))
 (use-package exwm
-  :hook (exwm-update-class . (lambda () (exwm-workspace-rename-buffer exwm-class-name)))
-  :hook (exwm-randr-screen-change . (lambda () (start-process-shell-command "xrandr" nil "xrandr --output DP-2 --auto"))))
+  :hook (exwm-update-class . (lambda () (exwm-workspace-rename-buffer exwm-class-name))))
 (provide 'init)
 ;;; init.el ends here
