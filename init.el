@@ -32,6 +32,8 @@
  '(ediff-split-window-function 'split-window-vertically)
  '(ediff-window-setup-function 'ediff-setup-windows-plain)
  '(eglot-autoshutdown t)
+ '(emms-info-functions '(emms-info-native))
+ '(emms-player-list '(emms-player-vlc))
  '(enable-recursive-minibuffers t)
  '(erc-join-buffer 'window-noselect)
  '(erc-minibuffer-notice t)
@@ -88,7 +90,7 @@
  '(package-selected-packages
    '(aggressive-completion avy company dape diff-hl disable-mouse
                            disk-usage docker dockerfile-mode
-                           doom-themes eat ellama elpher exwm
+                           doom-themes eat ellama elpher emms exwm
                            flymake-pyrefly flymake-ruff forge
                            format-all helpful hungry-delete
                            indent-bars magit marginalia markdown-mode
@@ -219,5 +221,6 @@
   :bind (("C-c M-s" . org-store-link)))
 (use-package exwm
   :hook (exwm-update-class . (lambda () (exwm-workspace-rename-buffer exwm-class-name))))
+(emms-all)
 (provide 'init)
 ;;; init.el ends here
