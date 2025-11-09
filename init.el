@@ -46,7 +46,7 @@
       (interactive (list (read-shell-command "$ ")))
       (start-process-shell-command cmd nil cmd))))
  '(exwm-randr-mode (display-graphic-p))
- '(exwm-randr-workspace-monitor-plist '(0 "DP-1"))
+ '(exwm-randr-workspace-monitor-plist '(0 "DP-2"))
  '(exwm-wm-mode (display-graphic-p))
  '(fill-column 69)
  '(fireplace-sound-on t)
