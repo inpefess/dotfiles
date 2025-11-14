@@ -124,7 +124,7 @@
    '(Custom-mode prog-mode text-mode eat-mode org-agenda-mode
                  special-mode))
  '(ws-butler-global-mode t)
- '(xclip-mode t)
+ '(xclip-mode (display-graphic-p))
  '(xclip-select-enable-clipboard nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
