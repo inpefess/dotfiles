@@ -1,5 +1,8 @@
 cloc
+docker-buildx-plugin
 docker-ce
+docker-ce-rootless-extras
+docker-compose-plugin
 fbterm
 htop
 light
