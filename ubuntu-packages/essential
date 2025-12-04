@@ -1,3 +1,4 @@
+dialog
 friendly-recovery
 fwupd
 initramfs-tools
@@ -5,12 +6,10 @@ language-pack-en
 linux-generic
 linux-generic-hwe-22.04
 linux-sysctl-defaults
-nano
-network-manager
-openssh-server
+ncurses-term
 os-prober
 sudo
 sudo-rs
 systemd-timesyncd
-unzip
 update-notifier
+zstd

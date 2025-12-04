@@ -1,4 +1,5 @@
 bluetooth
 ffmpeg
+pulseaudio-module-bluetooth
 rfkill
 vlc

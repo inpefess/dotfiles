@@ -1,0 +1,4 @@
+network-manager
+openssh-server
+wpasupplicant
+systemd-resolved
