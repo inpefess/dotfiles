@@ -8,8 +8,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(TeX-engine 'xetex)
- '(aggressive-completion-auto-completion-help nil)
- '(aggressive-completion-mode t)
  '(auth-source-save-behavior nil)
  '(auth-sources '("~/.authinfo.gpg"))
  '(browse-url-browser-function 'eww-browse-url)
@@ -87,18 +85,14 @@
      ("nongnu" . "https://elpa.nongnu.org/nongnu/")
      ("melpa" . "https://melpa.org/packages/")))
  '(package-selected-packages
-   '(aggressive-completion avy company dape diff-hl disable-mouse
-                           disk-usage docker dockerfile-mode
-                           doom-themes eat ellama elpher emms exwm
-                           flymake-pyrefly flymake-ruff forge
-                           format-all helpful hungry-delete
-                           indent-bars magit marginalia markdown-mode
-                           move-text nerd-icons-completion
-                           nerd-icons-dired nov org-journal
-                           org-modern org-super-agenda ox-pandoc
-                           ox-rst protobuf-mode smartparens
-                           terraform-mode writeroom-mode ws-butler
-                           xclip yaml-mode zone-nyan))
+   '(avy company dape diff-hl disable-mouse disk-usage docker
+         dockerfile-mode doom-themes eat ellama elpher emms exwm
+         flymake-pyrefly flymake-ruff forge format-all helpful
+         hungry-delete indent-bars magit marginalia markdown-mode
+         move-text nerd-icons-completion nerd-icons-dired nov
+         org-journal org-modern org-super-agenda ox-pandoc ox-rst
+         protobuf-mode smartparens terraform-mode writeroom-mode
+         ws-butler xclip yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
  '(project-switch-commands 'project-find-file)
  '(python-shell-completion-native-enable nil)
