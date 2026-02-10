@@ -116,7 +116,7 @@
                               writeroom-set-vertical-scroll-bars))
  '(writeroom-major-modes
    '(Custom-mode prog-mode text-mode eat-mode org-agenda-mode
-                 special-mode))
+                 special-mode conf-mode))
  '(ws-butler-global-mode t)
  '(xclip-mode (display-graphic-p))
  '(xclip-select-enable-clipboard nil))
