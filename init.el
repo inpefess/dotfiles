@@ -141,7 +141,7 @@
   :hook(python-base-mode . eglot-ensure)
   :config
   (add-to-list 'eglot-server-programs
-               '((python-ts-mode) "jedi-language-server")))
+               '((python-ts-mode) . ("ty" "server"))))
 (use-package zone
   :init (setq zone-programs [zone-nyan])
   :config (zone-when-idle 300))
