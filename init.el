@@ -86,7 +86,7 @@
      ("melpa" . "https://melpa.org/packages/")))
  '(package-selected-packages
    '(avy company dape diff-hl disable-mouse disk-usage docker
-         dockerfile-mode doom-themes eat ellama elpher emms exwm
+         dockerfile-mode doom-themes eat elpher emms exwm
          flymake-pyrefly flymake-ruff forge format-all helpful
          hungry-delete indent-bars magit marginalia markdown-mode
          move-text nerd-icons-completion nerd-icons-dired nov
