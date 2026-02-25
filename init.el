@@ -88,7 +88,7 @@
    '(avy company dape diff-hl disable-mouse disk-usage docker
          dockerfile-mode doom-themes eat emms exwm flymake-pyrefly
          flymake-ruff forge format-all helpful hungry-delete
-         indent-bars magit marginalia markdown-mode move-text
+         indent-bars magit marginalia markdown-mode move-text nael
          nerd-icons-completion nerd-icons-dired nov org-journal
          org-modern org-super-agenda ox-pandoc ox-rst protobuf-mode
          smartparens terraform-mode writeroom-mode ws-butler xclip
@@ -138,7 +138,8 @@
 (use-package org-capture
   :bind ("C-c c" . org-capture))
 (use-package eglot
-  :hook(python-base-mode . eglot-ensure)
+  :hook ((python-base-mode . eglot-ensure)
+         (nael-mode . eglot-ensure))
   :config
   (add-to-list 'eglot-server-programs
                '((python-ts-mode) . ("ty" "server"))))
@@ -215,5 +216,7 @@
 (use-package exwm
   :hook (exwm-update-class . (lambda () (exwm-workspace-rename-buffer exwm-class-name))))
 (emms-all)
+(use-package nael
+  :hook (nael-mode . abbrev-mode))
 (provide 'init)
 ;;; init.el ends here
