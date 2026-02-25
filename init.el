@@ -86,13 +86,13 @@
      ("melpa" . "https://melpa.org/packages/")))
  '(package-selected-packages
    '(avy company dape diff-hl disable-mouse disk-usage docker
-         dockerfile-mode doom-themes eat elpher emms exwm
-         flymake-pyrefly flymake-ruff forge format-all helpful
-         hungry-delete indent-bars magit marginalia markdown-mode
-         move-text nerd-icons-completion nerd-icons-dired nov
-         org-journal org-modern org-super-agenda ox-pandoc ox-rst
-         protobuf-mode smartparens terraform-mode writeroom-mode
-         ws-butler xclip yaml-mode zone-nyan))
+         dockerfile-mode doom-themes eat emms exwm flymake-pyrefly
+         flymake-ruff forge format-all helpful hungry-delete
+         indent-bars magit marginalia markdown-mode move-text
+         nerd-icons-completion nerd-icons-dired nov org-journal
+         org-modern org-super-agenda ox-pandoc ox-rst protobuf-mode
+         smartparens terraform-mode writeroom-mode ws-butler xclip
+         yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
  '(project-switch-commands 'project-find-file)
  '(python-shell-completion-native-enable nil)
