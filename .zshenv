@@ -32,5 +32,3 @@ export PATH=$PYENV_ROOT/bin:$PATH
 export ISABELLE_HOME_USER=$XDG_CONFIG_HOME/isabelle
 export ISABELLE_HOME=$OPTDIR/Isabelle
 export PATH=$ISABELLE_HOME/bin:$PATH
-# for poetry
-export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
