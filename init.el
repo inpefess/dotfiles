@@ -86,9 +86,9 @@
      ("melpa" . "https://melpa.org/packages/")))
  '(package-selected-packages
    '(avy company dape diff-hl disable-mouse disk-usage docker
-         dockerfile-mode doom-themes eat emms exwm flymake-pyrefly
-         flymake-ruff forge format-all helpful hungry-delete
-         indent-bars magit marginalia markdown-mode move-text nael
+         dockerfile-mode doom-themes eat emms exwm flymake-ruff forge
+         format-all helpful hungry-delete indent-bars magit
+         marginalia markdown-mode move-text nael
          nerd-icons-completion nerd-icons-dired nov org-journal
          org-modern org-super-agenda ox-pandoc ox-rst protobuf-mode
          smartparens terraform-mode writeroom-mode ws-butler xclip
@@ -207,8 +207,6 @@
   :load-path "elisp"
   :config
   (advice-add 'project-switch-project :before #'activate-venv))
-(use-package flymake-pyrefly
-  :hook (eglot-managed-mode . pyrefly-setup-flymake-backend))
 (use-package org-modern
   :hook (org-mode . org-modern-mode))
 (use-package org-mode
