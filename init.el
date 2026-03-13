@@ -86,13 +86,12 @@
      ("melpa" . "https://melpa.org/packages/")))
  '(package-selected-packages
    '(avy company dape diff-hl disable-mouse disk-usage docker
-         dockerfile-mode doom-themes eat emms exwm flymake-ruff forge
-         format-all helpful hungry-delete indent-bars magit
-         marginalia markdown-mode move-text nael
-         nerd-icons-completion nerd-icons-dired nov org-journal
-         org-modern org-super-agenda ox-pandoc ox-rst protobuf-mode
-         smartparens terraform-mode writeroom-mode ws-butler xclip
-         yaml-mode zone-nyan))
+         dockerfile-mode doom-themes eat emms exwm forge format-all
+         helpful hungry-delete indent-bars magit marginalia
+         markdown-mode move-text nael nerd-icons-completion
+         nerd-icons-dired nov org-journal org-modern org-super-agenda
+         ox-pandoc ox-rst protobuf-mode smartparens terraform-mode
+         writeroom-mode ws-butler xclip yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
  '(project-switch-commands 'project-find-file)
  '(python-shell-completion-native-enable nil)
@@ -192,8 +191,6 @@
   (dired-mode . nerd-icons-dired-mode))
 (use-package indent-bars
   :hook (python-base-mode . indent-bars-mode))
-(use-package flymake-ruff
-  :hook (eglot-managed-mode . flymake-ruff-load))
 (use-package flymake
   :hook
   ((prog-mode . flymake-mode)
