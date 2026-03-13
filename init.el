@@ -86,12 +86,12 @@
      ("melpa" . "https://melpa.org/packages/")))
  '(package-selected-packages
    '(avy company dape diff-hl disable-mouse disk-usage docker
-         dockerfile-mode doom-themes eat emms exwm forge format-all
-         helpful hungry-delete indent-bars magit marginalia
-         markdown-mode move-text nael nerd-icons-completion
-         nerd-icons-dired nov org-journal org-modern org-super-agenda
-         ox-pandoc ox-rst protobuf-mode smartparens terraform-mode
-         writeroom-mode ws-butler xclip yaml-mode zone-nyan))
+         dockerfile-mode doom-themes eat emms exwm forge helpful
+         hungry-delete indent-bars magit marginalia markdown-mode
+         move-text nael nerd-icons-completion nerd-icons-dired nov
+         org-journal org-modern org-super-agenda ox-pandoc ox-rst
+         protobuf-mode smartparens terraform-mode writeroom-mode
+         ws-butler xclip yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
  '(project-switch-commands 'project-find-file)
  '(python-shell-completion-native-enable nil)
@@ -174,12 +174,6 @@
           (:tangle . "yes")
           (:padline . "no")
           (:comments . "org"))))
-(use-package format-all
-  :commands format-all-mode
-  :hook (prog-mode . format-all-mode)
-  :config
-  (setq-default format-all-formatters
-                '(("Python" (ruff "format")))))
 (use-package marginalia
   :bind (:map minibuffer-local-map
               ("M-A" . marginalia-cycle)))
