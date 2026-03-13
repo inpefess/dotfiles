@@ -152,8 +152,6 @@
   :config (appt-activate))
 (use-package doom-themes
   :config (load-theme 'doom-acario-dark))
-(use-package ellama
-  :bind ("C-c e" . ellama-transient-main-menu))
 (use-package avy
   :bind ("C-:" . avy-goto-char-timer))
 (use-package nov
