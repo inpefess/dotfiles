@@ -141,7 +141,7 @@
          (nael-mode . eglot-ensure))
   :config
   (add-to-list 'eglot-server-programs
-               '((python-ts-mode) . ("ty" "server"))))
+               '((python-ts-mode) . ("rass" "--" "ty" "server" "--" "ruff" "server" "--" "jedi-language-server"))))
 (use-package zone
   :init (setq zone-programs [zone-nyan])
   :config (zone-when-idle 300))
