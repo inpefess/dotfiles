@@ -138,7 +138,10 @@
   :bind ("C-c c" . org-capture))
 (use-package eglot
   :hook ((python-base-mode . eglot-ensure)
-         (nael-mode . eglot-ensure))
+         (nael-mode . eglot-ensure)
+         (before-save . (lambda () (call-interactively 'eglot-code-action-organize-imports)))
+         (before-save . eglot-format-buffer))
+  :bind ("C-c e" . eglot-code-actions)
   :config
   (add-to-list 'eglot-server-programs
                '((python-ts-mode) . ("rass" "--" "ty" "server" "--" "ruff" "server" "--" "jedi-language-server"))))
