@@ -34,3 +34,4 @@ export ISABELLE_HOME=$OPTDIR/Isabelle
 export PATH=$ISABELLE_HOME/bin:$PATH
 # Lean proof assistant
 export PATH=$HOME/.elan/bin:$PATH
+. "$HOME/.cargo/env"

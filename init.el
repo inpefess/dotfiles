@@ -90,8 +90,8 @@
          hungry-delete indent-bars magit marginalia markdown-mode
          move-text nael nerd-icons-completion nerd-icons-dired nov
          org-journal org-modern org-super-agenda ox-pandoc ox-rst
-         protobuf-mode smartparens terraform-mode writeroom-mode
-         ws-butler xclip yaml-mode zone-nyan))
+         protobuf-mode rust-mode smartparens terraform-mode
+         writeroom-mode ws-butler xclip yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
  '(project-switch-commands 'project-find-file)
  '(python-shell-completion-native-enable nil)
@@ -138,6 +138,7 @@
   :bind ("C-c c" . org-capture))
 (use-package eglot
   :hook ((python-base-mode . eglot-ensure)
+         (rust-mode . eglot-ensure)
          (nael-mode . eglot-ensure)
          (before-save . (lambda () (call-interactively 'eglot-code-action-organize-imports)))
          (before-save . eglot-format-buffer))
