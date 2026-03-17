@@ -88,7 +88,7 @@
    '(avy company dape diff-hl disable-mouse disk-usage docker
          dockerfile-mode doom-themes eat emms exwm forge helpful
          hungry-delete indent-bars magit marginalia markdown-mode
-         move-text nael nerd-icons-completion nerd-icons-dired nov
+         move-text nerd-icons-completion nerd-icons-dired nov
          org-journal org-modern org-super-agenda ox-pandoc ox-rst
          protobuf-mode rust-mode smartparens terraform-mode
          writeroom-mode ws-butler xclip yaml-mode zone-nyan))
@@ -139,7 +139,6 @@
 (use-package eglot
   :hook ((python-base-mode . eglot-ensure)
          (rust-mode . eglot-ensure)
-         (nael-mode . eglot-ensure)
          (before-save . (lambda () (call-interactively 'eglot-code-action-organize-imports)))
          (before-save . eglot-format-buffer))
   :bind ("C-c e" . eglot-code-actions)
@@ -207,7 +206,5 @@
 (use-package exwm
   :hook (exwm-update-class . (lambda () (exwm-workspace-rename-buffer exwm-class-name))))
 (emms-all)
-(use-package nael
-  :hook (nael-mode . abbrev-mode))
 (provide 'init)
 ;;; init.el ends here
