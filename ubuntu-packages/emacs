@@ -1,3 +1,5 @@
+build-essential
+libncurses-dev
 libacl1-dev
 libgccjit-15-dev
 libgnutls28-dev

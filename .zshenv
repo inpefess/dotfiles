@@ -25,9 +25,6 @@ export LDFLAGS="-L$LOCALDIR/lib -L$LOCALDIR/lib64"
 export CFLAGS="-I$LOCALDIR/include -I/usr/include/mkl"
 export CPPFLAGS=$CFLAGS
 export PKG_CONFIG_PATH=$LOCALDIR/lib64/pkgconfig:$LOCALDIR/lib/pkgconfig$PKG_CONFIG_PATH
-# pyenv
-export PYENV_ROOT=$HOME/.pyenv
-export PATH=$PYENV_ROOT/bin:$PATH
 # Isabelle proof assistant
 export ISABELLE_HOME_USER=$XDG_CONFIG_HOME/isabelle
 export ISABELLE_HOME=$OPTDIR/Isabelle
