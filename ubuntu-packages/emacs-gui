@@ -6,3 +6,5 @@ libm17n-dev
 libotf-dev
 librsvg2-dev
 libxpm-dev
+libjpeg-dev
+libtiff-dev
