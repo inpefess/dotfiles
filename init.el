@@ -90,7 +90,7 @@
          hungry-delete indent-bars magit marginalia markdown-mode
          move-text nerd-icons-completion nerd-icons-dired nov
          org-journal org-modern org-super-agenda ox-pandoc ox-rst
-         protobuf-mode rust-mode smartparens terraform-mode
+         protobuf-mode rust-mode smartparens swiper terraform-mode
          writeroom-mode ws-butler xclip yaml-mode zone-nyan))
  '(proced-auto-update-flag t)
  '(project-switch-commands 'project-find-file)
@@ -205,6 +205,8 @@
   :bind (("C-c M-s" . org-store-link)))
 (use-package exwm
   :hook (exwm-update-class . (lambda () (exwm-workspace-rename-buffer exwm-class-name))))
+(use-package swiper
+  :bind (("C-s" . swiper-isearch)))
 (emms-all)
 (provide 'init)
 ;;; init.el ends here
