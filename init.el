@@ -85,7 +85,7 @@
      ("nongnu" . "https://elpa.nongnu.org/nongnu/")
      ("melpa" . "https://melpa.org/packages/")))
  '(package-selected-packages
-   '(avy company dape diff-hl disable-mouse disk-usage docker
+   '(avy company csv-mode dape diff-hl disable-mouse disk-usage docker
          dockerfile-mode doom-themes eat emms exwm forge helpful
          hungry-delete indent-bars magit marginalia markdown-mode
          move-text nerd-icons-completion nerd-icons-dired nov
