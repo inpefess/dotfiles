@@ -1,6 +1,7 @@
 dialog
 friendly-recovery
 fwupd
+udisks2
 initramfs-tools
 language-pack-en
 linux-generic
